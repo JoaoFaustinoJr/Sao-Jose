@@ -207,3 +207,7 @@ a.chapter-portal{display:block;color:inherit;text-decoration:none}.art-linked .p
 .mockup-v39 .vellum-top .vellum-hint,.vellum-top .vellum-hint{position:relative;left:auto;bottom:auto;transform:none;white-space:normal;text-align:center;margin:0;min-width:min(88%,280px);padding:.58rem .9rem;background:rgba(255,247,218,.7);border:1px solid rgba(147,100,43,.18);box-shadow:0 3px 12px rgba(71,48,24,.08);font-size:.82rem}
 .vellum-detail{font:600 .56rem Georgia,serif;letter-spacing:.16em;color:rgba(101,69,31,.48);text-align:center}.vellum-detail span{color:#a67935;margin:0 .35rem}.vellum-ghost{top:56%}
 @media(max-width:600px){.vellum-top{top:12px;left:10px;right:10px}.vellum-top .vellum-hint{font-size:.78rem;padding:.52rem .75rem}.vellum-detail{font-size:.5rem}}
+
+/* v4.2 — guidance anchored to viewport-top of each chapter leaf */
+.chapter>.vellum-leaf .vellum-top{top:14px!important;bottom:auto!important}
+.chapter>.vellum-leaf .vellum-hint{top:auto!important;bottom:auto!important;position:relative!important}
