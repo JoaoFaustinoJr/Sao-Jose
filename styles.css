@@ -545,3 +545,23 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .chapter .vellum-leaf>.vellum-art:after{background:linear-gradient(90deg,rgba(246,233,202,.98) 0%,rgba(246,233,202,.74) 30%,rgba(246,233,202,.25) 58%,rgba(246,233,202,.04) 88%)!important}
  .chapter .vellum-leaf>.josephine-seal{left:50%!important;top:66px!important;width:44px!important;height:58px!important}
 }
+
+/* v8.2 — capa luxo inspirada no mockup aprovado: moldura de livro, pintura perfeitamente contida */
+@media(max-width:600px){
+ .cover{padding-top:.45rem!important;background:
+ radial-gradient(circle at 50% 30%,rgba(188,137,53,.10),transparent 36%),
+ linear-gradient(180deg,#06283a 0%,#031e2d 100%)!important}
+ .cover-inner{position:relative!important;width:94vw!important;margin:.45rem auto 5.7rem!important;padding:1.1rem 1rem 1.3rem!important;border:1px solid rgba(210,164,73,.58)!important;box-shadow:inset 0 0 0 4px rgba(210,164,73,.035),inset 0 0 48px rgba(0,0,0,.18)!important}
+ .cover-inner:before{content:"❦"!important;position:absolute!important;left:10px!important;top:8px!important;color:#d6a74e!important;font-size:1.05rem!important;text-shadow:none!important}
+ .cover-inner:after{content:"❦"!important;position:absolute!important;right:10px!important;top:8px!important;color:#d6a74e!important;font-size:1.05rem!important;transform:scaleX(-1)!important}
+ .cover .kicker{margin-top:.9rem!important}
+ .cover h1{font-size:clamp(2.55rem,11.4vw,3.95rem)!important;line-height:.88!important;margin:.2rem auto .38rem!important}
+ .cover .cover-subtitle,.cover .subtitle{margin-bottom:.7rem!important}
+ .cover-art-mockup{position:relative!important;width:min(62vw,310px)!important;margin:.72rem auto 1.05rem!important;padding:7px!important;background:linear-gradient(135deg,#c89a43,#f0d58a 34%,#9d702c 66%,#dfb85e)!important;border:0!important;box-shadow:0 10px 24px rgba(0,0,0,.28),0 0 0 1px rgba(246,215,141,.3)!important;overflow:visible!important}
+ .cover-art-mockup:before{content:""!important;position:absolute!important;inset:3px!important;border:1px solid #06283a!important;outline:1px solid rgba(255,230,164,.55)!important;outline-offset:2px!important;z-index:3!important;pointer-events:none!important}
+ .cover-art-mockup:after{content:"✦"!important;display:grid!important;place-items:center!important;position:absolute!important;left:50%!important;top:auto!important;bottom:-12px!important;width:28px!important;height:24px!important;transform:translateX(-50%)!important;background:#06283a!important;border:1px solid rgba(210,164,73,.55)!important;color:#d8aa52!important;font-size:.55rem!important;z-index:5!important}
+ .cover-art-mockup>img{display:block!important;width:100%!important;height:auto!important;max-height:36svh!important;object-fit:contain!important;object-position:center!important;margin:0!important;background:#071f2c!important}
+ .cover .cover-quote,.cover blockquote{max-width:88%!important;margin:.92rem auto .75rem!important;font-size:clamp(.9rem,4vw,1.04rem)!important;line-height:1.38!important}
+ .cover button[data-go="titlepage"]{margin:.5rem auto .6rem!important}
+ .cover .micro,.cover .cover-meta{margin-top:.5rem!important}
+}
