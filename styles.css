@@ -209,3 +209,22 @@ a.chapter-portal{display:block;color:inherit;text-decoration:none}.art-linked .p
 .page.novena-blue{background:radial-gradient(circle at 78% 10%,rgba(221,177,82,.12),transparent 19%),radial-gradient(circle at 16% 72%,rgba(31,86,116,.23),transparent 32%),linear-gradient(155deg,#061827 0%,#0a2c43 58%,#061b2a 100%)!important;color:#eee2c7!important}
 .page.novena-blue h1,.page.novena-blue h2,.page.novena-blue h3,.page.novena-blue .lead,.page.novena-blue .kicker,.page.novena-blue header,.page.novena-blue header button{color:#d9ad58!important}
 .page.novena-blue p,.page.novena-blue li{color:#eadfc8}.page.novena-blue blockquote{color:#f2e5c8;background:rgba(218,171,78,.07);border-color:rgba(218,171,78,.28)}.page.novena-blue .source-note,.page.novena-blue .meditation-card,.page.novena-blue .prayer-card{background:rgba(244,228,194,.06);border-color:rgba(218,171,78,.22);color:#eadfc8}.page.novena-blue .chapter-portal p{color:#d7b66f}.page.novena-blue .illumination{color:#d4a64d}
+
+/* v4.8 — sobriedade josefina: ouro tipográfico, iluminura respirada, velino discreto */
+.page.novena-blue{--chapter-gold:#e0b85f;--chapter-gold-soft:#c99b45;--chapter-ivory:#f3e8cf}
+.page.novena-blue h2{color:var(--chapter-gold)!important;text-shadow:0 1px 12px rgba(215,166,68,.08)}
+.page.novena-blue .kicker,.page.novena-blue article>h3,.page.novena-blue .scripture{color:var(--chapter-gold)!important}
+.page.novena-blue .lead{color:#d8b66c!important}.page.novena-blue blockquote{color:var(--chapter-ivory)!important}
+.page.novena-blue blockquote cite{color:var(--chapter-gold-soft)!important;letter-spacing:.13em}
+.page.novena-blue article>p{color:var(--chapter-ivory)}
+.page.novena-blue .illumination-page{min-height:58vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:1.35rem .5rem 1.6rem;margin:0 0 2.2rem;text-align:center}
+.page.novena-blue .illumination-page .portal-frame{width:min(92%,520px);min-height:310px;margin:auto;box-shadow:0 18px 42px rgba(0,0,0,.18);border:1px solid rgba(224,184,95,.34)}
+.page.novena-blue .illumination-page>p{max-width:480px;color:#d7b66f!important;margin:.8rem auto 0;font:italic .72rem Georgia,serif}
+.page.novena-blue .illumination-page+ .illumination{margin-top:-1.25rem;margin-bottom:1.7rem}
+.josephine-mark{position:absolute;z-index:4;top:72px;left:50%;width:34px;height:50px;transform:translateX(-50%);opacity:.42;pointer-events:none}
+.josephine-mark b{position:absolute;left:16px;top:16px;width:2px;height:31px;background:#9a6c31;transform:rotate(5deg);transform-origin:bottom}
+.josephine-mark i{position:absolute;width:15px;height:9px;border:1px solid #9a6c31;border-radius:100% 0 100% 0;top:8px;left:10px;transform-origin:bottom center}
+.josephine-mark i:nth-child(1){transform:rotate(-48deg) translate(-4px,1px)}.josephine-mark i:nth-child(2){transform:rotate(4deg) translate(0,-5px)}.josephine-mark i:nth-child(3){transform:rotate(50deg) translate(4px,1px)}
+.chapter .vellum-leaf>.vellum-hint{color:#6b4a25!important;background:rgba(255,248,222,.58)!important;border:1px solid rgba(145,98,42,.13);box-shadow:0 2px 10px rgba(65,43,22,.055)}
+.vellum-watermark{opacity:.62}
+@media(max-width:600px){.page.novena-blue .illumination-page{min-height:52vh;padding-top:1rem}.page.novena-blue .illumination-page .portal-frame{min-height:250px}.josephine-mark{top:65px}}
