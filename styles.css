@@ -352,3 +352,31 @@ a.chapter-portal{display:block;color:inherit;text-decoration:none}.art-linked .p
 /* sensação de página levantando sem alterar a mecânica estável */
 .vellum-leaf.turning{transform-origin:left center;box-shadow:22px 12px 36px rgba(0,0,0,.12)!important}
 @media(max-width:600px){.page:not(.cover):not(.luxury-titlepage):after{right:8px!important;top:55px!important;width:22px!important;height:82px!important}.page:not(.cover):not(.luxury-titlepage):before{right:10px!important;top:64px!important;width:18px!important;height:18px!important}.vellum-hint{bottom:18px!important}}
+
+/* v7.0 — direção do mockup aprovado: livro de luxo, velino ilustrado e folha de rosto em pergaminho */
+.luxury-titlepage{background:radial-gradient(circle at 50% 18%,rgba(224,188,112,.16),transparent 34%),#061f31!important}
+.titlepage-frame{overflow:hidden;background:
+linear-gradient(rgba(250,240,211,.94),rgba(235,215,174,.96)),
+repeating-linear-gradient(8deg,rgba(106,72,31,.035) 0 1px,transparent 1px 7px)!important;
+color:#342619!important;border-color:#b1843b!important;box-shadow:0 24px 70px rgba(0,0,0,.4),inset 0 0 70px rgba(116,73,28,.08),inset 0 0 0 6px rgba(255,250,228,.38)!important}
+.titlepage-frame:before,.titlepage-frame:after{width:58px!important;height:58px!important;border-width:2px!important;border-color:#a97c31!important}
+.titlepage-ornament,.luxury-titlepage .kicker,.titlepage-motto,.titlepage-invocation{color:#8b6329!important}.titlepage-small{color:#71522f!important}.luxury-titlepage h2{color:#152635!important;text-shadow:0 1px #fff6df}.titlepage-sub,.titlepage-dedication{color:#4d402f!important}.titlepage-rule i{background:linear-gradient(90deg,transparent,#9d7331)!important}.titlepage-rule b{color:#9d7331!important}
+.titlepage-seal{width:94px!important;height:94px!important;border:0!important;border-radius:50%!important;background:radial-gradient(circle at 38% 32%,#a94235,#7d201c 52%,#52100f 74%)!important;color:#e6b85e!important;box-shadow:0 7px 14px rgba(66,27,15,.35),inset 0 0 0 4px #651713,inset 0 0 0 6px rgba(225,166,80,.25)!important;transform:rotate(-4deg)}
+.titlepage-seal span{font-size:1.5rem!important;text-shadow:0 1px 1px #4d100e}.titlepage-seal:after{content:"⚜";position:absolute;font-size:.62rem;margin-top:48px;color:#e0ad51}
+.luxury-titlepage button{background:linear-gradient(#fff6dc,#ead19c)!important;color:#38281b!important;border-color:#a87a31!important;box-shadow:0 5px 15px rgba(83,52,20,.18)!important}.titlepage-edition{color:#806d4d!important}
+/* imagem devocional fantasma impressa sob o velino */
+.vellum-leaf:after{content:""!important;position:absolute!important;inset:0!important;background:
+linear-gradient(rgba(245,232,201,.56),rgba(245,232,201,.64)),
+url("assets/art/capa-sao-jose-v67.jpg") center 42%/72% auto no-repeat!important;opacity:.42!important;filter:sepia(.22) saturate(.68)!important;mix-blend-mode:multiply!important;pointer-events:none!important}
+.vellum-leaf:before{z-index:3!important;inset:8px!important;border:1px solid rgba(137,94,40,.22)!important;box-shadow:inset 0 0 0 3px rgba(255,255,255,.08)}
+.vellum-ghost,.vellum-flourish,.vellum-watermark,.josephine-seal,.vellum-hint{z-index:5!important}
+.vellum-ghost{top:auto!important;bottom:92px!important;font-family:Georgia,serif!important;font-style:italic!important;opacity:.55!important}
+.vellum-watermark{font-size:7rem!important;opacity:.055!important}
+.vellum-flourish:before,.vellum-flourish:after{content:"❧";color:rgba(137,94,40,.45);font-size:.8rem}
+.josephine-seal:before{box-shadow:inset 0 0 0 4px rgba(154,108,49,.05),0 0 0 1px rgba(154,108,49,.12)!important}
+/* dupla linha dourada dá acabamento de encadernação à folha */
+.vellum-leaf{outline:1px solid rgba(223,188,111,.18);outline-offset:-5px}
+/* marcadores mais próximos do mockup: lombada lateral escalonada */
+.page.chapter:nth-of-type(3n+1):after{--ribbon:#163c5a;--ribbon-hi:#285d7c}
+.page.chapter:nth-of-type(3n+2):after{--ribbon:#275039;--ribbon-hi:#3f7453}
+.page.chapter:nth-of-type(3n):after{--ribbon:#6d243f;--ribbon-hi:#913c5d}
