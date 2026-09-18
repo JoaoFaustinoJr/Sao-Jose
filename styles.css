@@ -501,3 +501,23 @@ opacity:.92!important;filter:sepia(.12) saturate(.82) contrast(.96)!important}
  .josephine-seal{opacity:.92!important}
  .vellum-flourish{font-size:.72rem!important}
 }
+
+/* v7.9 — imagem josefina grande e integrada ao velino, conforme mockup aprovado */
+.vellum-leaf:after{content:""!important;position:absolute!important;inset:0!important;background:
+linear-gradient(90deg,rgba(249,239,214,.92) 0%,rgba(247,234,205,.84) 40%,rgba(241,222,184,.48) 64%,rgba(235,211,166,.20) 100%),
+url("assets/art/capa-sao-jose-v67.jpg") 118% 50%/78% auto no-repeat!important;
+opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix-blend-mode:multiply!important;pointer-events:none!important}
+.vellum-leaf{background:linear-gradient(104deg,#f6e9c8e8,#ead4a5d9)!important}
+.vellum-leaf:before{z-index:4!important;inset:10px!important;border:1px solid rgba(157,105,34,.52)!important}
+.vellum-ghost,.vellum-flourish,.vellum-watermark,.josephine-seal,.vellum-hint{z-index:6!important}
+.josephine-seal{position:absolute!important;left:18px!important;right:auto!important;top:auto!important;bottom:70px!important;width:58px!important;height:58px!important;opacity:.95!important;background:rgba(244,224,184,.78)!important;border:2px solid rgba(143,91,26,.56)!important;box-shadow:0 3px 10px rgba(83,50,18,.12)!important}
+.vellum-watermark{left:auto!important;right:8%!important;top:18%!important;transform:none!important;opacity:.13!important}
+.vellum-ghost{max-width:72%!important;margin-inline:auto!important}
+.vellum-hint{z-index:8!important}
+@media(max-width:600px){
+ .vellum-leaf:after{background:
+ linear-gradient(90deg,rgba(249,239,214,.94) 0%,rgba(246,232,201,.78) 43%,rgba(239,218,177,.38) 66%,rgba(234,207,159,.13) 100%),
+ url("assets/art/capa-sao-jose-v67.jpg") 158% 52%/104% auto no-repeat!important;opacity:.98!important}
+ .josephine-seal{left:14px!important;bottom:58px!important;width:52px!important;height:52px!important}
+ .vellum-watermark{right:4%!important;top:20%!important}
+}
