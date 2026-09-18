@@ -167,3 +167,37 @@ a.chapter-portal{display:block;color:inherit;text-decoration:none}.art-linked .p
 .dreams-art,.sleeping-art{margin:1rem 0 1.35rem}.dream-sky,.sleep-scene{position:relative;height:245px;border:1px solid rgba(211,170,84,.35);border-radius:16px;overflow:hidden;background:radial-gradient(circle at 75% 20%,rgba(221,185,105,.16),transparent 16%),linear-gradient(#061a2a,#0a2940 70%,#153d4c)}.dreams-art p,.sleeping-art p{text-align:center;font:italic .72rem Georgia,serif;color:#d9bd7d;opacity:.9}.dream-sky .moon,.sleep-scene .moon{position:absolute;width:52px;height:52px;border-radius:50%;right:12%;top:12%;background:#e8d7a6;box-shadow:0 0 25px rgba(231,205,138,.22)}.dream-sky .road{position:absolute;width:160px;height:210px;left:43%;bottom:-110px;background:linear-gradient(90deg,transparent,rgba(213,181,112,.22),transparent);transform:perspective(180px) rotateX(58deg)}.jose-silhouette{position:absolute;width:42px;height:105px;left:30%;bottom:26px;border-radius:45% 45% 20% 20%;background:#07141d;box-shadow:0 -24px 0 -8px #07141d}.dream-sky .dawn{position:absolute;bottom:-42px;right:-15%;width:70%;height:90px;border-radius:50%;background:rgba(221,174,75,.18);box-shadow:0 0 60px rgba(221,174,75,.17)}.dream-sky .star{position:absolute;width:2px;height:2px;background:#ead99f;box-shadow:0 0 5px #ead99f}.dream-sky .s1{left:17%;top:20%}.dream-sky .s2{left:55%;top:13%}
 .sleep-scene{background:linear-gradient(150deg,#061724,#0b2a3d 72%,#163848)}.sleep-scene .window{position:absolute;right:9%;top:9%;width:80px;height:100px;border:4px solid #5e4932;box-shadow:inset 0 0 0 1px #b38a4c}.sleep-scene .moon{right:14%;top:17%;width:38px;height:38px}.sleep-scene .bed{position:absolute;left:13%;bottom:32px;width:66%;height:58px;border-radius:35px 10px 8px 8px;background:#765036;box-shadow:0 12px 0 #39291f}.sleep-jose{position:absolute;left:23%;bottom:77px;width:105px;height:44px;border-radius:60% 45% 35% 45%;background:linear-gradient(110deg,#9b6840,#6c452f);transform:rotate(5deg)}.sleep-jose:before{content:"";position:absolute;left:-25px;top:-12px;width:48px;height:48px;border-radius:50%;background:#a67855;box-shadow:-7px -4px 0 #443128}.sleep-scene .lamp{position:absolute;right:18%;bottom:40px;width:18px;height:28px;border-radius:50%;background:#d6a94f;box-shadow:0 0 45px 18px rgba(218,165,68,.25)}.sleep-scene .lily{position:absolute;left:10%;bottom:26px;width:2px;height:90px;background:#85734e;transform:rotate(12deg)}
 @media(max-width:600px){.jose-editorial{min-height:220px}.dream-sky,.sleep-scene{height:220px}}
+
+/* v3.9 — aproximação fina ao mockup aprovado */
+.mockup-v39{--navy:#061d2d;--navy2:#0a3048;--gold:#d3a44d;--gold2:#edc979;--paper:#f3e4c2;--paper2:#ead5a9;--ink:#302316;background:#061724}
+.mockup-v39 .page.parchment,.mockup-v39 .parchment{background:
+ radial-gradient(ellipse at 10% 5%,rgba(142,94,42,.08),transparent 24%),
+ radial-gradient(ellipse at 92% 88%,rgba(151,101,45,.07),transparent 25%),
+ repeating-linear-gradient(4deg,rgba(94,64,33,.014) 0 1px,transparent 1px 9px),
+ linear-gradient(96deg,#f0dfba 0%,#f8edcf 48%,#efddb6 100%);color:var(--ink)}
+.mockup-v39 .page.parchment:before{content:"";position:absolute;z-index:0;inset:4px;border:1px solid rgba(126,86,37,.13);border-radius:13px;pointer-events:none;box-shadow:inset 0 0 34px rgba(104,69,31,.055)}
+.mockup-v39 .page.parchment>*{position:relative;z-index:1}
+.mockup-v39 .page header{border-bottom:1px solid rgba(157,111,48,.24);padding-bottom:.65rem}
+.mockup-v39 h1,.mockup-v39 h2,.mockup-v39 h3{font-family:Georgia,"Times New Roman",serif;color:#302316}.mockup-v39 h2{letter-spacing:-.025em}.mockup-v39 .kicker{color:#9b6a27;letter-spacing:.2em;font-weight:700}
+.mockup-v39 blockquote{border-left:0;text-align:center;font-family:Georgia,serif;font-style:italic;background:rgba(190,145,75,.075);border-top:1px solid rgba(171,122,51,.18);border-bottom:1px solid rgba(171,122,51,.18);padding:1rem 1.2rem}
+.mockup-v39 .chapter article>h3:before{content:"";display:inline-block;width:24px;height:1px;background:#b78a43;vertical-align:middle;margin-right:.55rem}.mockup-v39 .chapter article>h3:after{content:"";display:inline-block;width:24px;height:1px;background:#b78a43;vertical-align:middle;margin-left:.55rem}
+.mockup-v39 .chapter article>h3{text-align:center;font-size:1.08rem;margin-top:1.8rem}
+.mockup-v39 .source-note,.mockup-v39 .meditation-card,.mockup-v39 .prayer-card{background:rgba(255,249,230,.42);border:1px solid rgba(157,110,48,.18);box-shadow:0 5px 15px rgba(72,48,23,.045)}
+.mockup-v39 .app-dock{background:linear-gradient(180deg,#082b42,#041b2b);border-top:1px solid rgba(220,175,83,.42);box-shadow:0 -7px 25px rgba(2,13,22,.25)}
+.mockup-v39 .app-dock button{color:#e9dfc8}.mockup-v39 .app-dock button:before{color:#d6a84f}.mockup-v39 .app-dock button:hover,.mockup-v39 .app-dock button:focus{background:rgba(211,164,77,.09);color:#f3cc7b}
+.mockup-v39 .deep-blue-section{background:
+ radial-gradient(circle at 78% 12%,rgba(224,184,98,.13),transparent 19%),
+ radial-gradient(circle at 18% 70%,rgba(31,88,116,.28),transparent 34%),
+ linear-gradient(155deg,#041725,#082a40 58%,#061c2b);color:#efe3c7}
+.mockup-v39 .deep-blue-section h1,.mockup-v39 .deep-blue-section h2,.mockup-v39 .deep-blue-section h3{color:#f1e4c5}.mockup-v39 .deep-blue-section .kicker{color:#e1b762}
+.mockup-v39 .portal-frame{border-color:rgba(208,164,76,.42);box-shadow:0 12px 30px rgba(50,31,16,.14)}
+.mockup-v39 .chapter-portal{margin-top:1rem}.mockup-v39 .chapter-portal p{font-family:Georgia,serif;font-size:.72rem;color:#7d623e}
+.mockup-v39 .illumination{color:#b6873c;opacity:.75}
+.mockup-v39 .vellum-leaf{background:
+ radial-gradient(ellipse at 20% 14%,rgba(122,82,39,.09),transparent 22%),
+ radial-gradient(ellipse at 78% 67%,rgba(118,76,35,.07),transparent 28%),
+ repeating-linear-gradient(7deg,rgba(102,69,34,.024) 0 1px,transparent 1px 10px),
+ linear-gradient(96deg,rgba(246,231,195,.91),rgba(240,221,181,.82) 58%,rgba(226,201,158,.77));border-color:rgba(126,83,37,.25);box-shadow:12px 15px 32px rgba(55,34,18,.2),inset -20px 0 30px rgba(91,57,26,.08)}
+.mockup-v39 .vellum-hint{background:rgba(255,247,218,.55);border:1px solid rgba(147,100,43,.12);color:#674822}
+.mockup-v39 .compendium-card,.mockup-v39 .menu-card{border-color:rgba(167,118,48,.22);box-shadow:0 7px 20px rgba(74,48,20,.055)}
+@media(min-width:761px){.mockup-v39 .page{box-shadow:0 0 0 1px rgba(207,166,88,.18),0 22px 55px rgba(0,0,0,.24)}}
