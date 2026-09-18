@@ -475,3 +475,29 @@ url("assets/art/capa-sao-jose-v67.jpg") 118% 55%/64% auto no-repeat!important;op
 .josephine-seal:after{content:"SJ";display:grid;place-items:center;width:100%;height:100%;font:italic 1rem Georgia,serif;color:rgba(124,82,30,.62)}
 .vellum-ghost:after{content:"❦   ✦   ❦\A AD IESUM PER IOSEPH"!important;white-space:pre!important;line-height:2.1!important;letter-spacing:.24em!important}
 @media(max-width:600px){.vellum-leaf:after{background:linear-gradient(90deg,rgba(247,236,207,.86),rgba(241,225,190,.66) 60%,rgba(236,217,177,.42)),url("assets/art/capa-sao-jose-v67.jpg") 130% 58%/72% auto no-repeat!important;opacity:.68!important}.vellum-watermark{font-size:5.8rem!important}}
+
+/* v7.8 — velino de luxo com ornamentação VISÍVEL no celular */
+.vellum-leaf{background:
+linear-gradient(105deg,rgba(255,251,231,.62),rgba(239,220,179,.58) 62%,rgba(224,197,145,.48))!important;
+box-shadow:inset 0 0 55px rgba(108,70,28,.14),inset 12px 0 24px rgba(255,255,255,.25),12px 14px 34px rgba(0,0,0,.2)!important}
+.vellum-leaf:after{background:
+linear-gradient(90deg,rgba(248,237,208,.68) 0%,rgba(244,228,193,.50) 45%,rgba(238,216,174,.20) 70%,rgba(238,216,174,.10) 100%),
+url("assets/art/capa-sao-jose-v67.jpg") 115% 57%/72% auto no-repeat!important;
+opacity:.92!important;filter:sepia(.12) saturate(.82) contrast(.96)!important}
+.vellum-leaf:before{border:2px solid rgba(171,119,39,.48)!important;box-shadow:inset 0 0 0 5px rgba(171,119,39,.07)!important}
+.vellum-flourish{opacity:1!important;color:#9a6a28!important;font-size:.9rem!important}
+.vellum-watermark{opacity:.18!important;color:#936326!important}
+.josephine-seal{opacity:.88!important;width:70px!important;height:70px!important;border:2px solid rgba(145,94,29,.48)!important;background:rgba(242,221,178,.30)!important}
+.josephine-seal:after{color:#85571e!important;font-size:1.08rem!important}
+.vellum-ghost{opacity:.78!important;color:#765022!important;text-shadow:0 1px rgba(255,255,255,.5)!important}
+.vellum-ghost:before{font-size:1.25rem!important;color:#956626!important}
+.vellum-hint{background:rgba(255,244,216,.91)!important;border:1px solid rgba(153,99,31,.55)!important;color:#70481f!important;box-shadow:0 7px 20px rgba(66,41,18,.18),inset 0 1px #fff9e9!important}
+/* vinheta josefina em ouro no canto inferior direito */
+.vellum-leaf .vellum-hint:before{color:#805421!important}
+.vellum-leaf .vellum-hint:after{color:#9a6826!important;font-size:1rem!important}
+@media(max-width:600px){
+ .vellum-leaf:after{background:linear-gradient(90deg,rgba(248,237,208,.68),rgba(241,222,183,.34) 62%,rgba(235,211,166,.12)),url("assets/art/capa-sao-jose-v67.jpg") 145% 59%/88% auto no-repeat!important;opacity:.9!important}
+ .vellum-watermark{opacity:.2!important}
+ .josephine-seal{opacity:.92!important}
+ .vellum-flourish{font-size:.72rem!important}
+}
