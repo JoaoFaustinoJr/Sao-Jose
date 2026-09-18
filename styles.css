@@ -10,3 +10,11 @@
 .cover-art{height:38vh;min-height:260px;max-height:430px;margin:20px auto;position:relative;overflow:hidden;border:1px solid #cda95b66;background:#160e09;box-shadow:inset 0 0 55px #0008,0 12px 34px #0005}.cover-art:after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,#2a180b10 45%,#120b07bb 100%);pointer-events:none}.cover-art img{width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:sepia(.28) contrast(1.05) brightness(.78)}.cover-art figcaption{position:absolute;z-index:2;left:12px;right:12px;bottom:9px;font-size:.62rem;line-height:1.3;letter-spacing:.035em;color:#ead8aa;opacity:.82;text-align:center}.cover .med{margin-top:16px}
 
 .table-chain{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;justify-content:center;margin:1.5rem 0;padding:1rem;border-top:1px solid rgba(109,73,32,.28);border-bottom:1px solid rgba(109,73,32,.28);font-family:Georgia,serif}.table-chain span{font-weight:700}.table-chain b{opacity:.55}.closing-seal{text-align:center;margin:2rem 0 1.4rem;padding:1.4rem .8rem;border-top:1px solid rgba(109,73,32,.25);border-bottom:1px solid rgba(109,73,32,.25)}.closing-seal span{font-size:1.6rem}.closing-seal p{font-family:Georgia,serif;font-size:1.12rem;line-height:1.55}
+/* v1.3 — iluminuras editoriais: ornamentais, não figurativas */
+.illumination{display:flex;align-items:center;justify-content:center;gap:.65rem;margin:.65rem auto 1.15rem;max-width:260px;color:#8a632b;opacity:.82}
+.illumination:before,.illumination:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,currentColor)}
+.illumination:after{background:linear-gradient(90deg,currentColor,transparent)}
+.illumination span{font-family:Georgia,serif;font-size:1rem}.illumination i{font-style:normal;font-size:1.05rem}
+.illumination-lily i{font-size:1.25rem}.illumination-table i{font-size:1.2rem}
+.chapter article>h3:first-of-type:first-letter,.table-page>h3:first-of-type:first-letter{float:left;font-family:Georgia,serif;font-size:2.8em;line-height:.78;margin:.1em .12em 0 0;color:#7a5526;text-shadow:0 1px 0 rgba(255,255,255,.5)}
+@media(max-width:480px){.illumination{max-width:210px;margin:.45rem auto .9rem}.chapter article>h3:first-of-type:first-letter,.table-page>h3:first-of-type:first-letter{font-size:2.45em}}
