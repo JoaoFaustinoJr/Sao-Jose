@@ -18,3 +18,5 @@
 .illumination-lily i{font-size:1.25rem}.illumination-table i{font-size:1.2rem}
 .chapter article>h3:first-of-type:first-letter,.table-page>h3:first-of-type:first-letter{float:left;font-family:Georgia,serif;font-size:2.8em;line-height:.78;margin:.1em .12em 0 0;color:#7a5526;text-shadow:0 1px 0 rgba(255,255,255,.5)}
 @media(max-width:480px){.illumination{max-width:210px;margin:.45rem auto .9rem}.chapter article>h3:first-of-type:first-letter,.table-page>h3:first-of-type:first-letter{font-size:2.45em}}
+
+.library-grid{display:grid;grid-template-columns:1fr;gap:.8rem;margin:1.25rem 0 1.5rem}.library-grid article{padding:1rem 1.05rem;border:1px solid rgba(109,73,32,.22);background:rgba(255,250,235,.22);box-shadow:inset 0 0 18px rgba(109,73,32,.035)}.library-grid article>b{font-family:Georgia,serif;color:#69471f;font-size:1.06rem}.library-grid article p{margin:.45rem 0 .2rem}.library-grid article small{opacity:.75;line-height:1.45}@media(min-width:700px){.library-grid{grid-template-columns:1fr 1fr}}
