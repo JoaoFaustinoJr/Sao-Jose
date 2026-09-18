@@ -521,3 +521,14 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .josephine-seal{left:14px!important;bottom:58px!important;width:52px!important;height:52px!important}
  .vellum-watermark{right:4%!important;top:20%!important}
 }
+
+/* v8.0 — camada pictórica REAL no velino; substitui a miniatura/pseudo-elemento */
+.vellum-leaf:after{background:linear-gradient(100deg,rgba(249,239,214,.34),rgba(234,207,159,.10))!important;opacity:1!important;filter:none!important}
+.vellum-art{position:absolute!important;z-index:2!important;top:14%!important;right:-5%!important;width:64%!important;height:66%!important;overflow:hidden!important;opacity:.27!important;filter:sepia(.28) saturate(.72) contrast(.9)!important;mix-blend-mode:multiply!important;pointer-events:none!important;-webkit-mask-image:linear-gradient(to left,rgba(0,0,0,.9) 48%,rgba(0,0,0,.55) 76%,transparent 100%)!important;mask-image:linear-gradient(to left,rgba(0,0,0,.9) 48%,rgba(0,0,0,.55) 76%,transparent 100%)!important}
+.vellum-art img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 38%!important;border:0!important;box-shadow:none!important;transform:none!important}
+.vellum-leaf.revealed .vellum-art,.vellum-leaf.turning .vellum-art{pointer-events:none!important}
+.josephine-seal{z-index:7!important}
+@media(max-width:600px){
+ .vellum-art{top:12%!important;right:-10%!important;width:78%!important;height:70%!important;opacity:.31!important}
+ .vellum-art img{object-position:48% 35%!important}
+}
