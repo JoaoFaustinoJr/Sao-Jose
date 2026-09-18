@@ -1,4 +1,4 @@
-const CACHE='sao-jose-v41';
+const CACHE='sao-jose-v42';
 const ASSETS=['./manifest.webmanifest'];
 self.addEventListener('install',e=>e.waitUntil(self.skipWaiting()));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
