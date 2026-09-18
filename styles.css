@@ -298,26 +298,3 @@ a.chapter-portal{display:block;color:inherit;text-decoration:none}.art-linked .p
 .cover-art-editorial img,.cover-art img[src*="capa-sao-jose-editorial"]{width:100%;height:auto;max-height:58vh;object-fit:contain;display:block}
 .cover-art img[src*="capa-sao-jose-editorial"]{filter:none!important}
 
-/* v6.0 — cada dia funciona como pequeno livro, não como página web longa */
-.book-day.active{overflow:hidden!important;min-height:calc(100svh - 72px);padding-bottom:78px!important}
-.book-day>.book-leaf{display:none;min-height:calc(100svh - 150px);max-height:calc(100svh - 150px);overflow-y:auto;overscroll-behavior:contain;padding:0 .15rem 1rem;animation:bookIn .34s ease both;scrollbar-width:none}
-.book-day>.book-leaf::-webkit-scrollbar{display:none}.book-day>.book-leaf-active{display:block}
-.book-side-nav{position:fixed;z-index:32;left:50%;transform:translateX(-50%);bottom:66px;width:min(92%,620px);height:48px;display:grid;grid-template-columns:64px 1fr 64px;align-items:center;background:linear-gradient(90deg,rgba(5,29,45,.96),rgba(10,43,62,.98),rgba(5,29,45,.96));border:1px solid rgba(218,177,88,.4);box-shadow:0 -8px 26px rgba(0,0,0,.24)}
-.book-side-nav button{height:100%;border:0;background:transparent;color:#e4c276;font:2rem Georgia,serif}.book-side-nav button:disabled{opacity:.2}.book-page-count{text-align:center;color:#caa85f;font:.68rem Georgia,serif;letter-spacing:.18em}
-@keyframes bookIn{from{opacity:.15;transform:translateX(12px)}to{opacity:1;transform:none}}
-@media(max-width:600px){.book-day>.book-leaf{min-height:calc(100svh - 142px);max-height:calc(100svh - 142px);padding-bottom:.75rem}.book-side-nav{bottom:62px;width:96%;height:44px}.book-day .day-opening{min-height:auto!important}}
-@media(prefers-reduced-motion:reduce){.book-day>.book-leaf{animation:none}}
-
-/* v6.2 — superfície de livro, não de website */
-html:has(.book-day.active),body:has(.book-day.active){overflow:hidden!important;height:100%!important}
-.book-day.active{position:fixed!important;inset:0 0 58px!important;height:auto!important;min-height:0!important;overflow:hidden!important;padding:18px 14px 64px!important;background:radial-gradient(circle at 50% 18%,#123c54 0,#08283c 42%,#041923 100%)!important}
-.book-day>.book-leaf{display:none!important;position:absolute;inset:16px 12px 58px;overflow:hidden!important;padding:24px 22px 28px!important;border:1px solid rgba(205,163,78,.52);border-radius:3px;background:linear-gradient(100deg,rgba(250,241,215,.98),rgba(239,222,184,.97) 48%,rgba(250,241,215,.98));box-shadow:0 14px 42px rgba(0,0,0,.38),inset 18px 0 28px rgba(91,61,27,.07),inset -8px 0 18px rgba(91,61,27,.05);color:#392b20!important}
-.book-day>.book-leaf-active{display:flex!important;flex-direction:column;justify-content:center}
-.book-day>.book-leaf h2,.book-day>.book-leaf h3,.book-day>.book-leaf .kicker{color:#17364a!important}.book-day>.book-leaf p,.book-day>.book-leaf blockquote,.book-day>.book-leaf li{color:#493a2c!important}
-.book-day>.book-leaf .day-opening{min-height:0!important;height:100%;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
-.book-day>.book-leaf .historical-art{max-height:58%;margin:.2rem auto!important}.book-day>.book-leaf .historical-art .art-mat{max-height:42svh!important}.book-day>.book-leaf .historical-art img{max-height:40svh!important}
-.book-day>.book-leaf .prayer-ribbon{background:#0a3046!important;margin:.8rem 0!important}.book-day>.book-leaf .devotional-cta{color:#8d651f!important;border-color:#a67c32!important}
-.book-side-nav{position:fixed!important;z-index:80;left:50%;transform:translateX(-50%);bottom:61px;width:min(94%,650px);height:48px;display:grid;grid-template-columns:70px 1fr 70px;align-items:center;background:#062438;border:1px solid rgba(218,177,88,.55);box-shadow:0 -6px 24px rgba(0,0,0,.3)}
-.book-side-nav button{height:100%;border:0;background:transparent;color:#e7c36f;font:2.15rem Georgia,serif}.book-side-nav button:disabled{opacity:.2}.book-page-count{text-align:center;color:#d4b15e;font:.64rem Georgia,serif;letter-spacing:.14em}
-.turn-from-right{animation:leafRight .38s ease both}.turn-from-left{animation:leafLeft .38s ease both}@keyframes leafRight{from{opacity:.25;transform:perspective(900px) rotateY(-5deg) translateX(22px)}to{opacity:1;transform:none}}@keyframes leafLeft{from{opacity:.25;transform:perspective(900px) rotateY(5deg) translateX(-22px)}to{opacity:1;transform:none}}
-@media(max-width:600px){.book-day.active{padding:10px 8px 58px!important}.book-day>.book-leaf{inset:9px 7px 52px;padding:18px 16px 22px!important}.book-day>.book-leaf p{font-size:.92rem!important;line-height:1.48!important}.book-day>.book-leaf h3{font-size:1.15rem!important}.book-side-nav{bottom:58px;height:44px;width:97%}}
