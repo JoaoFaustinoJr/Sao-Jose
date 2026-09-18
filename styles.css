@@ -275,3 +275,9 @@ a.chapter-portal{display:block;color:inherit;text-decoration:none}.art-linked .p
 .devotional-cta{width:auto!important;min-width:210px!important;padding:.7rem 1.3rem!important;background:transparent!important;color:#e4c276!important;border:1px solid rgba(224,184,95,.52)!important;box-shadow:none!important;font-size:.88rem!important;letter-spacing:.02em}.devotional-cta:before{content:"❦";margin-right:.55rem;color:#c99b45}.devotional-cta b{color:#e4c276!important}
 .art-repertoire-strip{margin:1.5rem 0;padding:1rem;border:1px solid rgba(174,128,57,.28);background:rgba(174,128,57,.05)}.art-repertoire-strip h3{margin-top:0}.art-thumbs{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.7rem}.art-thumbs span{padding:.28rem .5rem;border:1px solid rgba(174,128,57,.25);font:italic .65rem Georgia,serif}
 @media(max-width:430px){.prayer-ribbon button{font-size:.56rem!important;min-height:66px!important}.prayer-ribbon:before{font-size:.47rem}}
+
+/* v5.6 — pintura como forma preferencial de página-iluminura */
+.painting-plate .art-mat{height:min(55vh,520px);padding:8px;background:linear-gradient(145deg,rgba(231,195,118,.23),rgba(3,19,31,.9));box-shadow:0 20px 48px rgba(0,0,0,.3),inset 0 0 0 1px rgba(242,214,151,.25)}
+.painting-plate img{object-fit:contain!important;filter:none!important}.painting-plate figcaption{padding-top:.15rem}
+.image-fallback:before{content:"❦  SÃO JOSÉ  ❦";position:absolute;inset:0;display:grid;place-items:center;color:#d8ae59;font:1rem Georgia,serif;letter-spacing:.15em}
+@media(max-width:600px){.painting-plate .art-mat{height:46vh;min-height:300px}}
