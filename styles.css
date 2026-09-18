@@ -598,3 +598,7 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 /* v9.1 — ajuste fino da marca d'água no velino: composição ligeiramente mais alta */
 .chapter .vellum-leaf>.vellum-art>img{top:4%!important;object-position:50% 27%!important}
 @media(max-width:600px){.chapter .vellum-leaf>.vellum-art>img{top:3%!important;object-position:50% 25%!important}}
+
+/* v9.2 — marca d'água do velino um pouco mais alta */
+.chapter .vellum-leaf>.vellum-art>img{top:0!important;object-position:50% 23%!important}
+@media(max-width:600px){.chapter .vellum-leaf>.vellum-art>img{top:-2%!important;object-position:50% 21%!important}}
