@@ -532,3 +532,16 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .vellum-art{top:12%!important;right:-10%!important;width:78%!important;height:70%!important;opacity:.31!important}
  .vellum-art img{object-position:48% 35%!important}
 }
+
+/* v8.1 — hotfix FOUC/colapso: a pintura pertence ao plano do velino e não muda de tamanho após o carregamento */
+.chapter .vellum-leaf{isolation:isolate!important}
+.chapter .vellum-leaf>.vellum-art{position:absolute!important;z-index:1!important;inset:0!important;width:100%!important;height:100%!important;overflow:hidden!important;opacity:.22!important;filter:sepia(.22) saturate(.72) contrast(.94)!important;mix-blend-mode:multiply!important;pointer-events:none!important;mask:none!important;-webkit-mask:none!important;transform:none!important;transition:none!important}
+.chapter .vellum-leaf>.vellum-art>img{position:absolute!important;display:block!important;right:-8%!important;left:auto!important;top:9%!important;width:72%!important;height:76%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:50% 32%!important;border:0!important;border-radius:0!important;box-shadow:none!important;margin:0!important;padding:0!important;opacity:1!important;filter:none!important;transform:none!important;transition:none!important}
+.chapter .vellum-leaf>.vellum-art:after{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(246,233,202,.98) 0%,rgba(246,233,202,.82) 27%,rgba(246,233,202,.34) 54%,rgba(246,233,202,.08) 82%)!important;pointer-events:none!important}
+.chapter .vellum-leaf>.josephine-seal{left:50%!important;right:auto!important;top:70px!important;bottom:auto!important;width:48px!important;height:64px!important;transform:translateX(-50%)!important;background:transparent!important;border:0!important;box-shadow:none!important;opacity:.6!important}
+@media(max-width:600px){
+ .chapter .vellum-leaf>.vellum-art{inset:0!important;width:100%!important;height:100%!important;opacity:.25!important}
+ .chapter .vellum-leaf>.vellum-art>img{right:-18%!important;top:8%!important;width:92%!important;height:78%!important;object-position:48% 30%!important}
+ .chapter .vellum-leaf>.vellum-art:after{background:linear-gradient(90deg,rgba(246,233,202,.98) 0%,rgba(246,233,202,.74) 30%,rgba(246,233,202,.25) 58%,rgba(246,233,202,.04) 88%)!important}
+ .chapter .vellum-leaf>.josephine-seal{left:50%!important;top:66px!important;width:44px!important;height:58px!important}
+}
