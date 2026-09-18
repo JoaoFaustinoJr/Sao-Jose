@@ -1,5 +1,5 @@
 const chapterOrder=['day1','day2','day3','day4','day5','day6','day7','day8','day9'];
-const pages=[...document.querySelectorAll('.page')];function go(id){const target=document.getElementById(id);if(!target)return;pages.forEach(p=>p.classList.remove('active'));target.classList.add('active');const oldLeaf=target.querySelector('.vellum-leaf');if(oldLeaf){const freshLeaf=oldLeaf.cloneNode(true);freshLeaf.classList.remove('revealed','turning');oldLeaf.replaceWith(freshLeaf);}localStorage.setItem('saoJosePlace',id);const rp=document.querySelector('#readingProgress i');if(rp){const n=chapterOrder.indexOf(id);rp.style.width=n>=0?(((n+1)/chapterOrder.length)*100)+'%':(id==='table'||id==='memory'?'100%':'0%')}target.scrollTop=0;window.scrollTo(0,0);if(chapterOrder.includes(id))prepareBookDay(target)}document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b){e.preventDefault();go(b.dataset.go);return}const tissue=e.target.closest('.tissue');if(tissue)turnVellum(tissue)});
+const pages=[...document.querySelectorAll('.page')];function go(id){const target=document.getElementById(id);if(!target)return;pages.forEach(p=>p.classList.remove('active'));target.classList.add('active');const oldLeaf=target.querySelector('.vellum-leaf');if(oldLeaf){const freshLeaf=oldLeaf.cloneNode(true);freshLeaf.classList.remove('revealed','turning');oldLeaf.replaceWith(freshLeaf);}localStorage.setItem('saoJosePlace',id);const rp=document.querySelector('#readingProgress i');if(rp){const n=chapterOrder.indexOf(id);rp.style.width=n>=0?(((n+1)/chapterOrder.length)*100)+'%':(id==='table'||id==='memory'?'100%':'0%')}scrollTo({top:0,behavior:'smooth'})}document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b){e.preventDefault();go(b.dataset.go);return}const tissue=e.target.closest('.tissue');if(tissue)turnVellum(tissue)});
 function turnVellum(el){if(!el||el.classList.contains('revealed'))return;el.classList.add('turning');setTimeout(()=>{el.classList.add('revealed');el.classList.remove('turning')},620)}
 let vellumStartX=null;document.addEventListener('pointerdown',e=>{const v=e.target.closest('.vellum-leaf');if(v)vellumStartX=e.clientX});document.addEventListener('pointerup',e=>{const v=e.target.closest('.vellum-leaf');if(!v||vellumStartX===null)return;const dx=e.clientX-vellumStartX;vellumStartX=null;if(Math.abs(dx)>34||Math.abs(dx)<8)turnVellum(v)});document.addEventListener('keydown',e=>{const v=e.target.closest?.('.vellum-leaf');if(v&&(e.key==='Enter'||e.key===' ')){e.preventDefault();turnVellum(v)}});const saved=localStorage.getItem('saoJosePlace');if(saved&&document.getElementById(saved))go(saved);const trust=document.getElementById('trust');trust?.addEventListener('click',()=>{const p=document.getElementById('petition');const value=p.value.trim();if(!value)return;localStorage.setItem('saoJosePetition',value);p.value='';document.getElementById('trustMsg').textContent='Pedido confiado. Permaneça alguns instantes em silêncio.'});if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
 let silenceInterval=null;document.addEventListener('click',e=>{const b=e.target.closest('[data-silence]');if(!b)return;clearInterval(silenceInterval);const out=document.getElementById('silenceTimer');let sec=Number(b.dataset.silence);if(sec===0){out.textContent='Sem cronômetro. Permaneça o tempo que desejar.';return}const draw=()=>{const m=Math.floor(sec/60),r=String(sec%60).padStart(2,'0');out.textContent=m+':'+r};draw();silenceInterval=setInterval(()=>{sec--;draw();if(sec<=0){clearInterval(silenceInterval);out.textContent='O tempo terminou. Permaneça mais um instante, se desejar.'}},1000)});
@@ -20,31 +20,3 @@ function jumpInDay(kind,btn){const page=btn.closest('.chapter');if(!page)return;
 document.addEventListener('click',e=>{const b=e.target.closest('[data-jump]');if(b){e.preventDefault();jumpInDay(b.dataset.jump,b)}});
 
 
-/* v6.2 — livro real: um bloco de leitura por folha; a página inteira não rola */
-function prepareBookDay(day){
- if(!day||day.dataset.bookReady)return;day.dataset.bookReady='1';day.classList.add('book-day');
- const vellum=day.querySelector('.vellum-leaf');
- const source=[...day.children].filter(n=>n!==vellum);
- const leaves=[];
- let pendingHeading=null;
- source.forEach(n=>{
-   if(n.tagName==='H3'){pendingHeading=n;return}
-   const leaf=document.createElement('article');leaf.className='book-leaf';
-   if(pendingHeading){leaf.appendChild(pendingHeading);pendingHeading=null}
-   leaf.appendChild(n);leaves.push(leaf);
- });
- if(pendingHeading){const leaf=document.createElement('article');leaf.className='book-leaf';leaf.appendChild(pendingHeading);leaves.push(leaf)}
- leaves.forEach(x=>day.appendChild(x));
- const nav=document.createElement('nav');nav.className='book-side-nav';nav.innerHTML='<button class="book-prev" aria-label="Folha anterior">‹</button><span class="book-page-count"></span><button class="book-next" aria-label="Próxima folha">›</button>';day.appendChild(nav);showBookLeaf(day,0);
-}
-function showBookLeaf(day,n){
- const leaves=[...day.querySelectorAll(':scope > .book-leaf')];if(!leaves.length)return;
- n=Math.max(0,Math.min(n,leaves.length-1));const old=Number(day.dataset.bookPage||0);day.dataset.bookPage=n;
- leaves.forEach((x,i)=>{x.classList.remove('book-leaf-active','turn-from-left','turn-from-right');if(i===n){x.classList.add('book-leaf-active',n>=old?'turn-from-right':'turn-from-left')}});
- const count=day.querySelector('.book-page-count');if(count)count.textContent='FOLHA '+(n+1)+' · '+leaves.length;
- day.querySelector('.book-prev').disabled=n===0;day.querySelector('.book-next').disabled=n===leaves.length-1;
-}
-document.addEventListener('click',e=>{const b=e.target.closest('.book-prev,.book-next');if(!b)return;const d=b.closest('.book-day');showBookLeaf(d,Number(d.dataset.bookPage||0)+(b.classList.contains('book-next')?1:-1))});
-let bookSwipeX=null;document.addEventListener('pointerdown',e=>{if(e.target.closest('.book-day'))bookSwipeX=e.clientX});
-document.addEventListener('pointerup',e=>{const d=e.target.closest('.book-day');if(!d||bookSwipeX===null)return;const dx=e.clientX-bookSwipeX;bookSwipeX=null;if(Math.abs(dx)>48)showBookLeaf(d,Number(d.dataset.bookPage||0)+(dx<0?1:-1))});
-document.addEventListener('keydown',e=>{const d=document.querySelector('.book-day.active');if(!d)return;if(e.key==='ArrowRight')showBookLeaf(d,Number(d.dataset.bookPage||0)+1);if(e.key==='ArrowLeft')showBookLeaf(d,Number(d.dataset.bookPage||0)-1)});
