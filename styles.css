@@ -398,3 +398,12 @@ url("assets/art/capa-sao-jose-v67.jpg") center 42%/72% auto no-repeat!important;
 .page.chapter article>h3{position:relative}.page.chapter article>h3:after{content:"";display:block;width:52px;height:1px;margin:.45rem 0 .75rem;background:linear-gradient(90deg,#b88635,transparent)}
 .page.chapter footer{border-top:1px solid rgba(207,161,70,.3)!important}
 @media(max-width:600px){.cover-inner{border-left-color:rgba(216,170,75,.35);border-right-color:rgba(216,170,75,.35)}.vellum-ghost{font-size:.92rem!important}.titlepage-small:before,.titlepage-small:after{margin:0 .3rem}}
+
+/* v7.2 — hotfix da capa: remove máscara central e preserva a pintura inteira */
+.cover-art-mockup{width:min(76vw,430px)!important;max-width:430px!important;overflow:visible!important;background:transparent!important}
+.cover-art-mockup img{display:block!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;object-position:center!important;background:transparent!important;clip-path:none!important;mask:none!important;-webkit-mask:none!important}
+.cover-art-mockup:before{inset:-6px!important;border:1px solid rgba(224,181,87,.72)!important;background:transparent!important}
+.cover-art-mockup:after{bottom:-11px!important}
+.cover-inner{overflow:visible!important}
+.cover .glow{pointer-events:none!important}
+@media(max-width:600px){.cover-art-mockup{width:min(72vw,360px)!important}.cover-art-mockup img{max-height:45svh!important;width:100%!important;object-fit:contain!important}}
