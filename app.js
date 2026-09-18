@@ -19,33 +19,32 @@ document.getElementById('finishNovena')?.addEventListener('click',()=>{localStor
 function jumpInDay(kind,btn){const page=btn.closest('.chapter');if(!page)return;const hs=[...page.querySelectorAll('h3')];let target=null;const match={word:/palavra/i,meditation:/contemplar|medita|silêncio|escuta|aliança|ternura|trabalho|discern/i,prayer:/oração/i,intentions:/inten|mesa|sonhos/i}[kind];if(match)target=hs.find(h=>match.test(h.textContent));if(!target&&kind==='word')target=page.querySelector('article>h3');if(!target&&kind==='meditation')target=hs[Math.min(1,hs.length-1)];if(!target&&kind==='prayer')target=hs.find(h=>/oração/i.test(h.textContent))||hs[hs.length-1];if(!target&&kind==='intentions')target=page.querySelector('.action')||hs[hs.length-1];if(target){target.scrollIntoView({behavior:document.body.classList.contains('reduce-motion')?'auto':'smooth',block:'start'});target.classList.add('prayer-focus');setTimeout(()=>target.classList.remove('prayer-focus'),1200)}}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-jump]');if(b){e.preventDefault();jumpInDay(b.dataset.jump,b)}});
 
-/* v6.0 — navegação de livro: cada bloco do dia vira uma folha, sem rolagem longa */
+
+/* v6.2 — livro real: um bloco de leitura por folha; a página inteira não rola */
 function prepareBookDay(day){
- if(!day||day.dataset.bookReady)return;
- day.dataset.bookReady='1'; day.classList.add('book-day');
+ if(!day||day.dataset.bookReady)return;day.dataset.bookReady='1';day.classList.add('book-day');
  const vellum=day.querySelector('.vellum-leaf');
- const nodes=[...day.children].filter(n=>n!==vellum);
- const leaves=[]; let leaf=null;
- nodes.forEach((n,i)=>{
-   const isOpening=n.classList?.contains('day-opening');
-   if(isOpening||!leaf){leaf=document.createElement('div');leaf.className='book-leaf';leaves.push(leaf)}
-   leaf.appendChild(n);
-   if(n.tagName==='H3'&&leaf.children.length>1){const moved=n;leaf.removeChild(moved);leaf=document.createElement('div');leaf.className='book-leaf';leaves.push(leaf);leaf.appendChild(moved)}
+ const source=[...day.children].filter(n=>n!==vellum);
+ const leaves=[];
+ let pendingHeading=null;
+ source.forEach(n=>{
+   if(n.tagName==='H3'){pendingHeading=n;return}
+   const leaf=document.createElement('article');leaf.className='book-leaf';
+   if(pendingHeading){leaf.appendChild(pendingHeading);pendingHeading=null}
+   leaf.appendChild(n);leaves.push(leaf);
  });
+ if(pendingHeading){const leaf=document.createElement('article');leaf.className='book-leaf';leaf.appendChild(pendingHeading);leaves.push(leaf)}
  leaves.forEach(x=>day.appendChild(x));
- const nav=document.createElement('nav');nav.className='book-side-nav';nav.setAttribute('aria-label','Folhear o dia');
- nav.innerHTML='<button class="book-prev" aria-label="Página anterior">‹</button><span class="book-page-count"></span><button class="book-next" aria-label="Próxima página">›</button>';
- day.appendChild(nav); showBookLeaf(day,0);
+ const nav=document.createElement('nav');nav.className='book-side-nav';nav.innerHTML='<button class="book-prev" aria-label="Folha anterior">‹</button><span class="book-page-count"></span><button class="book-next" aria-label="Próxima folha">›</button>';day.appendChild(nav);showBookLeaf(day,0);
 }
 function showBookLeaf(day,n){
  const leaves=[...day.querySelectorAll(':scope > .book-leaf')];if(!leaves.length)return;
- n=Math.max(0,Math.min(n,leaves.length-1));day.dataset.bookPage=n;
- leaves.forEach((x,i)=>x.classList.toggle('book-leaf-active',i===n));
- const count=day.querySelector('.book-page-count');if(count)count.textContent=(n+1)+' / '+leaves.length;
- const prev=day.querySelector('.book-prev'),next=day.querySelector('.book-next');if(prev)prev.disabled=n===0;if(next)next.disabled=n===leaves.length-1;
- day.scrollTop=0;window.scrollTo(0,0);
+ n=Math.max(0,Math.min(n,leaves.length-1));const old=Number(day.dataset.bookPage||0);day.dataset.bookPage=n;
+ leaves.forEach((x,i)=>{x.classList.remove('book-leaf-active','turn-from-left','turn-from-right');if(i===n){x.classList.add('book-leaf-active',n>=old?'turn-from-right':'turn-from-left')}});
+ const count=day.querySelector('.book-page-count');if(count)count.textContent='FOLHA '+(n+1)+' · '+leaves.length;
+ day.querySelector('.book-prev').disabled=n===0;day.querySelector('.book-next').disabled=n===leaves.length-1;
 }
-document.addEventListener('click',e=>{const b=e.target.closest('.book-prev,.book-next');if(!b)return;const d=b.closest('.book-day'),n=Number(d.dataset.bookPage||0)+(b.classList.contains('book-next')?1:-1);showBookLeaf(d,n)});
+document.addEventListener('click',e=>{const b=e.target.closest('.book-prev,.book-next');if(!b)return;const d=b.closest('.book-day');showBookLeaf(d,Number(d.dataset.bookPage||0)+(b.classList.contains('book-next')?1:-1))});
 let bookSwipeX=null;document.addEventListener('pointerdown',e=>{if(e.target.closest('.book-day'))bookSwipeX=e.clientX});
-document.addEventListener('pointerup',e=>{const d=e.target.closest('.book-day');if(!d||bookSwipeX===null)return;const dx=e.clientX-bookSwipeX;bookSwipeX=null;if(Math.abs(dx)<55)return;showBookLeaf(d,Number(d.dataset.bookPage||0)+(dx<0?1:-1))});
+document.addEventListener('pointerup',e=>{const d=e.target.closest('.book-day');if(!d||bookSwipeX===null)return;const dx=e.clientX-bookSwipeX;bookSwipeX=null;if(Math.abs(dx)>48)showBookLeaf(d,Number(d.dataset.bookPage||0)+(dx<0?1:-1))});
 document.addEventListener('keydown',e=>{const d=document.querySelector('.book-day.active');if(!d)return;if(e.key==='ArrowRight')showBookLeaf(d,Number(d.dataset.bookPage||0)+1);if(e.key==='ArrowLeft')showBookLeaf(d,Number(d.dataset.bookPage||0)-1)});
