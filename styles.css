@@ -380,3 +380,21 @@ url("assets/art/capa-sao-jose-v67.jpg") center 42%/72% auto no-repeat!important;
 .page.chapter:nth-of-type(3n+1):after{--ribbon:#163c5a;--ribbon-hi:#285d7c}
 .page.chapter:nth-of-type(3n+2):after{--ribbon:#275039;--ribbon-hi:#3f7453}
 .page.chapter:nth-of-type(3n):after{--ribbon:#6d243f;--ribbon-hi:#913c5d}
+
+/* v7.1 — edição luxo inspirada no mockup aprovado */
+.cover-inner{position:relative;border:1px solid rgba(216,170,75,.52);box-shadow:inset 0 0 0 5px rgba(216,170,75,.025);padding-left:clamp(.75rem,3vw,1.4rem);padding-right:clamp(.75rem,3vw,1.4rem)}
+.cover-inner:before,.cover-inner:after{content:"❦";position:absolute;top:9px;color:#d3a84e;font-size:1.25rem}.cover-inner:before{left:12px}.cover-inner:after{right:12px;transform:scaleX(-1)}
+.cover-art-mockup{position:relative}.cover-art-mockup:before{content:"";position:absolute;z-index:2;inset:-5px;border:1px solid rgba(224,181,87,.72);box-shadow:inset 0 0 0 3px rgba(224,181,87,.08);pointer-events:none}
+.cover-art-mockup:after{content:"⚜";position:absolute;z-index:3;left:50%;bottom:-10px;transform:translateX(-50%);padding:0 .45rem;background:#06263a;color:#d5aa52;font-size:.65rem}
+.cover .med{max-width:620px;margin-left:auto;margin-right:auto}.cover button[data-go="titlepage"]{box-shadow:0 7px 22px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.8)!important;border:1px solid #b98735!important}
+.luxury-titlepage .titlepage-frame{border:2px solid #a97c31!important;outline:1px solid rgba(169,124,49,.45);outline-offset:-11px}
+.titlepage-frame:before{content:"❦"!important;display:grid;place-items:start;color:#9c7130;font-size:1.6rem;padding:4px;border:0!important}.titlepage-frame:after{content:"❦"!important;display:grid;place-items:end;color:#9c7130;font-size:1.6rem;padding:4px;border:0!important;transform:rotate(180deg)}
+.titlepage-small:before,.titlepage-small:after{content:"— ✦ —";display:inline-block;color:#a77a32;font-size:.5rem;margin:0 .55rem;vertical-align:middle}
+.vellum-leaf{border-radius:0 4px 7px 0!important;box-shadow:inset -18px 0 28px rgba(91,60,28,.08),inset 2px 0 rgba(255,255,255,.45),11px 12px 32px rgba(0,0,0,.18)!important}
+.vellum-leaf:after{background:linear-gradient(96deg,rgba(247,236,207,.7),rgba(241,226,191,.53) 56%,rgba(237,220,183,.62)),url("assets/art/capa-sao-jose-v67.jpg") center 37%/76% auto no-repeat!important;opacity:.5!important}
+.vellum-leaf .vellum-flourish{top:108px!important}.vellum-ghost{bottom:100px!important;font-size:1.08rem!important;line-height:1.55!important}.vellum-ghost:before{content:"❦";display:block;margin-bottom:.55rem;color:#8c652f;font-size:.8rem}.vellum-ghost:after{content:"✦";display:block;margin-top:.6rem;color:#8c652f;font-size:.55rem}
+.vellum-hint:before{content:"FOLHA DE VELINO  ·  ";font-style:normal;font-size:.52rem;letter-spacing:.15em;color:#8d6a3c}
+.page.chapter article{position:relative}.page.chapter article:before{content:"";position:absolute;inset:5px;border-left:1px solid rgba(204,158,68,.16);border-right:1px solid rgba(204,158,68,.16);pointer-events:none}
+.page.chapter article>h3{position:relative}.page.chapter article>h3:after{content:"";display:block;width:52px;height:1px;margin:.45rem 0 .75rem;background:linear-gradient(90deg,#b88635,transparent)}
+.page.chapter footer{border-top:1px solid rgba(207,161,70,.3)!important}
+@media(max-width:600px){.cover-inner{border-left-color:rgba(216,170,75,.35);border-right-color:rgba(216,170,75,.35)}.vellum-ghost{font-size:.92rem!important}.titlepage-small:before,.titlepage-small:after{margin:0 .3rem}}
