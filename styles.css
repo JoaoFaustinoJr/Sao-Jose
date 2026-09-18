@@ -281,3 +281,15 @@ a.chapter-portal{display:block;color:inherit;text-decoration:none}.art-linked .p
 .painting-plate img{object-fit:contain!important;filter:none!important}.painting-plate figcaption{padding-top:.15rem}
 .image-fallback:before{content:"❦  SÃO JOSÉ  ❦";position:absolute;inset:0;display:grid;place-items:center;color:#d8ae59;font:1rem Georgia,serif;letter-spacing:.15em}
 @media(max-width:600px){.painting-plate .art-mat{height:46vh;min-height:300px}}
+
+/* v5.7 — proporção da obra governa a moldura; não cortamos pintura para caber no aplicativo */
+.art-adaptive{width:100%;max-width:620px;margin-left:auto!important;margin-right:auto!important}
+.art-adaptive .art-mat{width:fit-content!important;max-width:min(94%,580px)!important;height:auto!important;min-height:0!important;margin:0 auto;display:block!important;padding:8px!important;aspect-ratio:auto!important}
+.art-adaptive .art-mat img{display:block;width:auto!important;height:auto!important;max-width:100%!important;max-height:min(58svh,560px)!important;object-fit:contain!important;margin:auto}
+.art-adaptive figcaption{width:min(92%,540px);margin:.55rem auto 0!important}
+.day-opening .art-adaptive{min-height:0!important;padding-top:.15rem!important;padding-bottom:.65rem!important}
+.day-opening .art-adaptive .art-mat{box-sizing:border-box}
+.day-opening .art-adaptive img[width][height]{height:auto!important}
+/* pinturas verticais ganham presença; obras horizontais usam a largura sem altura artificial */
+@media(min-width:700px){.art-adaptive .art-mat img{max-height:min(62vh,610px)!important}.art-adaptive .art-mat{max-width:min(90%,640px)!important}}
+@media(max-width:600px){.art-adaptive .art-mat{max-width:96%!important;padding:6px!important}.art-adaptive .art-mat img{max-height:50svh!important}.art-adaptive figcaption{font-size:.6rem!important;line-height:1.35!important}.day-opening .art-adaptive{padding-bottom:.35rem!important}}
