@@ -326,3 +326,29 @@ a.chapter-portal{display:block;color:inherit;text-decoration:none}.art-linked .p
 .page:not(.cover):not(.luxury-titlepage):after{content:"";position:fixed;z-index:25;right:14px;top:70px;width:22px;height:76px;background:linear-gradient(90deg,#6e1823,#9c2d38 52%,#5d121c);clip-path:polygon(0 0,100% 0,100% 88%,50% 100%,0 88%);box-shadow:0 4px 8px rgba(0,0,0,.28);pointer-events:none}
 .page:not(.cover):not(.luxury-titlepage):before{content:"";position:fixed;z-index:26;right:18px;top:76px;width:14px;height:1px;background:#d4a64d;box-shadow:0 5px 0 rgba(212,166,77,.5);pointer-events:none}
 @media(max-width:600px){.titlepage-frame{width:94%;min-height:calc(100svh - 7.5rem);padding:2.2rem 1.15rem}.page:not(.cover):not(.luxury-titlepage):after{right:9px;top:62px;width:19px;height:66px}.page:not(.cover):not(.luxury-titlepage):before{right:12px;top:68px;width:13px}}
+
+/* v6.9 — marcadores editoriais + folha de velino refinada */
+.page.chapter{--ribbon:#7d2430;--ribbon-hi:#a53b46}
+.page.chapter:nth-of-type(3n+1){--ribbon:#173f5c;--ribbon-hi:#285b7b}
+.page.chapter:nth-of-type(3n+2){--ribbon:#6d5422;--ribbon-hi:#a07b31}
+/* marcador: fita estreita, costurada, com ponta em V e medalhão */
+.page:not(.cover):not(.luxury-titlepage):after{right:12px!important;top:58px!important;width:25px!important;height:92px!important;background:linear-gradient(90deg,var(--ribbon,#74202b),var(--ribbon-hi,#9a3440) 46%,var(--ribbon,#74202b))!important;clip-path:polygon(0 0,100% 0,100% 86%,50% 100%,0 86%)!important;border-radius:1px 1px 0 0;box-shadow:0 5px 10px rgba(0,0,0,.32),inset 1px 0 rgba(255,255,255,.12),inset -1px 0 rgba(0,0,0,.2)!important}
+.page:not(.cover):not(.luxury-titlepage):before{right:15px!important;top:68px!important;width:19px!important;height:19px!important;border:1px solid rgba(229,190,103,.8);border-radius:50%;background:radial-gradient(circle,rgba(230,191,105,.18),transparent 64%)!important;box-shadow:0 0 0 2px rgba(79,34,25,.18),inset 0 0 0 2px rgba(229,190,103,.12)!important}
+/* velino: folha realmente translúcida, fibrosa e com bordas de papel */
+.vellum-leaf{background:
+ linear-gradient(104deg,rgba(255,255,255,.24),rgba(248,235,203,.54) 22%,rgba(239,219,180,.46) 67%,rgba(255,250,230,.28)),
+ repeating-linear-gradient(7deg,rgba(126,91,45,.025) 0 1px,transparent 1px 6px)!important;
+ backdrop-filter:blur(1.8px) saturate(.78);-webkit-backdrop-filter:blur(1.8px) saturate(.78);
+ border:1px solid rgba(142,103,53,.22)!important;
+ box-shadow:inset 0 0 42px rgba(113,75,31,.08),inset 9px 0 20px rgba(255,255,255,.18),8px 10px 30px rgba(0,0,0,.16)!important;
+ overflow:hidden}
+.vellum-leaf:before{content:"";position:absolute;inset:7px;border:1px solid rgba(132,91,40,.12);pointer-events:none}
+.vellum-leaf:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 20% 15%,rgba(255,255,255,.25),transparent 27%),radial-gradient(ellipse at 80% 76%,rgba(126,86,38,.055),transparent 31%);mix-blend-mode:multiply;pointer-events:none}
+.vellum-ghost{opacity:.32!important;color:#74522e!important;text-shadow:0 1px rgba(255,255,255,.35);letter-spacing:.035em}
+.vellum-watermark{opacity:.075!important;filter:blur(.15px)}
+.vellum-flourish{opacity:.7}.josephine-seal{opacity:.48!important}
+.vellum-hint{bottom:24px!important;padding:.45rem .8rem!important;border-top:1px solid rgba(128,87,39,.15);color:rgba(92,62,32,.72)!important;font:italic .7rem Georgia,serif!important;letter-spacing:.03em}
+.vellum-hint b{color:#8d642e!important}
+/* sensação de página levantando sem alterar a mecânica estável */
+.vellum-leaf.turning{transform-origin:left center;box-shadow:22px 12px 36px rgba(0,0,0,.12)!important}
+@media(max-width:600px){.page:not(.cover):not(.luxury-titlepage):after{right:8px!important;top:55px!important;width:22px!important;height:82px!important}.page:not(.cover):not(.luxury-titlepage):before{right:10px!important;top:64px!important;width:18px!important;height:18px!important}.vellum-hint{bottom:18px!important}}
