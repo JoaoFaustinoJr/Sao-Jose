@@ -49,9 +49,28 @@ document.addEventListener('click',e=>{
  devotionalAudio.play().catch(()=>{b.textContent='▷ Ouvir oração';});
  devotionalAudio.addEventListener('ended',()=>{b.textContent='▷ Ouvir oração';});
 });
+function runDreamTransition(kind='enter'){
+ const root=document.documentElement;
+ root.classList.remove('dream-transition','dream-awaken');
+ void root.offsetWidth;
+ root.classList.add(kind==='wake'?'dream-awaken':'dream-transition');
+ setTimeout(()=>root.classList.remove('dream-transition','dream-awaken'),2200);
+}
 document.addEventListener('click',e=>{
  const go=e.target.closest('[data-go="dreams"]');
- if(!go)return;
- document.documentElement.classList.add('dream-transition');
- setTimeout(()=>document.documentElement.classList.remove('dream-transition'),1600);
+ if(go){runDreamTransition('enter');return;}
+ const dream=e.target.closest('[data-dream]');
+ if(dream){
+   const card=dream.closest('.dream-vision-card');
+   document.querySelectorAll('.dream-vision-card.is-contemplating').forEach(x=>x.classList.remove('is-contemplating'));
+   card?.classList.add('is-contemplating');
+   document.getElementById('dreams')?.classList.add('vision-open');
+   runDreamTransition('enter');
+ }
+ const rise=e.target.closest('#riseAct');
+ if(rise){
+   document.getElementById('dreams')?.classList.remove('vision-open');
+   document.querySelectorAll('.dream-vision-card.is-contemplating').forEach(x=>x.classList.remove('is-contemplating'));
+   runDreamTransition('wake');
+ }
 });
