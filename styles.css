@@ -618,3 +618,6 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 
 /* v9.4 — Dia VIII definitivo */
 .day-standard-8 img{aspect-ratio:4/5!important;object-fit:cover!important;object-position:50% 43%!important}@media(max-width:600px){.day-standard-8 img{object-position:50% 41%!important}}
+
+/* v9.5 — Dia VIII: arte definitiva, preservar composição vertical e base */
+.day-standard-8 img{aspect-ratio:4/5!important;object-fit:cover!important;object-position:50% 50%!important}@media(max-width:600px){.day-standard-8 img{object-position:50% 50%!important}}
