@@ -656,3 +656,6 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 
 /* v10.3 — gravura histórica como portal dos Quatro Sonhos */
 .dream-historic{max-width:260px!important;margin:1.15rem auto 1.7rem!important}.dream-historic img{max-height:320px!important;filter:sepia(.08) contrast(1.02)}.dream-historic figcaption{font-size:.66rem!important}@media(max-width:600px){.dream-historic{max-width:220px!important}}
+
+/* v10.3 — gravura histórica como portal discreto dos Quatro Sonhos */
+.dream-historic{max-width:255px!important;margin:1.15rem auto 1.65rem!important}.dream-historic img{max-height:315px!important;object-fit:contain!important}.dream-historic figcaption{font-size:.65rem!important}.dream-historic figcaption strong{font-size:.73rem!important}@media(max-width:600px){.dream-historic{max-width:215px!important}}
