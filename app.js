@@ -123,3 +123,13 @@ window.addEventListener('load',()=>{const open=new URLSearchParams(location.sear
 
 // v10.25 — fechamento de cada dia
  document.addEventListener('click',e=>{const b=e.target.closest('.finish-day');if(!b)return;const closing=b.closest('.day-closing');const done=closing?.querySelector('.day-finished');if(done){done.hidden=false;done.scrollIntoView({behavior:'smooth',block:'center'})}b.hidden=true;});
+
+
+// v10.58 — gesto lateral de livro: capa ⇄ contracapa / folha de rosto
+(()=>{const cover=document.getElementById('cover');if(!cover)return;let x0=null,y0=null;
+ cover.addEventListener('touchstart',e=>{const t=e.changedTouches[0];x0=t.clientX;y0=t.clientY},{passive:true});
+ cover.addEventListener('touchend',e=>{if(x0===null)return;const t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;x0=y0=null;
+  if(Math.abs(dx)<55||Math.abs(dx)<Math.abs(dy)*1.25)return;
+  if(dx>0)go('backcover',true);else go('titlepage',true);
+ },{passive:true});
+})();
