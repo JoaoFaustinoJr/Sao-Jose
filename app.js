@@ -12,25 +12,24 @@ familyWork:{badge:'CADERNO FAMILIAR · TRANSCRIÇÃO',title:'Oração para Santi
 familyBlessing:{badge:'CADERNO FAMILIAR · TRANSCRIÇÃO',title:'Bênção final',body:'<p>O Senhor nos abençoe e nos guarde sempre, faça brilhar sobre nós o seu rosto e nos conceda uma vida feliz; mostre para nós sua face paterna e nos dê paz e prosperidade.</p><p>Que Jesus Cristo esteja sobre nós para nos abençoar, diante de nós para nos guiar, ao nosso lado para nos acompanhar, no nosso coração para nos conservar na saúde do corpo e da alma e atrás de nós, para nos livrar de todo mal, inveja, mau espírito e discórdia.</p><p>O Senhor nos abençoe nesta noite e sempre.</p><p>Em nome do Pai, do Filho e do Espírito Santo. Amém.</p>'}};let prayerReturnTarget=null;
 document.addEventListener('click',e=>{
  const b=e.target.closest('[data-prayer]');if(!b)return;
- const originPage=b.closest('.page');
- prayerReturnTarget={pageId:originPage?.id||'prayers',element:b,scrollY:window.scrollY};
  const d=prayerData[b.dataset.prayer],sheet=document.getElementById('prayerText');if(!d||!sheet)return;
+ const origin=b.closest('.page');
+ prayerReturnTarget={pageId:origin&&origin.id?origin.id:'prayers',scrollY:window.pageYOffset||document.documentElement.scrollTop||0};
  document.getElementById('prayerBadge').textContent=d.badge;
  document.getElementById('prayerTitle').textContent=d.title;
  document.getElementById('prayerBody').innerHTML=d.body;
  sheet.hidden=false;
- if(!document.getElementById('prayers').classList.contains('active'))go('prayers');
- sheet.scrollIntoView({behavior:'smooth',block:'start'});
+ const prayers=document.getElementById('prayers');
+ if(prayers&&!prayers.classList.contains('active'))go('prayers');
+ sheet.scrollIntoView();
 });
-document.getElementById('closePrayer')?.addEventListener('click',()=>{
- const sheet=document.getElementById('prayerText');sheet.hidden=true;
+const closePrayer=document.getElementById('closePrayer');
+if(closePrayer)closePrayer.addEventListener('click',()=>{
+ const sheet=document.getElementById('prayerText');if(sheet)sheet.hidden=true;
  const ret=prayerReturnTarget;prayerReturnTarget=null;
- if(!ret){document.querySelector('.prayerbook')?.scrollIntoView({behavior:'smooth'});return;}
- if(ret.pageId!=='prayers')go(ret.pageId,true);
- requestAnimationFrame(()=>requestAnimationFrame(()=>{
-   window.scrollTo({top:ret.scrollY,behavior:'auto'});
-   if(ret.element?.isConnected)ret.element.focus({preventScroll:true});
- }));
+ if(!ret)return;
+ if(ret.pageId&&ret.pageId!=='prayers')go(ret.pageId,true);
+ setTimeout(()=>window.scrollTo(0,ret.scrollY||0),0);
 });
 
 function refreshContinue(){const saved=localStorage.getItem('saoJosePlace');const labels={day1:'Dia I · São José, homem justo',day2:'Dia II · São José, homem que escuta',day3:'Dia III · Esposo de Santa Maria',day4:'Dia IV · Pai na ternura',day5:'Dia V · Guardião',day6:'Dia VI · Homem do trabalho',day7:'Dia VII · Homem do silêncio',day8:'Dia VIII · Homem que discerne',day9:'Dia IX · Guardião da Igreja e de nossa casa',dreams:'Os Quatro Sonhos',sleeping:'São José Adormecido',table:'Mesa dos Anjos',memory:'Memória da Família',prayers:'Livro de Orações',library:'Biblioteca'};const label=document.getElementById('continueLabel');if(label)label.textContent=saved&&labels[saved]?'Continuar: '+labels[saved]:'Começar pelo primeiro dia';}
