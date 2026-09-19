@@ -615,3 +615,6 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 /* 8 — limpeza final: álbum familiar é documento, não placeholder técnico */
 .family-album-card{margin:1.5rem 0;padding:1.25rem;border:1px solid rgba(150,102,37,.38);background:linear-gradient(180deg,rgba(249,239,210,.72),rgba(235,216,169,.58));color:#3b2b19;box-shadow:inset 0 0 0 5px rgba(255,250,232,.35)}
 @media(max-width:600px){.chapter .vellum-leaf>.vellum-art>img{opacity:.16!important}.day-standard-1 img{object-position:50% 28%!important}.day-standard-6 img{object-position:50% 39%!important}.day-standard-9 img{object-position:50% 36%!important}}
+
+/* v9.4 — Dia VIII definitivo */
+.day-standard-8 img{aspect-ratio:4/5!important;object-fit:cover!important;object-position:50% 43%!important}@media(max-width:600px){.day-standard-8 img{object-position:50% 41%!important}}
