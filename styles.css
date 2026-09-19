@@ -1366,3 +1366,30 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .joseph-folio .day-closing-book:after{top:20px!important}
  .family-memory-medallion{width:126px!important;height:126px!important;background-position:50% 59.5%!important}
 }
+
+
+/* v10.65 — encerramento: retorna à fórmula estável, sem recorte da prancha */
+.joseph-folio .day-closing-book{
+ padding-top:1rem!important;
+}
+.joseph-folio .day-closing-book:after{display:none!important;content:none!important}
+.joseph-folio .day-closing-book:before{
+ display:block!important;
+ position:relative!important;
+ width:42px!important;height:42px!important;margin:.2rem auto .65rem!important;
+ border-radius:50%!important;background:#073447!important;border:1px solid #c79b47!important;
+ box-shadow:inset 0 0 0 4px rgba(199,155,71,.08),0 4px 10px rgba(0,0,0,.15)!important;
+ content:"SJ"!important;color:#d7ad58!important;font:600 13px/40px Georgia,serif!important;text-align:center!important
+}
+.joseph-folio .day-closing-book>.kicker,
+.joseph-folio .day-closing-book>h3{display:block!important}
+.joseph-folio .day-closing-book .closing-rule{
+ display:flex!important;width:min(78%,340px)!important;height:28px!important;margin:.2rem auto .75rem!important;
+ background:none!important;align-items:center!important;justify-content:center!important;gap:10px!important
+}
+.joseph-folio .day-closing-book .closing-rule:before,
+.joseph-folio .day-closing-book .closing-rule:after{
+ content:""!important;display:block!important;height:1px!important;flex:1!important;
+ background:linear-gradient(90deg,transparent,#c79b47)!important
+}
+.joseph-folio .day-closing-book .closing-rule:after{background:linear-gradient(90deg,#c79b47,transparent)!important}
