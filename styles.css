@@ -862,3 +862,21 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .day-closing-book .finish-day{min-width:0;margin:.2rem auto 0;padding:.72rem 1.1rem;border-radius:8px}
 .day-closing-book .day-finished{max-width:280px;margin:1rem auto 0;padding:.8rem 0 0;border-top:1px solid rgba(190,151,72,.28)}
 @media(max-width:620px){.day-closing.day-closing-book{padding:1.45rem .35rem 1.25rem}.day-closing-book h3{font-size:1.45rem}.day-closing-book .closing-prayers>button{padding:.85rem .8rem}}
+
+/* v10.28 — Fólio Josefino · protótipo Dia I */
+.joseph-folio>article{position:relative;padding-left:clamp(1.1rem,5vw,2.2rem);padding-right:clamp(1.1rem,5vw,2.2rem)}
+.joseph-folio>article:before,.joseph-folio>article:after{content:"";position:absolute;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent 0,rgba(195,151,67,.5) 5%,rgba(195,151,67,.18) 92%,transparent 100%);pointer-events:none}
+.joseph-folio>article:before{left:.55rem}.joseph-folio>article:after{right:.55rem}
+.joseph-folio article>h3{position:relative;margin-top:2.15rem;padding:.6rem 0 .5rem;font-family:Georgia,serif;letter-spacing:.015em}
+.joseph-folio article>h3:before{content:"✦";display:block;margin-bottom:.42rem;font-size:.62rem;letter-spacing:0;color:#c79b47}
+.joseph-folio article>h3:after{content:"";display:block;width:42px;height:1px;margin-top:.5rem;background:rgba(199,155,71,.55)}
+.joseph-folio article>p:not(.kicker):not(.lead):not(.scripture):not(.provenance){line-height:1.76}
+.joseph-folio .scripture{margin:1rem 0 1.3rem}
+.joseph-folio .scripture-link{border-radius:7px}
+.joseph-folio article>blockquote{position:relative;margin:1.55rem .15rem;padding:1.05rem 1.15rem;border-left:1px solid rgba(199,155,71,.62);border-right:1px solid rgba(199,155,71,.28);background:linear-gradient(90deg,rgba(199,155,71,.07),transparent)}
+.joseph-folio article>blockquote:before{content:"❦";position:absolute;top:-.72rem;left:50%;transform:translateX(-50%);padding:0 .45rem;color:#c79b47;background:var(--navy,#082c3d);font-size:.72rem}
+.joseph-folio .action{position:relative;border:1px solid rgba(199,155,71,.28);border-radius:7px;background:rgba(255,248,222,.045);box-shadow:none}
+.joseph-folio .action:before{content:"⚜";position:absolute;top:-.65rem;right:1rem;padding:0 .4rem;color:#c79b47;background:var(--navy,#082c3d);font-size:.8rem}
+.joseph-folio .day-closing-book{position:relative;margin-top:2.7rem}
+.joseph-folio .day-closing-book:before{content:"⚜";display:block;margin:0 auto .8rem;color:#c79b47;font-size:1rem}
+@media(max-width:620px){.joseph-folio>article{padding-left:1.15rem;padding-right:1.15rem}.joseph-folio>article:before{left:.28rem}.joseph-folio>article:after{right:.28rem}.joseph-folio article>h3{margin-top:1.85rem}}
