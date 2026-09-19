@@ -1103,3 +1103,20 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .day-standard-2.art-complete{padding:0!important;overflow:hidden!important;background:transparent!important}
 .day-standard-2.art-complete .art-mat{margin:0!important;border:0!important;padding:0!important;background:transparent!important}
 .day-standard-2.art-complete .art-mat img{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important}
+
+
+/* v10.51 — arte definitiva do Terço, sem recorte da prancha */
+.family-rosary-link{
+  aspect-ratio:2/1!important;
+  background-image:url("assets/file_000000008300820e893e741c1cbe72ab.png")!important;
+  background-size:100% 100%!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:0!important;
+  border-radius:18px!important;
+  box-shadow:0 10px 28px rgba(0,0,0,.14)!important;
+}
+.family-rosary-link:before{display:none!important}
+@media(max-width:420px){
+ .family-rosary-link{aspect-ratio:2/1!important;background-size:100% 100%!important;background-position:center!important;border-radius:14px!important}
+}
