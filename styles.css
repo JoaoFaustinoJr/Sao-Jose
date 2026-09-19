@@ -1308,3 +1308,37 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .section-joseph-seal.seal-sj{width:68px;height:68px}
  .joseph-folio .day-closing-book .closing-rule{width:72%!important}
 }
+
+
+/* v10.61 — prancha nova: uso controlado, sem recortes contaminados */
+:root{--joseph-new-art:url("assets/file_00000000a5c8820e81d6f86fc3b37926.png")}
+
+/* Quadro de Orações finais: recorte somente da peça superior, confinado ao próprio quadro. */
+.joseph-folio .day-closing-book:before{display:none!important}
+.joseph-folio .day-closing-book{
+ position:relative!important;padding-top:clamp(154px,32vw,230px)!important
+}
+.joseph-folio .day-closing-book:after{
+ content:""!important;position:absolute!important;top:8px!important;left:50%!important;transform:translateX(-50%)!important;
+ width:min(94%,520px)!important;aspect-ratio:1.92/1!important;
+ background-image:var(--joseph-new-art)!important;background-repeat:no-repeat!important;
+ background-size:100% auto!important;background-position:center top!important;
+ border-radius:16px!important;filter:drop-shadow(0 8px 18px rgba(0,0,0,.2));pointer-events:none!important
+}
+/* O quadro já contém título/invocação: evita repetição logo abaixo. */
+.joseph-folio .day-closing-book>.kicker,
+.joseph-folio .day-closing-book>h3{display:none!important}
+.joseph-folio .day-closing-book .closing-rule{display:none!important}
+
+/* Medalhão SJ/CUSTOS: recorte central isolado, com máscara circular para impedir vazamento da prancha. */
+.family-memory-medallion{
+ width:132px;height:132px;margin:.75rem auto 1.15rem;border-radius:50%;overflow:hidden;
+ background-image:var(--joseph-new-art)!important;background-repeat:no-repeat!important;
+ background-size:265% auto!important;background-position:50% 55.5%!important;
+ box-shadow:0 7px 18px rgba(63,42,15,.16);border:1px solid rgba(185,138,53,.42)
+}
+@media(max-width:420px){
+ .joseph-folio .day-closing-book{padding-top:clamp(142px,35vw,185px)!important}
+ .joseph-folio .day-closing-book:after{width:96%!important}
+ .family-memory-medallion{width:116px;height:116px}
+}
