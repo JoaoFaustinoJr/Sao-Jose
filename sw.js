@@ -1,5 +1,5 @@
-const CACHE='sao-jose-v1052';
-const CORE=['./','./index.html','./styles.css?v=152','./app.js?v=152','./manifest.webmanifest?v=152','./assets/art/capa-sao-jose-v67.jpg','./assets/file_000000008300820e893e741c1cbe72ab.png'];
+const CACHE='sao-jose-v1053';
+const CORE=['./','./index.html','./styles.css?v=153','./app.js?v=153','./manifest.webmanifest?v=153','./assets/art/capa-sao-jose-v67.jpg','./assets/file_000000008300820e893e741c1cbe72ab.png','./assets/file_00000000d80c820ea2d4384fba16a342.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;const u=new URL(e.request.url);if(u.origin!==location.origin)return;const nav=e.request.mode==='navigate';if(nav){e.respondWith(fetch(e.request,{cache:'no-store'}).then(r=>{const copy=r.clone();caches.open(CACHE).then(c=>c.put('./index.html',copy));return r}).catch(()=>caches.match('./index.html')));return}e.respondWith(caches.match(e.request).then(hit=>{const fresh=fetch(e.request,{cache:'no-store'}).then(r=>{if(r&&r.ok){const copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy))}return r});return hit||fresh}))});
