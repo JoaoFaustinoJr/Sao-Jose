@@ -979,3 +979,11 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .family-rosary-link>button{position:relative;z-index:1;width:40px!important;height:40px!important;min-width:40px!important;padding:0!important;border:1px solid #d0a24c!important;border-radius:50%!important;background:rgba(4,31,43,.55)!important;color:#e1b65f!important;font:400 2rem/1 Georgia,serif!important;display:grid!important;place-items:center!important;box-shadow:none!important}
 .family-rosary-link:after{content:"❦";position:absolute;right:55px;top:-9px;color:rgba(208,162,76,.13);font-size:4.5rem;transform:rotate(-18deg)}
 @media(max-width:420px){.family-rosary-link{grid-template-columns:54px 1fr 38px;gap:.65rem;padding:.9rem .75rem}.family-rosary-link .rosary-symbol{width:50px;height:50px}.family-rosary-link .rosary-copy strong{font-size:1.08rem}.family-rosary-link .rosary-copy p{font-size:.8rem}.family-rosary-link>button{width:36px!important;height:36px!important;min-width:36px!important;font-size:1.75rem!important}}
+
+
+/* v10.40 — hierarquia aprovada: destaque principal no Terço */
+.family-rosary-link .rosary-copy>span{font-size:.62rem!important;letter-spacing:.14em!important;color:#cbb78e!important;font-weight:600!important}
+.family-rosary-link .rosary-copy strong{font-size:clamp(1.28rem,5vw,1.55rem)!important;line-height:1.08!important;color:#e4b95f!important;font-weight:700!important;text-shadow:0 1px 10px rgba(208,162,76,.12)}
+.family-rosary-link .rosary-symbol span{font-size:1.8rem!important;color:#e4b95f!important}
+.family-rosary-link .rosary-symbol i{color:#e4b95f!important}
+.family-rosary-link .rosary-copy p{color:#f0e6d2!important}
