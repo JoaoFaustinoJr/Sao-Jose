@@ -779,3 +779,21 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .prayer-archive-divider{margin:1.15rem 0 .55rem;display:flex;align-items:center;gap:.65rem;color:var(--gold,#c99b43)}
 .prayer-archive-divider:before,.prayer-archive-divider:after{content:"";height:1px;flex:1;background:currentColor;opacity:.35}
 .prayer-archive-divider span{font-size:.66rem;letter-spacing:.16em;font-weight:700}
+
+/* v10.22 — folha de rosto como ex-líbris devocional */
+.titlepage-v2 .titlepage-frame{position:relative}
+.titlepage-custos{margin:.35rem auto .75rem;display:flex;align-items:baseline;justify-content:center;gap:.65rem;color:var(--ink,#17364a)}
+.titlepage-custos span{font-family:Georgia,"Times New Roman",serif;font-size:.82rem;font-weight:700;letter-spacing:.32em}
+.titlepage-custos small{font-family:Georgia,"Times New Roman",serif;font-size:.78rem;font-style:italic;letter-spacing:.05em;opacity:.72}
+.titlepage-lily{font-size:1.15rem;color:var(--gold,#a8792d);opacity:.68;margin:.05rem auto -.25rem}
+.titlepage-v2 .titlepage-seal{margin-top:.7rem}
+.titlepage-v2 .titlepage-rule{margin-top:1.45rem}
+.titlepage-v2 .titlepage-dedication{margin-top:1.6rem;font-size:1.05rem;line-height:1.55}
+.titlepage-v2 .titlepage-invocation{margin-top:1.3rem}
+.titlepage-v2 .titlepage-edition{opacity:.62;letter-spacing:.08em}
+@media(max-width:560px){
+ .titlepage-custos{gap:.48rem;margin-top:.25rem}
+ .titlepage-custos span{font-size:.74rem;letter-spacing:.27em}
+ .titlepage-custos small{font-size:.72rem}
+ .titlepage-v2 .titlepage-dedication{font-size:.98rem}
+}
