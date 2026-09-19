@@ -753,3 +753,13 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .family-prayer-rhythm{margin:.85rem 0;padding:.8rem .9rem;border-left:2px solid rgba(151,106,42,.46);background:rgba(255,250,233,.36)}
 .family-prayer-rhythm>b{font:700 .86rem Georgia,serif;color:#704c20}
 .family-prayer-rhythm p{margin:.35rem 0 0;font-size:.82rem;line-height:1.6}
+
+/* v10.14 — estrutura familiar dentro de cada dia; preparada para futura navegação lateral */
+.family-day-structure{margin:1rem 0 1.15rem;padding:.9rem 1rem;border:1px solid rgba(145,100,39,.24);border-radius:16px;background:linear-gradient(145deg,rgba(255,252,239,.72),rgba(240,226,194,.28));box-shadow:0 8px 24px rgba(78,52,21,.05)}
+.family-day-structure .kicker{margin:0 0 .3rem;font-size:.66rem;letter-spacing:.13em;opacity:.7}
+.family-day-structure h3{margin:.15rem 0 .35rem!important;font-size:1.03rem!important}
+.family-day-structure>p{margin:.3rem 0;font-size:.84rem;line-height:1.58}
+.family-day-actions{display:flex;gap:.45rem;flex-wrap:wrap;margin:.65rem 0}
+.family-day-actions button{flex:1 1 12rem;font-size:.76rem;padding:.62rem .7rem}
+.family-flow-note{font-style:italic;opacity:.74}
+@media(max-width:560px){.family-day-structure{padding:.8rem}.family-day-actions{display:grid;grid-template-columns:1fr}.family-day-actions button{width:100%}}
