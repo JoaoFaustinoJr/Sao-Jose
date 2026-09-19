@@ -697,3 +697,24 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 @keyframes dreamPortal{0%{opacity:0;transform:scale(.72)}35%{opacity:1}100%{opacity:0;transform:scale(1.35)}}
 @keyframes dreamBreath{0%,100%{opacity:.62}50%{opacity:1}}
 @media(prefers-reduced-motion:reduce){.dream-luminous:before,.dream-transition:after{animation:none!important}.dream-transition:after{display:none}}
+
+/* v10.8 — Quatro Sonhos: passagem contemplativa, luz narrativa e despertar */
+.dream-threshold{display:flex;align-items:center;justify-content:center;gap:.7rem;margin:.65rem auto 1rem;max-width:17rem;color:#d7b15d}
+.dream-threshold span{height:1px;flex:1;background:linear-gradient(90deg,transparent,rgba(221,184,99,.68))}
+.dream-threshold span:last-child{background:linear-gradient(90deg,rgba(221,184,99,.68),transparent)}
+.dream-threshold i{font-style:normal;font-size:.78rem;filter:drop-shadow(0 0 7px rgba(255,222,143,.35))}
+.dream-instruction{max-width:34rem;margin:.1rem auto 1.25rem;text-align:center;font-family:Georgia,serif;font-style:italic;font-size:.86rem;line-height:1.55;color:rgba(242,225,180,.78)}
+.dream-luminous:before{z-index:-1;background:radial-gradient(ellipse at 50% 18%,rgba(245,215,133,.13),transparent 27%),linear-gradient(180deg,rgba(2,22,33,.04),rgba(1,16,27,.24));animation:dreamBreath 9s ease-in-out infinite}
+.dream-luminous .dream-vision-card{position:relative;overflow:hidden;transition:transform .8s ease,box-shadow .8s ease,filter .8s ease,opacity .8s ease}
+.dream-luminous .dream-vision-card:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 28%,rgba(255,229,163,.12) 48%,transparent 67%);transform:translateX(-130%);opacity:0}
+.dream-luminous .dream-vision-card.is-contemplating{transform:translateY(-3px);box-shadow:0 18px 42px rgba(0,0,0,.28),0 0 26px rgba(222,186,103,.12);filter:brightness(1.035)}
+.dream-luminous .dream-vision-card.is-contemplating:after{animation:dreamCardLight 2.8s ease-out 1}
+.dream-luminous.vision-open .dream-vision-card:not(.is-contemplating){opacity:.78;filter:saturate(.82) brightness(.88)}
+.dream-transition:after,.dream-awaken:after{content:"";position:fixed;z-index:9998;inset:0;pointer-events:none}
+.dream-transition:after{background:radial-gradient(ellipse at 50% 43%,rgba(255,244,205,.76) 0,rgba(230,198,125,.28) 18%,rgba(14,48,62,.36) 48%,rgba(1,18,29,.72) 100%);animation:dreamPortalRefined 2.2s cubic-bezier(.22,.61,.36,1) both}
+.dream-awaken:after{background:linear-gradient(180deg,rgba(255,239,185,.36),rgba(10,42,55,.10) 45%,transparent 85%);animation:dreamWake 1.7s ease-out both}
+@keyframes dreamPortalRefined{0%{opacity:0;filter:blur(7px)}24%{opacity:.48}54%{opacity:.82;filter:blur(2px)}100%{opacity:0;filter:blur(0)}}
+@keyframes dreamWake{0%{opacity:.62}100%{opacity:0}}
+@keyframes dreamCardLight{0%{transform:translateX(-130%);opacity:0}25%{opacity:.65}100%{transform:translateX(130%);opacity:0}}
+@keyframes dreamBreath{0%,100%{opacity:.48}50%{opacity:.82}}
+@media(prefers-reduced-motion:reduce){.dream-luminous:before,.dream-transition:after,.dream-awaken:after,.dream-luminous .dream-vision-card:after{animation:none!important}.dream-transition:after,.dream-awaken:after{display:none!important}.dream-luminous .dream-vision-card{transition:none!important}}
