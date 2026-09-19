@@ -663,3 +663,24 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 
 /* v10.4 — correção definitiva do leitor bíblico em telas móveis */
 .scripture-reader:not([hidden]){display:block!important;overflow-y:auto!important;overflow-x:hidden!important;-webkit-overflow-scrolling:touch;background:#f7efd9!important}.scripture-sheet{display:block!important;width:100%!important;min-height:100vh!important;height:auto!important;overflow:visible!important;margin:0 auto!important;background:linear-gradient(90deg,rgba(126,85,31,.08),transparent 8%,transparent 92%,rgba(126,85,31,.08)),#f7efd9!important;color:#2d251b!important}.scripture-text,.scripture-text p{color:#2d251b!important}.scripture-back{position:sticky!important;bottom:max(.7rem,env(safe-area-inset-bottom))!important;margin-top:1.25rem!important}@media(max-width:600px){.scripture-reader:not([hidden]){padding:0!important}.scripture-sheet{padding:1.6rem 1.35rem calc(2rem + env(safe-area-inset-bottom))!important}.scripture-text{font-size:1.24rem!important;line-height:1.78!important}}
+
+
+/* v10.6 — selo josefino preservado sem cobrir a tipografia dos cards */
+.day-standard-card{overflow:visible!important}
+.day-standard-card .day-ribbon{
+  top:-22px!important;
+  height:58px!important;
+  z-index:4!important;
+}
+.day-standard-card .day-card-head{
+  position:relative!important;
+  z-index:3!important;
+  padding-top:2.35rem!important;
+  min-height:118px!important;
+}
+.day-standard-card .day-card-head span,
+.day-standard-card .day-card-head strong{position:relative!important;z-index:5!important}
+@media(max-width:600px){
+  .day-standard-card .day-ribbon{top:-18px!important;height:50px!important}
+  .day-standard-card .day-card-head{padding-top:2.15rem!important;min-height:108px!important}
+}
