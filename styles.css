@@ -844,3 +844,21 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .day-finished span{font-size:1.3rem;color:var(--gold,#906c31)}
 .day-finished strong{font-family:Georgia,serif;font-size:1.15rem}
 .day-finished small{opacity:.72}
+
+/* v10.27 — encerramento como última página do capítulo */
+.day-closing.day-closing-book{margin:2.4rem 0 1.2rem;padding:1.7rem 1.2rem 1.5rem;text-align:center;border:0;border-top:1px solid rgba(185,145,67,.45);border-bottom:1px solid rgba(185,145,67,.32);border-radius:0;background:transparent;box-shadow:none;color:inherit}
+.day-closing-book .closing-rule{display:flex;align-items:center;justify-content:center;gap:.7rem;margin:0 auto 1rem;max-width:220px;color:#c89b43}
+.day-closing-book .closing-rule i{height:1px;flex:1;background:currentColor;opacity:.55}
+.day-closing-book .closing-rule span{font-size:.85rem}
+.day-closing-book .kicker{font-size:.67rem;letter-spacing:.23em;color:#c89b43;margin:.25rem 0}
+.day-closing-book h3{font-family:Georgia,serif;font-size:1.65rem;margin:.25rem 0 1.2rem;color:inherit}
+.day-closing-book .closing-prayers{max-width:460px;margin:0 auto}
+.day-closing-book .closing-prayers>button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;text-align:left;padding:.9rem 1rem;border:1px solid rgba(190,151,72,.42);border-radius:8px;background:rgba(255,250,231,.08);color:inherit;font:inherit}
+.day-closing-book .closing-prayers>button span{font-family:Georgia,serif;font-size:1.08rem;font-weight:700}
+.day-closing-book .closing-prayers>button b{font-size:.78rem;letter-spacing:.08em;color:#c89b43;white-space:nowrap}
+.day-closing-book .closing-prayers>p{margin:1.1rem 0 .8rem;font-family:Georgia,serif;font-size:1rem;font-weight:600}
+.day-closing-book .closing-prayers i{font-style:normal;color:#c89b43;padding:0 .2rem}
+.day-closing-book .closing-invocation{margin:1rem 0 1.2rem;font-family:Georgia,serif;font-style:italic;font-size:1.08rem;opacity:.9}
+.day-closing-book .finish-day{min-width:0;margin:.2rem auto 0;padding:.72rem 1.1rem;border-radius:8px}
+.day-closing-book .day-finished{max-width:280px;margin:1rem auto 0;padding:.8rem 0 0;border-top:1px solid rgba(190,151,72,.28)}
+@media(max-width:620px){.day-closing.day-closing-book{padding:1.45rem .35rem 1.25rem}.day-closing-book h3{font-size:1.45rem}.day-closing-book .closing-prayers>button{padding:.85rem .8rem}}
