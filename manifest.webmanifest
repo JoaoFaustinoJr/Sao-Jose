@@ -1,1 +1,38 @@
-{"name":"Novena de São José","short_name":"São José","description":"Uma devoção de família","start_url":"./","display":"standalone","background_color":"#1b120d","theme_color":"#24170f","lang":"pt-BR","icons":[]}
+{
+  "name": "Novena de São José",
+  "short_name": "São José",
+  "description": "Novena de São José — oração, memória e tradição de família",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#1b120d",
+  "theme_color": "#24170f",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "assets/art/capa-sao-jose-v67.jpg",
+      "sizes": "any",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Rezar a Novena",
+      "short_name": "Novena",
+      "url": "./?open=daily"
+    },
+    {
+      "name": "Compêndio",
+      "short_name": "Compêndio",
+      "url": "./?open=compendium"
+    },
+    {
+      "name": "Memória da Família",
+      "short_name": "Memória",
+      "url": "./?open=memory"
+    }
+  ]
+}
