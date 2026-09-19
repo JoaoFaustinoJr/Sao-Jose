@@ -797,3 +797,19 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .titlepage-custos small{font-size:.72rem}
  .titlepage-v2 .titlepage-dedication{font-size:.98rem}
 }
+
+/* v10.23 — memória fotográfica e cancioneiro */
+.family-album .album-slots.photo-ready{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:1rem}
+.family-album .photo-ready i{min-height:118px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:.8rem;border:1px solid rgba(122,87,37,.28);border-radius:10px;background:linear-gradient(155deg,rgba(255,252,240,.94),rgba(224,210,174,.48));font-style:normal;box-shadow:0 7px 20px rgba(42,31,18,.08)}
+.family-album .photo-ready b{font-family:Georgia,serif;font-size:1.4rem;color:var(--gold,#9d772f)}
+.family-album .photo-ready small{margin-top:.35rem;line-height:1.25}
+.compendium-music-card{margin:1rem 0;padding:1.1rem;border:1px solid rgba(157,119,47,.28);border-radius:14px;background:linear-gradient(145deg,rgba(255,252,240,.86),rgba(232,220,187,.48));display:grid;grid-template-columns:auto 1fr auto;gap:1rem;align-items:center}
+.compendium-music-card .compendium-icon{font:2rem Georgia,serif;color:var(--gold,#9d772f)}
+.compendium-music-card h3,.compendium-music-card p{margin:.15rem 0}
+.songs-page .songbook{display:grid;gap:1rem;margin:1.4rem 0}
+.song-source-card{padding:1.15rem;border:1px solid rgba(157,119,47,.25);border-radius:12px;background:rgba(255,252,240,.62)}
+.song-source-card>span{font-size:.68rem;letter-spacing:.18em;font-weight:700;color:var(--gold,#9d772f)}
+.song-source-card h3{margin:.35rem 0 .55rem}
+.song-tools{display:flex;gap:.45rem;margin-top:.9rem;flex-wrap:wrap}
+.song-tools button[disabled]{opacity:.5}
+@media(max-width:620px){.family-album .album-slots.photo-ready{grid-template-columns:1fr}.compendium-music-card{grid-template-columns:auto 1fr}.compendium-music-card>button{grid-column:1/-1}}
