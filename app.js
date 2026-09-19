@@ -1,5 +1,5 @@
 const chapterOrder=['day1','day2','day3','day4','day5','day6','day7','day8','day9'];
-const pages=[...document.querySelectorAll('.page')];function go(id){const target=document.getElementById(id);if(!target)return;pages.forEach(p=>p.classList.remove('active'));target.classList.add('active');const oldLeaf=target.querySelector('.vellum-leaf');if(oldLeaf){const freshLeaf=oldLeaf.cloneNode(true);freshLeaf.classList.remove('revealed','turning');oldLeaf.replaceWith(freshLeaf);}localStorage.setItem('saoJosePlace',id);const rp=document.querySelector('#readingProgress i');if(rp){const n=chapterOrder.indexOf(id);rp.style.width=n>=0?(((n+1)/chapterOrder.length)*100)+'%':(id==='table'||id==='memory'?'100%':'0%')}scrollTo({top:0,behavior:'smooth'})}document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b){e.preventDefault();go(b.dataset.go);return}const tissue=e.target.closest('.tissue');if(tissue)turnVellum(tissue)});
+const pages=[...document.querySelectorAll('.page')];function go(id){const target=document.getElementById(id);if(!target)return;if(typeof stopDevotionalAudio==='function')stopDevotionalAudio();pages.forEach(p=>p.classList.remove('active'));target.classList.add('active');const oldLeaf=target.querySelector('.vellum-leaf');if(oldLeaf){const freshLeaf=oldLeaf.cloneNode(true);freshLeaf.classList.remove('revealed','turning');oldLeaf.replaceWith(freshLeaf);}localStorage.setItem('saoJosePlace',id);const rp=document.querySelector('#readingProgress i');if(rp){const n=chapterOrder.indexOf(id);rp.style.width=n>=0?(((n+1)/chapterOrder.length)*100)+'%':(id==='table'||id==='memory'?'100%':'0%')}scrollTo({top:0,behavior:'smooth'})}document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b){e.preventDefault();go(b.dataset.go);return}const tissue=e.target.closest('.tissue');if(tissue)turnVellum(tissue)});
 function turnVellum(el){if(!el||el.classList.contains('revealed'))return;el.classList.add('turning');setTimeout(()=>{el.classList.add('revealed');el.classList.remove('turning')},620)}
 let vellumStartX=null;document.addEventListener('pointerdown',e=>{const v=e.target.closest('.vellum-leaf');if(v)vellumStartX=e.clientX});document.addEventListener('pointerup',e=>{const v=e.target.closest('.vellum-leaf');if(!v||vellumStartX===null)return;const dx=e.clientX-vellumStartX;vellumStartX=null;if(Math.abs(dx)>34||Math.abs(dx)<8)turnVellum(v)});document.addEventListener('keydown',e=>{const v=e.target.closest?.('.vellum-leaf');if(v&&(e.key==='Enter'||e.key===' ')){e.preventDefault();turnVellum(v)}});const saved=localStorage.getItem('saoJosePlace');if(saved&&document.getElementById(saved))go(saved);const trust=document.getElementById('trust');trust?.addEventListener('click',()=>{const p=document.getElementById('petition');const value=p.value.trim();if(!value)return;localStorage.setItem('saoJosePetition',value);p.value='';document.getElementById('trustMsg').textContent='Pedido confiado. Permaneça alguns instantes em silêncio.'});if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
 let silenceInterval=null;document.addEventListener('click',e=>{const b=e.target.closest('[data-silence]');if(!b)return;clearInterval(silenceInterval);const out=document.getElementById('silenceTimer');let sec=Number(b.dataset.silence);if(sec===0){out.textContent='Sem cronômetro. Permaneça o tempo que desejar.';return}const draw=()=>{const m=Math.floor(sec/60),r=String(sec%60).padStart(2,'0');out.textContent=m+':'+r};draw();silenceInterval=setInterval(()=>{sec--;draw();if(sec<=0){clearInterval(silenceInterval);out.textContent='O tempo terminou. Permaneça mais um instante, se desejar.'}},1000)});
@@ -38,17 +38,31 @@ const scriptureRefs={"mt1-18-24":["Mateus 1,18–24","Mateus"],"mt1-20-24":["Mat
 
 /* v10.2 — retorno bíblico delegado para funcionar mesmo quando o leitor vem depois do script */
 
-/* v10.7 — áudio devocional e transição luminosa dos Quatro Sonhos */
+/* v10.12 — áudio devocional: retomar, pausar, parar e encerrar ao mudar de página */
 let devotionalAudio=null, devotionalButton=null;
+function resetAudioButton(btn){if(btn)btn.textContent='▷ Ouvir oração';}
+function stopDevotionalAudio(){
+ if(devotionalAudio){devotionalAudio.pause();devotionalAudio.currentTime=0;}
+ resetAudioButton(devotionalButton);devotionalAudio=null;devotionalButton=null;
+}
 document.addEventListener('click',e=>{
+ const stop=e.target.closest('.audio-stop-btn');
+ if(stop){stopDevotionalAudio();return;}
  const b=e.target.closest('.audio-prayer-btn');
  if(!b)return;
- if(devotionalAudio && devotionalButton===b && !devotionalAudio.paused){devotionalAudio.pause();b.textContent='▷ Ouvir oração';return;}
- if(devotionalAudio){devotionalAudio.pause(); if(devotionalButton) devotionalButton.textContent='▷ Ouvir oração';}
- devotionalAudio=new Audio(b.dataset.audioSrc); devotionalButton=b; b.textContent='Ⅱ Pausar';
- devotionalAudio.play().catch(()=>{b.textContent='▷ Ouvir oração';});
- devotionalAudio.addEventListener('ended',()=>{b.textContent='▷ Ouvir oração';});
+ const src=b.dataset.audioSrc;
+ if(devotionalAudio && devotionalButton===b){
+   if(devotionalAudio.paused){devotionalAudio.play().then(()=>b.textContent='Ⅱ Pausar').catch(()=>{b.textContent='Áudio indisponível';});}
+   else{devotionalAudio.pause();b.textContent='▶ Continuar';}
+   return;
+ }
+ stopDevotionalAudio();
+ devotionalAudio=new Audio(src);devotionalAudio.preload='auto';devotionalButton=b;b.textContent='Ⅱ Pausar';
+ devotionalAudio.play().catch(()=>{b.textContent='Áudio indisponível';});
+ devotionalAudio.addEventListener('ended',()=>stopDevotionalAudio(),{once:true});
+ devotionalAudio.addEventListener('error',()=>{if(devotionalButton===b)b.textContent='Áudio indisponível';},{once:true});
 });
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&devotionalAudio&&!devotionalAudio.paused){devotionalAudio.pause();if(devotionalButton)devotionalButton.textContent='▶ Continuar';}});
 function runDreamTransition(kind='enter'){
  const root=document.documentElement;
  root.classList.remove('dream-transition','dream-awaken');
