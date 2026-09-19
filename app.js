@@ -15,7 +15,7 @@ document.addEventListener('click',e=>{
  const d=prayerData[b.dataset.prayer],sheet=document.getElementById('prayerText');if(!d||!sheet)return;
  const origin=b.closest('.page');
  prayerReturnTarget={pageId:origin&&origin.id?origin.id:'prayers',scrollY:window.pageYOffset||document.documentElement.scrollTop||0};
- document.getElementById('prayerBadge').textContent=d.badge;
+ document.getElementById('prayerBadge').textContent=(d.badge||'').replace('CADERNO FAMILIAR · TRANSCRIÇÃO','ORAÇÃO DA FAMÍLIA');
  document.getElementById('prayerTitle').textContent=d.title;
  document.getElementById('prayerBody').innerHTML=d.body;
  sheet.hidden=false;
@@ -116,4 +116,4 @@ document.addEventListener('click',e=>{
 window.addEventListener('load',()=>{const open=new URLSearchParams(location.search).get('open');if(open&&document.getElementById(open)){setTimeout(()=>go(open,true),60)}});
 
 // v10.25 — fechamento de cada dia
- document.addEventListener('click',e=>{const b=e.target.closest('.finish-day');if(!b)return;const closing=b.closest('.day-closing');const done=closing?.querySelector('.day-finished');if(done){done.hidden=false;done.scrollIntoView({behavior:'smooth',block:'center'})}b.disabled=true;b.textContent='Dia concluído ✓';});
+ document.addEventListener('click',e=>{const b=e.target.closest('.finish-day');if(!b)return;const closing=b.closest('.day-closing');const done=closing?.querySelector('.day-finished');if(done){done.hidden=false;done.scrollIntoView({behavior:'smooth',block:'center'})}b.hidden=true;});
