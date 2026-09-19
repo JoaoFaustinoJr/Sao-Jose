@@ -1061,3 +1061,14 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 @media(max-width:420px){
  .family-rosary-link{aspect-ratio:1.82/1!important;background-size:111% auto!important;background-position:50% 41%!important;border-radius:16px!important}
 }
+
+
+/* v10.44 — recorte vertical exato: exclui cabeçalho e encerramento embutidos no mockup */
+.family-rosary-link{
+  aspect-ratio:1.88/1!important;
+  background-size:112% auto!important;
+  background-position:50% 32.7%!important;
+}
+@media(max-width:420px){
+ .family-rosary-link{aspect-ratio:1.88/1!important;background-size:112% auto!important;background-position:50% 32.7%!important}
+}
