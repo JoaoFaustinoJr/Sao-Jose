@@ -718,3 +718,18 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 @keyframes dreamCardLight{0%{transform:translateX(-130%);opacity:0}25%{opacity:.65}100%{transform:translateX(130%);opacity:0}}
 @keyframes dreamBreath{0%,100%{opacity:.48}50%{opacity:.82}}
 @media(prefers-reduced-motion:reduce){.dream-luminous:before,.dream-transition:after,.dream-awaken:after,.dream-luminous .dream-vision-card:after{animation:none!important}.dream-transition:after,.dream-awaken:after{display:none!important}.dream-luminous .dream-vision-card{transition:none!important}}
+
+/* v10.10 — arquivo familiar e curadoria documental */
+.family-archive,.archive-strip,.prayer-archive-note{margin:1.2rem 0;padding:1rem;border:1px solid rgba(153,108,44,.25);background:rgba(255,249,229,.48)}
+.family-archive{box-shadow:inset 0 0 0 4px rgba(255,255,255,.16)}
+.family-timeline{position:relative;margin:1.1rem 0 .2rem;padding-left:1.15rem;border-left:1px solid rgba(153,108,44,.42)}
+.family-timeline>div{position:relative;padding:.1rem 0 1.15rem .75rem}
+.family-timeline>div:before{content:"";position:absolute;left:-1.39rem;top:.35rem;width:.42rem;height:.42rem;border-radius:50%;background:#9b6f30;box-shadow:0 0 0 4px rgba(155,111,48,.10)}
+.family-timeline b{display:block;font-family:Georgia,serif;font-size:1.25rem;color:#76501f}
+.family-timeline span{display:block;font-weight:700;margin:.1rem 0}
+.family-timeline small,.archive-strip small,.prayer-archive-note small{display:block;line-height:1.5;opacity:.72}
+.archive-strip span{display:block;font-size:.66rem;letter-spacing:.14em;color:#8a622a}
+.archive-strip b{display:block;margin:.25rem 0;font-family:Georgia,serif}
+.prayer-archive-note{grid-column:1/-1}
+.prayer-archive-note b{display:block;font-family:Georgia,serif;color:#68471d}
+.prayer-archive-note p{font-size:.82rem;line-height:1.55;margin:.5rem 0 0;opacity:.8}
