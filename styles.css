@@ -1097,3 +1097,9 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .family-rosary-link{aspect-ratio:1.82/1!important;background-size:111% auto!important;background-position:50% 28.5%!important;border-radius:16px!important}
  .family-rosary-link:before{inset:6px!important;border-radius:11px!important}
 }
+
+
+/* v10.50 — Dia II: a arte já contém título e legenda; elimina repetição editorial */
+.day-standard-2.art-complete{padding:0!important;overflow:hidden!important;background:transparent!important}
+.day-standard-2.art-complete .art-mat{margin:0!important;border:0!important;padding:0!important;background:transparent!important}
+.day-standard-2.art-complete .art-mat img{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important}
