@@ -880,3 +880,10 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .joseph-folio .day-closing-book{position:relative;margin-top:2.7rem}
 .joseph-folio .day-closing-book:before{content:"⚜";display:block;margin:0 auto .8rem;color:#c79b47;font-size:1rem}
 @media(max-width:620px){.joseph-folio>article{padding-left:1.15rem;padding-right:1.15rem}.joseph-folio>article:before{left:.28rem}.joseph-folio>article:after{right:.28rem}.joseph-folio article>h3{margin-top:1.85rem}}
+
+/* v10.30 — bênção final da família */
+.ritual-closing-link{margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(151,111,46,.2);display:grid;gap:.45rem}
+.ritual-closing-link>span,.family-final-prayer>span{font-size:.64rem;letter-spacing:.18em;font-weight:700;color:var(--gold,#9a7434)}
+.ritual-closing-link button{margin-top:.15rem}
+.family-final-prayer{max-width:460px;margin:1rem auto 1.15rem;padding-top:.9rem;border-top:1px solid rgba(199,155,71,.24);display:grid;gap:.5rem}
+.family-final-prayer button{width:100%;display:flex;justify-content:space-between;align-items:center;padding:.78rem .9rem;border:1px solid rgba(199,155,71,.34);border-radius:7px;background:transparent;color:inherit;font:700 1rem Georgia,serif}
