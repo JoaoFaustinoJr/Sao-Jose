@@ -1,5 +1,5 @@
-const CACHE='sao-jose-v1054';
-const CORE=['./','./index.html','./styles.css?v=154','./app.js?v=154','./manifest.webmanifest?v=154','./assets/art/capa-sao-jose-v67.jpg','./assets/file_000000008300820e893e741c1cbe72ab.png','./assets/file_00000000d80c820ea2d4384fba16a342.png'];
+const CACHE='sao-jose-v1055';
+const CORE=['./','./index.html','./styles.css?v=155','./app.js?v=155','./manifest.webmanifest?v=155','./assets/art/capa-sao-jose-v67.jpg','./assets/file_000000008300820e893e741c1cbe72ab.png','./assets/file_00000000d80c820ea2d4384fba16a342.png','./assets/file_0000000038c0820e91fc4f36947e4bff.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;const u=new URL(e.request.url);if(u.origin!==location.origin)return;const nav=e.request.mode==='navigate';if(nav){e.respondWith(fetch(e.request,{cache:'no-store'}).then(r=>{const copy=r.clone();caches.open(CACHE).then(c=>c.put('./index.html',copy));return r}).catch(()=>caches.match('./index.html')));return}e.respondWith(caches.match(e.request).then(hit=>{const fresh=fetch(e.request,{cache:'no-store'}).then(r=>{if(r&&r.ok){const copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy))}return r});return hit||fresh}))});
