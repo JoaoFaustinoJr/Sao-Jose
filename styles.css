@@ -1120,3 +1120,20 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 @media(max-width:420px){
  .family-rosary-link{aspect-ratio:2/1!important;background-size:100% 100%!important;background-position:center!important;border-radius:14px!important}
 }
+
+
+/* v10.52 — Dia II volta ao mesmo molde editorial dos demais dias.
+   A arte original contém tipografia própria; recortamos apenas a cena no art-mat. */
+.day-standard-2.art-complete{padding:initial}
+.day-standard-2 .art-mat{aspect-ratio:4/5!important;position:relative!important}
+.day-standard-2 .art-mat img{
+  width:100%!important;height:100%!important;
+  aspect-ratio:auto!important;
+  object-fit:cover!important;
+  object-position:50% 49%!important;
+  transform:scale(1.18)!important;
+}
+@media(max-width:600px){
+ .day-standard-2 .art-mat{aspect-ratio:4/5!important}
+ .day-standard-2 .art-mat img{object-position:50% 49%!important;transform:scale(1.18)!important}
+}
