@@ -1265,3 +1265,46 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  #cover .cover-inner{width:calc(100vw - 14px)!important;padding-left:12px!important;padding-right:12px!important}
  .cover-edge{width:11vw!important}
 }
+
+
+/* v10.59 — correção dos recortes: nenhum fragmento da prancha é usado como ornamento */
+.editorial-emblem{display:none!important}
+.section-joseph-seal{
+ width:58px;height:58px;margin:.65rem auto 1rem;box-sizing:border-box;
+ display:grid;place-items:center;border:1px solid #b98a35;border-radius:50%;
+ color:#b98a35;background:#073447;
+ box-shadow:0 5px 14px rgba(0,0,0,.13),inset 0 0 0 4px rgba(185,138,53,.08);
+ font-family:Georgia,serif;font-size:1.35rem;line-height:1
+}
+.parchment .section-joseph-seal{background:#f4ead2;color:#9b6a21}
+.section-joseph-seal.seal-sj{width:76px;height:76px;display:flex;flex-direction:column;gap:2px}
+.section-joseph-seal.seal-sj span{font-size:1.65rem}.section-joseph-seal.seal-sj small{font-size:.48rem;letter-spacing:.16em}
+.section-joseph-seal:after{content:"";position:absolute;width:92px;height:1px;background:linear-gradient(90deg,transparent,#b98a35,transparent);transform:translateY(42px)}
+.section-joseph-seal{position:relative}
+
+/* Encerramento: substitui o recorte branco da prancha por ornamento vetorial/CSS limpo */
+.joseph-folio .day-closing-book .closing-rule{
+ width:min(78%,340px)!important;height:28px!important;margin:.2rem auto .75rem!important;
+ background:none!important;opacity:1!important;display:flex!important;align-items:center!important;justify-content:center!important;
+ gap:10px!important;overflow:visible!important
+}
+.joseph-folio .day-closing-book .closing-rule:before,
+.joseph-folio .day-closing-book .closing-rule:after{
+ content:""!important;display:block!important;height:1px!important;flex:1!important;
+ background:linear-gradient(90deg,transparent,#c79b47)!important
+}
+.joseph-folio .day-closing-book .closing-rule:after{background:linear-gradient(90deg,#c79b47,transparent)!important}
+.joseph-folio .day-closing-book .closing-rule>*{display:none!important}
+.joseph-folio .day-closing-book .closing-rule{color:#d7ad58!important}
+.joseph-folio .day-closing-book .closing-rule::marker{content:""}
+/* o selo circular já existente abre o encerramento; sem segundo recorte abaixo dele */
+.joseph-folio .day-closing-book:before{
+ background-image:none!important;background:#073447!important;border:1px solid #c79b47!important;
+ box-shadow:inset 0 0 0 4px rgba(199,155,71,.08),0 4px 10px rgba(0,0,0,.15)!important;
+ content:"SJ"!important;color:#d7ad58!important;font:600 13px/38px Georgia,serif!important;text-align:center!important
+}
+@media(max-width:420px){
+ .section-joseph-seal{width:52px;height:52px}
+ .section-joseph-seal.seal-sj{width:68px;height:68px}
+ .joseph-folio .day-closing-book .closing-rule{width:72%!important}
+}
