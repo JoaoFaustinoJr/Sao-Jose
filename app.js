@@ -28,8 +28,14 @@ if(closePrayer)closePrayer.addEventListener('click',()=>{
  const sheet=document.getElementById('prayerText');if(sheet)sheet.hidden=true;
  const ret=prayerReturnTarget;prayerReturnTarget=null;
  if(!ret)return;
- if(ret.pageId&&ret.pageId!=='prayers')go(ret.pageId,true);
- setTimeout(()=>window.scrollTo(0,ret.scrollY||0),0);
+ if(ret.pageId&&ret.pageId!=='prayers'){
+  go(ret.pageId,true);
+  /* retorno de uma oração: volta diretamente ao ponto de leitura, sem exigir novo folhear do velino */
+  const returnedPage=document.getElementById(ret.pageId);
+  const returnedVellum=returnedPage?.querySelector('.vellum-leaf');
+  if(returnedVellum){returnedVellum.classList.remove('turning');returnedVellum.classList.add('revealed');}
+ }
+ requestAnimationFrame(()=>requestAnimationFrame(()=>window.scrollTo({top:ret.scrollY||0,left:0,behavior:'auto'})));
 });
 
 function refreshContinue(){const saved=localStorage.getItem('saoJosePlace');const labels={day1:'Dia I · São José, homem justo',day2:'Dia II · São José, homem que escuta',day3:'Dia III · Esposo de Santa Maria',day4:'Dia IV · Pai na ternura',day5:'Dia V · Guardião',day6:'Dia VI · Homem do trabalho',day7:'Dia VII · Homem do silêncio',day8:'Dia VIII · Homem que discerne',day9:'Dia IX · Guardião da Igreja e de nossa casa',dreams:'Os Quatro Sonhos',sleeping:'São José Adormecido',table:'Mesa dos Anjos',memory:'Memória da Família',prayers:'Livro de Orações',library:'Biblioteca'};const label=document.getElementById('continueLabel');if(label)label.textContent=saved&&labels[saved]?'Continuar: '+labels[saved]:'Começar pelo primeiro dia';}
