@@ -763,3 +763,14 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .family-day-actions button{flex:1 1 12rem;font-size:.76rem;padding:.62rem .7rem}
 .family-flow-note{font-style:italic;opacity:.74}
 @media(max-width:560px){.family-day-structure{padding:.8rem}.family-day-actions{display:grid;grid-template-columns:1fr}.family-day-actions button{width:100%}}
+
+/* v10.16 — oração antes da explicação: sequência direta, compacta e editorial */
+.day-prayer-opening{margin:1.05rem 0 1.25rem;padding:1.05rem .95rem;border-top:1px solid rgba(211,165,72,.48);border-bottom:1px solid rgba(211,165,72,.35);text-align:center;background:rgba(255,248,226,.045)}
+.day-prayer-opening .kicker{margin:0 0 .7rem;letter-spacing:.16em;font-size:.67rem}
+.simple-prayers{margin:.32rem auto;max-width:31rem;line-height:1.55}
+.prayer-inline-link,.day-traditional-prayer button{margin:.65rem auto 0;display:block;max-width:31rem;width:100%}
+.day-traditional-prayer{margin-top:.9rem;padding-top:.8rem;border-top:1px solid rgba(211,165,72,.2)}
+.day-traditional-prayer span{display:block;font-size:.64rem;letter-spacing:.14em;opacity:.72;margin-bottom:.25rem}
+.ritual-prayer-index{margin:1.1rem 0;padding:1rem;text-align:center;border-top:1px solid rgba(130,91,37,.25);border-bottom:1px solid rgba(130,91,37,.2)}
+.ritual-prayer-index p{margin:.35rem 0}
+@media(max-width:560px){.day-prayer-opening{padding:.9rem .7rem}.simple-prayers{font-size:.91rem}}
