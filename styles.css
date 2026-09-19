@@ -987,3 +987,28 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .family-rosary-link .rosary-symbol span{font-size:1.8rem!important;color:#e4b95f!important}
 .family-rosary-link .rosary-symbol i{color:#e4b95f!important}
 .family-rosary-link .rosary-copy p{color:#f0e6d2!important}
+
+
+/* v10.41 — arte do mockup integrada ao card do Terço */
+.family-rosary-link{
+  min-height:190px;
+  grid-template-columns:1fr 46px;
+  align-items:end;
+  padding:1.05rem 1rem 1rem 1.1rem;
+  background:
+    linear-gradient(90deg,rgba(5,36,50,.98) 0%,rgba(5,36,50,.90) 43%,rgba(5,36,50,.26) 72%,rgba(5,36,50,.10) 100%),
+    url("assets/file_00000000da48820e965433c2795b509b.png") center 49%/cover no-repeat;
+}
+.family-rosary-link .rosary-symbol{display:none!important}
+.family-rosary-link .rosary-copy{align-self:end;max-width:68%;padding:.2rem 0 .15rem;text-shadow:0 2px 8px rgba(0,0,0,.72)}
+.family-rosary-link .rosary-copy>span{color:#e8d5a7!important}
+.family-rosary-link .rosary-copy strong{font-size:clamp(1.48rem,6vw,1.9rem)!important;color:#e6b858!important}
+.family-rosary-link .rosary-copy p{font-size:.84rem!important;max-width:250px}
+.family-rosary-link>button{align-self:end;margin-bottom:.15rem}
+.family-rosary-link:after{display:none}
+@media(max-width:420px){
+ .family-rosary-link{min-height:180px;grid-template-columns:1fr 40px;background-position:center 48%;padding:.9rem .75rem .9rem 1rem}
+ .family-rosary-link .rosary-copy{max-width:76%}
+ .family-rosary-link .rosary-copy strong{font-size:1.45rem!important}
+ .family-rosary-link .rosary-copy p{font-size:.78rem!important}
+}
