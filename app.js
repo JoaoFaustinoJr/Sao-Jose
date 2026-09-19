@@ -111,3 +111,6 @@ document.addEventListener('click',e=>{
    runDreamTransition('wake');
  }
 });
+
+// v10.24 — atalhos do PWA
+window.addEventListener('load',()=>{const open=new URLSearchParams(location.search).get('open');if(open&&document.getElementById(open)){setTimeout(()=>go(open,true),60)}});
