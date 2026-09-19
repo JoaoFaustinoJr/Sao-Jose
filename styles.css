@@ -1235,3 +1235,33 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .editorial-emblem{width:78px;height:78px}
  .emblem-sj{width:92px;height:92px}
 }
+
+
+/* v10.58 — capa centralizada na área útil + navegação lateral invisível */
+#cover.cover{width:100%!important;max-width:none!important;margin:0!important;overflow-x:hidden!important}
+#cover .cover-inner{
+ width:min(calc(100vw - 24px),680px)!important;max-width:680px!important;
+ margin:0 auto!important;box-sizing:border-box!important;
+ padding-left:clamp(14px,4vw,28px)!important;padding-right:clamp(14px,4vw,28px)!important;
+ transform:none!important;left:auto!important;right:auto!important
+}
+#cover .cover-art{margin-left:auto!important;margin-right:auto!important}
+.cover-edge{
+ position:absolute!important;z-index:8!important;top:12%!important;bottom:12%!important;width:9vw!important;
+ min-width:28px!important;max-width:58px!important;margin:0!important;padding:0!important;
+ border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;
+ opacity:0!important
+}
+.cover-edge-back{left:0!important}.cover-edge-forward{right:0!important}
+.backcover{min-height:calc(100dvh - var(--dock-h,76px));background:linear-gradient(180deg,#062f40,#082b3a 68%,#052634);color:#f4ead5;display:none;place-items:center;padding:24px 22px 100px!important;position:relative}
+.backcover.active{display:grid!important}
+.backcover-inner{width:min(100%,560px);min-height:min(76vh,720px);border:1px solid rgba(199,155,71,.62);box-shadow:inset 0 0 0 5px rgba(199,155,71,.06);padding:clamp(36px,9vh,80px) 28px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.backcover-lily,.backcover-rule{color:#d2a650;letter-spacing:.22em}
+.backcover-seal{width:104px;height:104px;margin:2rem auto;display:grid;place-items:center;border:1px solid #c79b47;border-radius:50%;font-family:Georgia,serif;color:#e0b65c}
+.backcover-seal span{font-size:2.5rem;line-height:1}.backcover-seal small{font-size:.62rem;letter-spacing:.18em}
+.backcover-prayer{max-width:390px;font:italic clamp(1.12rem,4.8vw,1.45rem)/1.65 Georgia,serif}
+.backcover-invocation{font:600 1.15rem Georgia,serif;margin:1.5rem 0 .45rem}
+@media(max-width:420px){
+ #cover .cover-inner{width:calc(100vw - 14px)!important;padding-left:12px!important;padding-right:12px!important}
+ .cover-edge{width:11vw!important}
+}
