@@ -1046,3 +1046,18 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .family-rosary-link{aspect-ratio:1.72/1!important;border-radius:21px!important;background-position:center 55%!important}
  .family-rosary-link:before{inset:6px!important;border-radius:16px!important}
 }
+
+
+/* v10.43 — recorte correto da prancha: somente o card do Terço */
+.family-rosary-link{
+  aspect-ratio:1.82/1!important;
+  background-image:url("assets/file_00000000da48820e965433c2795b509b.png")!important;
+  background-repeat:no-repeat!important;
+  background-size:111% auto!important;
+  background-position:50% 41%!important;
+  border-radius:18px!important;
+}
+.family-rosary-link:before{display:none!important}
+@media(max-width:420px){
+ .family-rosary-link{aspect-ratio:1.82/1!important;background-size:111% auto!important;background-position:50% 41%!important;border-radius:16px!important}
+}
