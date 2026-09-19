@@ -745,3 +745,11 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .archive-curator-note b{font:700 .82rem Georgia,serif;color:#68471d}
 .archive-curator-note p{margin:.25rem 0 0;font-size:.78rem;line-height:1.5;opacity:.78}
 @media(min-width:760px){.archive-collections{grid-template-columns:repeat(3,1fr)}.archive-collections article{padding:1rem}.archive-collections article>span{position:static;margin-bottom:.55rem}}
+
+/* v10.12 — ritmo familiar e controles de áudio */
+.audio-devotional{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem}
+.audio-devotional small{flex-basis:100%}
+.audio-stop-btn{padding:.5rem .72rem!important;font-size:.72rem!important;opacity:.78}
+.family-prayer-rhythm{margin:.85rem 0;padding:.8rem .9rem;border-left:2px solid rgba(151,106,42,.46);background:rgba(255,250,233,.36)}
+.family-prayer-rhythm>b{font:700 .86rem Georgia,serif;color:#704c20}
+.family-prayer-rhythm p{margin:.35rem 0 0;font-size:.82rem;line-height:1.6}
