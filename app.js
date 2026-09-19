@@ -37,3 +37,21 @@ const scriptureRefs={"mt1-18-24":["Mateus 1,18–24","Mateus"],"mt1-20-24":["Mat
 /* v9.9 — leitura bíblica: texto histórico em domínio público quando disponível; referência católica preservada */
 
 /* v10.2 — retorno bíblico delegado para funcionar mesmo quando o leitor vem depois do script */
+
+/* v10.7 — áudio devocional e transição luminosa dos Quatro Sonhos */
+let devotionalAudio=null, devotionalButton=null;
+document.addEventListener('click',e=>{
+ const b=e.target.closest('.audio-prayer-btn');
+ if(!b)return;
+ if(devotionalAudio && devotionalButton===b && !devotionalAudio.paused){devotionalAudio.pause();b.textContent='▷ Ouvir oração';return;}
+ if(devotionalAudio){devotionalAudio.pause(); if(devotionalButton) devotionalButton.textContent='▷ Ouvir oração';}
+ devotionalAudio=new Audio(b.dataset.audioSrc); devotionalButton=b; b.textContent='Ⅱ Pausar';
+ devotionalAudio.play().catch(()=>{b.textContent='▷ Ouvir oração';});
+ devotionalAudio.addEventListener('ended',()=>{b.textContent='▷ Ouvir oração';});
+});
+document.addEventListener('click',e=>{
+ const go=e.target.closest('[data-go="dreams"]');
+ if(!go)return;
+ document.documentElement.classList.add('dream-transition');
+ setTimeout(()=>document.documentElement.classList.remove('dream-transition'),1600);
+});
