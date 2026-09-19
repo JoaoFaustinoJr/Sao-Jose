@@ -1200,3 +1200,12 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .day-standard-2 .art-mat.day2-clean-art{background-size:224% auto!important;background-position:0 43%!important}
  .joseph-folio .day-closing-book .closing-rule{height:25px!important}
 }
+
+
+/* v10.56 — Dia II usa arte limpa independente, sem recortes de prancha */
+.day-standard-2 .art-mat{aspect-ratio:4/5!important;overflow:hidden!important}
+.day-standard-2 .art-mat img{
+ display:block!important;width:100%!important;height:100%!important;
+ aspect-ratio:auto!important;object-fit:cover!important;object-position:50% 48%!important;
+ transform:none!important
+}
