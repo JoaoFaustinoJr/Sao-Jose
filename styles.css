@@ -1209,3 +1209,29 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  aspect-ratio:auto!important;object-fit:cover!important;object-position:50% 48%!important;
  transform:none!important
 }
+
+
+/* v10.57 — intervenções da prancha passam a aparecer como elementos editoriais */
+.editorial-emblem{
+ width:92px;height:92px;margin:.65rem auto .7rem;
+ background-image:var(--joseph-editorial)!important;background-repeat:no-repeat!important;
+ filter:drop-shadow(0 5px 9px rgba(0,0,0,.16));
+}
+/* recortes da metade direita da prancha v10.55 */
+.emblem-prayer{background-size:440% auto!important;background-position:73.2% 7.2%!important}
+.emblem-family{background-size:440% auto!important;background-position:56.2% 31.5%!important}
+.emblem-hope{background-size:440% auto!important;background-position:91.2% 31.5%!important}
+.emblem-sj{
+ width:108px;height:108px;background-size:390% auto!important;
+ background-position:55.5% 77.5%!important;border-radius:50%;
+}
+.table-page .editorial-emblem,.family-memory .editorial-emblem,.prayerbook .editorial-emblem{position:relative}
+.table-page .editorial-emblem:after,.family-memory .editorial-emblem:after,.prayerbook .editorial-emblem:after{
+ content:"";position:absolute;left:50%;top:calc(100% + 7px);transform:translateX(-50%);
+ width:86px;height:1px;background:linear-gradient(90deg,transparent,#b98a35,transparent)
+}
+.sleeping-devotion .editorial-emblem{filter:drop-shadow(0 5px 10px rgba(0,0,0,.35))}
+@media(max-width:420px){
+ .editorial-emblem{width:78px;height:78px}
+ .emblem-sj{width:92px;height:92px}
+}
