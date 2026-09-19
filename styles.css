@@ -774,3 +774,8 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .ritual-prayer-index{margin:1.1rem 0;padding:1rem;text-align:center;border-top:1px solid rgba(130,91,37,.25);border-bottom:1px solid rgba(130,91,37,.2)}
 .ritual-prayer-index p{margin:.35rem 0}
 @media(max-width:560px){.day-prayer-opening{padding:.9rem .7rem}.simple-prayers{font-size:.91rem}}
+
+/* v10.18 — núcleo documental das orações familiares */
+.prayer-archive-divider{margin:1.15rem 0 .55rem;display:flex;align-items:center;gap:.65rem;color:var(--gold,#c99b43)}
+.prayer-archive-divider:before,.prayer-archive-divider:after{content:"";height:1px;flex:1;background:currentColor;opacity:.35}
+.prayer-archive-divider span{font-size:.66rem;letter-spacing:.16em;font-weight:700}
