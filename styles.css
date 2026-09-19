@@ -887,3 +887,24 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .ritual-closing-link button{margin-top:.15rem}
 .family-final-prayer{max-width:460px;margin:1rem auto 1.15rem;padding-top:.9rem;border-top:1px solid rgba(199,155,71,.24);display:grid;gap:.5rem}
 .family-final-prayer button{width:100%;display:flex;justify-content:space-between;align-items:center;padding:.78rem .9rem;border:1px solid rgba(199,155,71,.34);border-radius:7px;background:transparent;color:inherit;font:700 1rem Georgia,serif}
+
+/* v10.31 — refinamento da experiência devocional */
+.ritual-portal{display:grid;gap:0!important;text-align:left!important}
+.ritual-portal .ritual-phase{padding:1rem .2rem}
+.ritual-portal .ritual-phase+.ritual-phase{border-top:1px solid rgba(151,111,46,.2)}
+.ritual-portal .ritual-phase>span{font-size:.64rem;letter-spacing:.19em;font-weight:700;color:var(--gold,#977032)}
+.ritual-portal .ritual-phase p{margin:.55rem 0 .8rem;line-height:1.55}
+.ritual-portal .ritual-phase button{width:100%;display:flex;justify-content:space-between;align-items:center;text-align:left;padding:.72rem .2rem;border:0;border-radius:0;background:transparent;box-shadow:none;color:inherit;font:700 1rem Georgia,serif}
+.ritual-portal .ritual-phase button b{color:var(--gold,#977032)}
+.joseph-folio .day-closing-book .closing-prayers>button{background:transparent!important;box-shadow:none!important;border-left:0;border-right:0;border-radius:0;padding:.78rem .15rem}
+.joseph-folio .family-final-prayer button{background:transparent!important;box-shadow:none!important;border-left:0;border-right:0;border-radius:0;padding:.72rem .15rem}
+.joseph-folio .day-finished{padding:1rem 0 .2rem!important;border-top:1px solid rgba(199,155,71,.28)!important}
+.joseph-folio .day-finished strong{font-family:Georgia,serif;font-size:1.35rem}
+.joseph-folio .day-finished small{font-family:Georgia,serif;font-style:italic;margin-top:.25rem}
+#prayerText{position:relative}
+#prayerText:not([hidden]){border-left:1px solid rgba(158,116,48,.22);border-right:1px solid rgba(158,116,48,.22);padding-left:clamp(1.1rem,5vw,2rem);padding-right:clamp(1.1rem,5vw,2rem)}
+#prayerText:not([hidden]):before{content:"⚜";display:block;text-align:center;color:var(--gold,#977032);font-size:.85rem;margin:.4rem 0 .8rem}
+#prayerText #prayerBadge{font-size:.62rem;letter-spacing:.18em;opacity:.72}
+#prayerText #prayerTitle{font-family:Georgia,serif}
+#prayerText #prayerBody p{line-height:1.78}
+#prayerText #prayerBody p:first-child:first-letter{float:left;font-family:Georgia,serif;font-size:3.15em;line-height:.78;padding:.12em .09em 0 0;color:var(--gold,#977032)}
