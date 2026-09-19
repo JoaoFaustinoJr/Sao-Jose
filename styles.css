@@ -1137,3 +1137,40 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .day-standard-2 .art-mat{aspect-ratio:4/5!important}
  .day-standard-2 .art-mat img{object-position:50% 49%!important;transform:scale(1.18)!important}
 }
+
+
+/* v10.53 — selos josefinos: recortes CSS da prancha ornamental */
+:root{--joseph-seals:url("assets/file_00000000d80c820ea2d4384fba16a342.png")}
+.day-prayer-nav button{position:relative!important;padding-top:3.05rem!important}
+.day-prayer-nav button span{display:none!important}
+.day-prayer-nav button:before{
+ content:""!important;position:absolute!important;top:.38rem!important;left:50%!important;transform:translateX(-50%)!important;
+ width:42px!important;height:42px!important;border-radius:50%!important;
+ background-image:var(--joseph-seals)!important;background-size:500% 300%!important;background-repeat:no-repeat!important;
+ filter:drop-shadow(0 2px 3px rgba(0,0,0,.18));opacity:.96
+}
+/* A Palavra · Silêncio/escuta · Oração · Intenções */
+.day-prayer-nav button:nth-child(1):before{background-position:25% 0!important}
+.day-prayer-nav button:nth-child(2):before{background-position:25% 100%!important}
+.day-prayer-nav button:nth-child(3):before{background-position:50% 0!important}
+.day-prayer-nav button:nth-child(4):before{background-position:75% 0!important}
+
+/* pequeno selo de ofício para os exercícios práticos */
+.joseph-folio .action{padding-top:1.05rem!important}
+.joseph-folio .action:before{
+ content:""!important;top:-17px!important;right:14px!important;width:34px!important;height:34px!important;padding:0!important;
+ border:1px solid rgba(199,155,71,.5)!important;border-radius:50%!important;background-image:var(--joseph-seals)!important;
+ background-size:500% 300%!important;background-position:50% 50%!important;background-repeat:no-repeat!important;
+ background-color:#082c3d!important
+}
+/* selo de São José no início do encerramento */
+.joseph-folio .day-closing-book:before{
+ content:""!important;width:42px!important;height:42px!important;margin:0 auto .7rem!important;display:block!important;
+ border-radius:50%!important;background-image:var(--joseph-seals)!important;background-size:500% 300%!important;
+ background-position:0 0!important;background-repeat:no-repeat!important;filter:drop-shadow(0 2px 4px rgba(0,0,0,.16))
+}
+@media(max-width:420px){
+ .day-prayer-nav button{padding-top:2.75rem!important}
+ .day-prayer-nav button:before{width:37px!important;height:37px!important}
+ .joseph-folio .day-closing-book:before{width:38px!important;height:38px!important}
+}
