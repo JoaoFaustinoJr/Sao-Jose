@@ -684,3 +684,16 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
   .day-standard-card .day-ribbon{top:-18px!important;height:50px!important}
   .day-standard-card .day-card-head{padding-top:2.15rem!important;min-height:108px!important}
 }
+
+/* v10.7 — experiência dos sonhos e controles de áudio */
+.audio-devotional{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin:.8rem 0 1.2rem;padding:.65rem .75rem;border-top:1px solid rgba(155,111,48,.24);border-bottom:1px solid rgba(155,111,48,.24)}
+.audio-devotional button{padding:.55rem .9rem;background:rgba(255,249,226,.72)!important;color:#60431f!important;border-color:rgba(157,111,47,.42)!important}
+.audio-devotional small{font-size:.7rem;letter-spacing:.06em;opacity:.62}
+.dream-luminous{position:relative;isolation:isolate}
+.dream-luminous:before{content:"";position:fixed;z-index:-1;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 24%,rgba(245,215,133,.20),transparent 28%),radial-gradient(circle at 50% 58%,rgba(54,105,125,.14),transparent 48%);animation:dreamBreath 7s ease-in-out infinite}
+.dream-luminous .dream-vision-card{transition:transform .65s ease,box-shadow .65s ease,filter .65s ease}
+.dream-luminous .dream-vision-card:focus-within,.dream-luminous .dream-vision-card:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(222,186,103,.13);filter:brightness(1.04)}
+.dream-transition:after{content:"";position:fixed;z-index:9998;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 42%,rgba(255,242,190,.92) 0,rgba(229,196,119,.42) 20%,rgba(10,39,52,.18) 52%,transparent 75%);animation:dreamPortal 1.6s ease both}
+@keyframes dreamPortal{0%{opacity:0;transform:scale(.72)}35%{opacity:1}100%{opacity:0;transform:scale(1.35)}}
+@keyframes dreamBreath{0%,100%{opacity:.62}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.dream-luminous:before,.dream-transition:after{animation:none!important}.dream-transition:after{display:none}}
