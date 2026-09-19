@@ -1174,3 +1174,29 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .day-prayer-nav button:before{width:37px!important;height:37px!important}
  .joseph-folio .day-closing-book:before{width:38px!important;height:38px!important}
 }
+
+
+/* v10.55 — nova prancha editorial: Dia II + ornamentos josefinos */
+:root{--joseph-editorial:url("assets/file_0000000038c0820e91fc4f36947e4bff.png")}
+/* A metade esquerda da prancha é uma arte limpa de São José adormecido. */
+.day-standard-2 .art-mat.day2-clean-art{
+ aspect-ratio:4/5!important;overflow:hidden!important;
+ background-image:var(--joseph-editorial)!important;
+ background-size:224% auto!important;
+ background-position:0 43%!important;
+ background-repeat:no-repeat!important;
+}
+/* Neutraliza o antigo ajuste reservado à imagem com tipografia embutida. */
+.day-standard-2 .art-mat.day2-clean-art img{display:none!important}
+/* O divisor com lírio da nova prancha aparece apenas no fechamento: um gesto gráfico, não repetição. */
+.joseph-folio .day-closing-book .closing-rule{
+ height:30px!important;margin:.1rem auto .75rem!important;width:min(92%,420px)!important;
+ background-image:var(--joseph-editorial)!important;background-size:220% auto!important;
+ background-position:100% 59%!important;background-repeat:no-repeat!important;
+ opacity:.82;overflow:hidden
+}
+.joseph-folio .day-closing-book .closing-rule>*{display:none!important}
+@media(max-width:600px){
+ .day-standard-2 .art-mat.day2-clean-art{background-size:224% auto!important;background-position:0 43%!important}
+ .joseph-folio .day-closing-book .closing-rule{height:25px!important}
+}
