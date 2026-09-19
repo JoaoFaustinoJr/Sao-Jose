@@ -659,3 +659,7 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 
 /* v10.3 — gravura histórica como portal discreto dos Quatro Sonhos */
 .dream-historic{max-width:255px!important;margin:1.15rem auto 1.65rem!important}.dream-historic img{max-height:315px!important;object-fit:contain!important}.dream-historic figcaption{font-size:.65rem!important}.dream-historic figcaption strong{font-size:.73rem!important}@media(max-width:600px){.dream-historic{max-width:215px!important}}
+
+
+/* v10.4 — correção definitiva do leitor bíblico em telas móveis */
+.scripture-reader:not([hidden]){display:block!important;overflow-y:auto!important;overflow-x:hidden!important;-webkit-overflow-scrolling:touch;background:#f7efd9!important}.scripture-sheet{display:block!important;width:100%!important;min-height:100vh!important;height:auto!important;overflow:visible!important;margin:0 auto!important;background:linear-gradient(90deg,rgba(126,85,31,.08),transparent 8%,transparent 92%,rgba(126,85,31,.08)),#f7efd9!important;color:#2d251b!important}.scripture-text,.scripture-text p{color:#2d251b!important}.scripture-back{position:sticky!important;bottom:max(.7rem,env(safe-area-inset-bottom))!important;margin-top:1.25rem!important}@media(max-width:600px){.scripture-reader:not([hidden]){padding:0!important}.scripture-sheet{padding:1.6rem 1.35rem calc(2rem + env(safe-area-inset-bottom))!important}.scripture-text{font-size:1.24rem!important;line-height:1.78!important}}
