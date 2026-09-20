@@ -1427,3 +1427,6 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 
 /* v10.69 — fichas do cancioneiro */
 .archive-song-list details{border-bottom:1px solid rgba(170,122,43,.28);padding:.25rem 0}.archive-song-list summary{cursor:pointer;padding:.65rem .8rem;list-style:none}.archive-song-list summary b,.archive-song-list summary small{display:block}.archive-song-list summary small{margin-top:.15rem;opacity:.72}.song-lyrics,.song-note{margin:.2rem .8rem .9rem;padding:.85rem 1rem;border-left:2px solid #aa7a2b;line-height:1.6}.song-source{display:block;margin:-.45rem .8rem 1rem;opacity:.7}
+
+/* v10.74 — São José e a Boa Morte */
+.good-death-page{min-height:100vh;padding-bottom:5rem}.good-death-page h2{max-width:12ch}.good-death-light{text-align:center;font-size:3rem;margin:1rem auto;color:#c6a15b;text-shadow:0 0 28px rgba(255,220,145,.55)}.good-death-invocation,.good-death-day{border:1px solid rgba(198,161,91,.38);padding:1.15rem;margin:1.5rem 0;background:rgba(7,31,48,.55);box-shadow:0 14px 36px rgba(0,0,0,.16)}.good-death-invocation span,.good-death-day>span{font-size:.72rem;letter-spacing:.16em;color:#d8bd82}.good-death-invocation p{font-family:Georgia,serif;font-size:1.15rem;line-height:1.65}.good-death-day blockquote{margin:1rem 0;border-left:2px solid #c6a15b;padding-left:1rem}.good-death-day button{margin-top:.5rem}
