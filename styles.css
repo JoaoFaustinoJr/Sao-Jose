@@ -1436,3 +1436,7 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 
 /* v10.78 — arte final da Novena */
 .novena-closing-art{margin:2rem 0 1.2rem}.novena-closing-art>img{display:block;width:100%;height:auto;border:1px solid rgba(198,161,91,.5);box-shadow:0 16px 40px rgba(0,0,0,.25)}.closing-art-actions{display:grid;gap:.75rem;margin-top:1rem}.closing-art-actions button{width:100%}
+
+/* v10.79 — arte final como mascara interativa */
+.novena-closing-art{margin:1.5rem -.15rem 1rem}.closing-art-map{position:relative;width:100%}.closing-art-map>img{display:block;width:100%;height:auto;border:1px solid rgba(198,161,91,.5);box-shadow:0 16px 40px rgba(0,0,0,.25)}.art-hotspot{position:absolute;z-index:3;margin:0;padding:0;border:0!important;background:transparent!important;box-shadow:none!important;border-radius:0;opacity:0;cursor:pointer}.art-hotspot-songs{left:20%;top:63.4%;width:61%;height:8.2%}.art-hotspot-table{left:16%;top:75.8%;width:69%;height:7.3%}.art-hotspot:focus-visible{opacity:1;outline:2px solid #d8bd82;background:rgba(216,189,130,.12)!important}
+@media(max-width:480px){.novena-closing-art{margin-left:-.45rem;margin-right:-.45rem}}
