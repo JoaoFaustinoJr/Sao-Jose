@@ -3,7 +3,7 @@
   "short_name": "São José",
   "description": "Novena de São José — oração, memória e tradição de família",
   "id": "./",
-  "start_url": "./",
+  "start_url": "./?source=pwa",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
