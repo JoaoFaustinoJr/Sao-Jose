@@ -2,7 +2,7 @@ const chapterOrder=['day1','day2','day3','day4','day5','day6','day7','day8','day
 const pages=[...document.querySelectorAll('.page')];function go(id,instant=false){const target=document.getElementById(id);if(!target)return;if(typeof stopDevotionalAudio==='function')stopDevotionalAudio();pages.forEach(p=>p.classList.remove('active'));target.classList.add('active');const oldLeaf=target.querySelector('.vellum-leaf');if(oldLeaf){const freshLeaf=oldLeaf.cloneNode(true);freshLeaf.classList.remove('revealed','turning');oldLeaf.replaceWith(freshLeaf);}localStorage.setItem('saoJosePlace',id);const rp=document.querySelector('#readingProgress i');if(rp){const n=chapterOrder.indexOf(id);rp.style.width=n>=0?(((n+1)/chapterOrder.length)*100)+'%':(id==='table'||id==='memory'?'100%':'0%')}window.scrollTo({top:0,behavior:instant?'auto':'smooth'})}document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b){e.preventDefault();go(b.dataset.go);return}const tissue=e.target.closest('.tissue');if(tissue)turnVellum(tissue)});
 function turnVellum(el){if(!el||el.classList.contains('revealed'))return;el.classList.add('turning');setTimeout(()=>{el.classList.add('revealed');el.classList.remove('turning')},620)}
 let vellumStartX=null;document.addEventListener('pointerdown',e=>{const v=e.target.closest('.vellum-leaf');if(v)vellumStartX=e.clientX});document.addEventListener('pointerup',e=>{const v=e.target.closest('.vellum-leaf');if(!v||vellumStartX===null)return;const dx=e.clientX-vellumStartX;vellumStartX=null;if(Math.abs(dx)>34||Math.abs(dx)<8)turnVellum(v)});document.addEventListener('keydown',e=>{const v=e.target.closest?.('.vellum-leaf');if(v&&(e.key==='Enter'||e.key===' ')){e.preventDefault();turnVellum(v)}});const saved=localStorage.getItem('saoJosePlace');/* v10.15: sempre iniciar pela capa; a retomada permanece disponível no Compêndio */const trust=document.getElementById('trust');trust?.addEventListener('click',()=>{const p=document.getElementById('petition');const value=p.value.trim();if(!value)return;localStorage.setItem('saoJosePetition',value);p.value='';document.getElementById('trustMsg').textContent='Pedido confiado. Permaneça alguns instantes em silêncio.'});if('serviceWorker'in navigator)window.addEventListener('load',async()=>{try{
- const reg=await navigator.serviceWorker.register('./sw.js?v=180',{updateViaCache:'none'});
+ const reg=await navigator.serviceWorker.register('./sw.js?v=181',{updateViaCache:'none'});
  await reg.update();
  let refreshing=false;
  navigator.serviceWorker.addEventListener('controllerchange',()=>{if(refreshing)return;refreshing=true;location.reload()});
@@ -140,3 +140,26 @@ window.addEventListener('load',()=>{const open=new URLSearchParams(location.sear
   if(dx>0)go('backcover',true);else go('titlepage',true);
  },{passive:true});
 })();
+
+// v10.81 — instalacao e compartilhamento
+let deferredInstallPrompt=null;
+const installBtn=()=>document.getElementById('installApp');
+const toolsMsg=()=>document.getElementById('appToolsMsg');
+const isStandalone=()=>window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true;
+function refreshInstallUI(){const b=installBtn();if(!b)return;if(isStandalone()){b.disabled=true;b.classList.add('is-installed');b.querySelector('b').textContent='App instalado';b.querySelector('small').textContent='A Novena já está neste aparelho';}}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstallPrompt=e;refreshInstallUI();});
+window.addEventListener('appinstalled',()=>{deferredInstallPrompt=null;refreshInstallUI();const m=toolsMsg();if(m)m.textContent='Novena instalada neste aparelho.';});
+window.addEventListener('load',refreshInstallUI);
+document.addEventListener('click',async e=>{
+ const ib=e.target.closest('#installApp');
+ if(ib){
+  if(isStandalone()){refreshInstallUI();return;}
+  if(deferredInstallPrompt){deferredInstallPrompt.prompt();const r=await deferredInstallPrompt.userChoice;deferredInstallPrompt=null;if(toolsMsg())toolsMsg().textContent=r.outcome==='accepted'?'Instalação iniciada.':'Você pode instalar quando desejar.';return;}
+  const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
+  if(toolsMsg())toolsMsg().textContent=ios?'No iPhone/iPad: toque em Compartilhar e depois em “Adicionar à Tela de Início”.':'No navegador, abra o menu e escolha “Instalar app” ou “Adicionar à tela inicial”.';
+  return;
+ }
+ const sb=e.target.closest('#shareApp');if(!sb)return;
+ const data={title:'Novena de São José',text:'Novena de São José — uma devoção de família',url:'https://joaofaustinojr.github.io/Sao-Jose/'};
+ try{if(navigator.share){await navigator.share(data);if(toolsMsg())toolsMsg().textContent='Compartilhamento aberto.';}else{await navigator.clipboard.writeText(data.url);if(toolsMsg())toolsMsg().textContent='Link da Novena copiado.';}}catch(err){if(err?.name!=='AbortError'&&toolsMsg())toolsMsg().textContent='Não foi possível abrir o compartilhamento neste navegador.';}
+});
