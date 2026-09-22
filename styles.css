@@ -1631,3 +1631,17 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .daily-supplications:before{left:-.35rem!important;right:auto!important;transform:rotate(-16deg)!important}
 .daily-intentions .daily-supplications:after{right:-.35rem!important;left:auto!important;transform:scaleX(-1) rotate(-16deg)!important}
 @media(max-width:420px){.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{font-size:3.6rem!important;opacity:.31!important;bottom:-.3rem!important}}
+
+
+/* v11.04 · correção definitiva: ornamentos independentes, sem transform conflitante */
+.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{
+ content:"❧\A❦\A❧"!important;white-space:pre!important;background:none!important;
+ position:absolute!important;bottom:-.45rem!important;width:5.2rem!important;height:auto!important;
+ font-family:Georgia,serif!important;font-size:3.75rem!important;line-height:.55!important;
+ color:#4d8096!important;opacity:.32!important;z-index:1!important;pointer-events:none!important;
+ filter:none!important;text-shadow:none!important;text-align:center!important;
+}
+.daily-intentions .daily-supplications:before{left:-.2rem!important;right:auto!important;transform:rotate(-14deg)!important}
+.daily-intentions .daily-supplications:after{right:-.2rem!important;left:auto!important;transform:rotate(14deg)!important}
+.daily-intentions .daily-supplications>span,.daily-intentions .daily-supplications>h4,.daily-intentions .daily-supplications>button{position:relative!important;z-index:3!important}
+@media(max-width:420px){.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{font-size:3.35rem!important;width:4.7rem!important;bottom:-.25rem!important}}
