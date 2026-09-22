@@ -12,10 +12,16 @@
   "lang": "pt-BR",
   "icons": [
     {
-      "src": "assets/art/capa-sao-jose-v67.jpg",
-      "sizes": "any",
-      "type": "image/jpeg",
+      "src": "assets/file_000000000274820ea50eaa3d446cf46b.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "assets/file_000000000274820ea50eaa3d446cf46b.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "shortcuts": [
