@@ -1891,3 +1891,20 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  #cover.cover{padding-left:10px!important;padding-right:10px!important}
  #cover .cover-inner{width:min(calc(100vw - 20px),680px)!important;max-width:100%!important}
 }
+
+
+/* v11.31 · unidade josefina: compêndio, capítulos e encerramentos */
+.compendium-page .illumination-lily{position:relative;margin-bottom:.35rem!important}
+.compendium-page .illumination-lily:after{content:"SJ";display:flex;align-items:center;justify-content:center;width:27px;height:27px;margin:.42rem auto 0;border-radius:50%;background:radial-gradient(circle at 36% 28%,#a83445,var(--wine) 52%,var(--wine-dark));border:1px solid #c8a04d;color:#efd17d;font:italic 600 11px Georgia,serif;box-shadow:0 3px 7px rgba(75,11,24,.18)}
+.compendium-page .toc>button{position:relative;overflow:hidden}
+.compendium-page .toc>button:after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(166,119,45,.28),transparent)}
+.chapter-portal{position:relative!important}
+.chapter-portal:after{content:"SJ";position:absolute;right:13px;bottom:12px;width:31px;height:31px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 36% 28%,#a83445,var(--wine) 52%,var(--wine-dark));border:1px solid #cba756;color:#f1d787;font:italic 600 11px Georgia,serif;box-shadow:0 3px 8px rgba(57,8,17,.24);z-index:4}
+.day-closing-book:after{content:"SJ";display:flex;align-items:center;justify-content:center;width:34px;height:34px;margin:1.25rem auto .15rem;border-radius:50%;background:radial-gradient(circle at 36% 28%,#a83445,var(--wine) 52%,var(--wine-dark));border:1px solid #cba756;color:#f1d787;font:italic 600 12px Georgia,serif;box-shadow:0 4px 9px rgba(57,8,17,.2)}
+.day-closing-book .closing-rule i{background:linear-gradient(90deg,transparent,#b99448,transparent)!important}
+.day-closing-book .closing-rule span{font-size:.9rem!important}
+.day-finished{border:1px solid rgba(134,23,43,.24)!important;box-shadow:inset 0 0 0 1px rgba(210,172,89,.16)!important}
+@media(max-width:560px){
+ .chapter-portal:after{width:28px;height:28px;right:10px;bottom:10px;font-size:10px}
+ .compendium-page .illumination-lily:after{width:25px;height:25px}
+}
