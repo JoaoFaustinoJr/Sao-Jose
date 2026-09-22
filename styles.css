@@ -1580,3 +1580,12 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .lily-divider i{opacity:.7}
 .daily-intentions .lily-divider span{font-size:1.15rem!important;text-shadow:0 0 12px rgba(219,177,75,.22)}
 @media(max-width:420px){.daily-intentions .daily-supplications{padding-left:1.45rem!important;padding-right:1.45rem!important}.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{width:6.2rem;height:9rem;opacity:.28}}
+
+
+/* v11.00 · correção dos arabescos: acima do fundo e atrás do conteúdo */
+.daily-intentions .daily-supplications{isolation:auto!important;min-height:17rem!important}
+.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{z-index:0!important;bottom:-.1rem!important;width:8.8rem!important;height:12.2rem!important;opacity:.38!important}
+.daily-intentions .daily-supplications:before{left:-.35rem!important}
+.daily-intentions .daily-supplications:after{right:-.35rem!important}
+.daily-intentions .daily-supplications>span,.daily-intentions .daily-supplications>h4,.daily-intentions .daily-supplications>button{z-index:1!important}
+@media(max-width:420px){.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{width:7.2rem!important;height:10.4rem!important;opacity:.34!important}}
