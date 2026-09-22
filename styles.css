@@ -1486,3 +1486,8 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .devotional-link,.daily-intentions .devotional-link span{color:#f1dfb4!important;opacity:1!important;text-shadow:0 1px 0 rgba(0,0,0,.22)}
 .daily-intentions .devotional-link{border-color:rgba(211,173,94,.42)!important}
 .daily-intentions .devotional-link b{color:#d9b45e!important;opacity:1!important}
+
+/* v10.90 · chamada das súplicas com presença, sem botão branco */
+.daily-intentions .devotional-link{width:min(92%,31rem)!important;margin:1rem auto .45rem!important;padding:1rem 1.15rem!important;border:1px solid rgba(216,174,82,.78)!important;border-radius:12px!important;background:linear-gradient(180deg,rgba(15,70,82,.96),rgba(7,47,61,.98))!important;box-shadow:inset 0 0 0 1px rgba(255,235,180,.08),0 8px 20px rgba(0,0,0,.18)!important;color:#f7e6bd!important;font-size:1.08rem!important;font-weight:700!important;letter-spacing:.02em!important}
+.daily-intentions .devotional-link span{color:#f7e6bd!important}
+.daily-intentions .devotional-link b{margin-left:auto;color:#e2b95f!important;font-size:1.75rem!important}
