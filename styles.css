@@ -1589,3 +1589,18 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .daily-supplications:after{right:-.35rem!important}
 .daily-intentions .daily-supplications>span,.daily-intentions .daily-supplications>h4,.daily-intentions .daily-supplications>button{z-index:1!important}
 @media(max-width:420px){.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{width:7.2rem!important;height:10.4rem!important;opacity:.34!important}}
+
+
+/* v11.01 · arabescos robustos, sem SVG em data URI */
+.daily-intentions .daily-supplications{position:relative!important;overflow:hidden!important;padding-bottom:2.25rem!important}
+.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{
+ content:"❧\A❦\A❧"!important;white-space:pre!important;background:none!important;
+ position:absolute!important;bottom:-.7rem!important;width:auto!important;height:auto!important;
+ font-family:Georgia,serif!important;font-size:4.3rem!important;line-height:.52!important;
+ color:#477d94!important;opacity:.42!important;z-index:0!important;pointer-events:none!important;
+ filter:none!important;text-shadow:0 0 18px rgba(71,125,148,.16)!important;
+}
+.daily-intentions .daily-supplications:before{left:-.55rem!important;transform:rotate(-18deg)!important}
+.daily-intentions .daily-supplications:after{right:-.55rem!important;transform:scaleX(-1) rotate(-18deg)!important}
+.daily-intentions .daily-supplications>span,.daily-intentions .daily-supplications>h4,.daily-intentions .daily-supplications>button{position:relative!important;z-index:2!important}
+@media(max-width:420px){.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{font-size:3.75rem!important;opacity:.4!important}}
