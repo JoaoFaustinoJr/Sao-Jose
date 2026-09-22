@@ -1840,3 +1840,33 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .day-closing-book .family-final-prayer{border-top-color:rgba(134,23,43,.36)!important}
 .day-closing-book .joseph-divider span{color:var(--wine)!important}
 @media(max-width:560px){.compendium-page .continue-card{padding:.68rem .85rem!important}.compendium-page .toc{gap:.55rem!important}}
+
+/* v11.27 · refinamento tipográfico e ritmo editorial sem novos assets */
+.novena-blue article{max-width:760px!important;margin-inline:auto!important}
+.day-opening{padding-bottom:.35rem!important}
+.day-opening .chapter-portal{margin-bottom:.85rem!important}
+.day-prayer-nav{margin:.65rem auto 1rem!important}
+.begin-day{margin-top:.55rem!important;margin-bottom:1.45rem!important}
+.day-prayer-opening{padding-top:1.2rem!important;padding-bottom:1.25rem!important}
+.day-prayer-opening>.kicker{letter-spacing:.22em!important}
+.day-prayer-opening .simple-prayers{line-height:1.72!important}
+.day-traditional-prayer{margin-top:1rem!important}
+.chapter-lily-crown{margin-top:1.25rem!important}
+.day-opening>h2{margin-top:.2rem!important;margin-bottom:.35rem!important;line-height:1.02!important}
+.day-opening>.lead{margin-top:0!important;opacity:.92}
+.novena-blue article>h3{margin-top:1.8rem!important;padding-top:.7rem!important;letter-spacing:.04em}
+.novena-blue article>h3:before,.novena-blue article>h3:after{content:"";display:inline-block;width:34px;height:1px;background:rgba(215,180,95,.52);vertical-align:middle;margin:0 .55rem}
+.day-closing-book{margin-top:2.2rem!important;padding-top:1.25rem!important;padding-bottom:1.4rem!important;border-top:1px solid rgba(215,180,95,.42)!important}
+.day-closing-book>h3{margin:.3rem 0 1rem!important}
+.day-closing-book .closing-prayers button,.day-closing-book .family-final-prayer{border-radius:18px!important}
+.day-closing-book .closing-invocation{font-style:italic!important;margin:1.1rem auto!important}
+.compendium-page .lead{margin-bottom:.9rem!important}
+.compendium-page .continue-card{margin-bottom:.85rem!important}
+.compendium-page .toc>button{min-height:70px!important;padding:.72rem .85rem!important}
+.compendium-page .toc>button span small{margin-top:.15rem!important;line-height:1.25!important}
+@media(max-width:560px){
+ .novena-blue article{padding-left:1rem!important;padding-right:1rem!important}
+ .day-prayer-opening{padding-left:.65rem!important;padding-right:.65rem!important}
+ .novena-blue article>h3:before,.novena-blue article>h3:after{width:24px;margin:0 .38rem}
+ .compendium-page .toc>button{min-height:64px!important}
+}
