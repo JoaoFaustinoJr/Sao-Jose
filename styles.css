@@ -1691,3 +1691,18 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .song-document-link{width:100%;margin-top:.7rem;text-align:left;display:flex;align-items:center;justify-content:center;gap:.35rem;flex-wrap:wrap}
 .song-document-link small{font-size:.72rem;opacity:.72;font-weight:400}
 .song-document-link:disabled{opacity:.72;cursor:default}
+
+
+/* v11.08 · acervo fotográfico familiar */
+.family-devotion-gallery{margin:2rem 0;padding:1.15rem;border:1px solid rgba(145,111,52,.28);border-radius:18px;background:rgba(255,250,236,.42)}
+.family-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1rem}
+.family-photo-grid figure,.family-devotion-photo{margin:0;overflow:hidden;border-radius:14px;background:#efe5cd;box-shadow:0 7px 22px rgba(42,29,16,.12)}
+.family-photo-grid figure.wide{grid-column:1/-1}
+.family-photo-grid img{width:100%;height:230px;object-fit:cover;display:block}
+.family-photo-grid .wide img{height:300px}
+.family-photo-grid figcaption,.family-devotion-photo figcaption{padding:.7rem .85rem;font-family:Georgia,serif;font-size:.86rem;text-align:center}
+.family-devotion-photo{margin:1.3rem auto;max-width:520px;border:1px solid rgba(180,141,65,.35)}
+.family-devotion-photo img{display:block;width:100%;max-height:560px;object-fit:cover}
+.family-devotion-photo figcaption strong,.family-devotion-photo figcaption small{display:block}
+.family-devotion-photo figcaption small{margin-top:.25rem;opacity:.72}
+@media(max-width:560px){.family-photo-grid{grid-template-columns:1fr}.family-photo-grid figure.wide{grid-column:auto}.family-photo-grid img,.family-photo-grid .wide img{height:auto;max-height:430px;object-fit:cover}}
