@@ -1821,3 +1821,22 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .persignation-crucifix-art{display:block!important;width:132px!important;height:150px!important;object-fit:contain!important;margin:-.15rem auto .15rem!important;filter:drop-shadow(0 5px 7px rgba(0,0,0,.42))!important}
 .persignation-art{min-height:190px!important}
 @media(max-width:560px){.persignation-crucifix-art{width:118px!important;height:136px!important}.persignation-art{min-height:176px!important}}
+
+/* v11.26 · acabamento editorial aplicado aos seletores reais do app */
+:root{--wine:#86172b;--wine-dark:#5f0d1d;--wine-light:#a72d43}
+.titlepage-seal{background:radial-gradient(circle at 38% 30%,#aa3041 0%,var(--wine) 48%,var(--wine-dark) 100%)!important;border-color:#a9653c!important;box-shadow:0 10px 20px rgba(62,8,18,.28),inset 0 0 0 3px rgba(223,170,91,.28)!important}
+.titlepage-invocation{color:var(--wine)!important}
+.compendium-page .continue-card{padding:.78rem 1rem!important;border-left:4px solid var(--wine)!important}
+.compendium-page .toc>button:first-child{border-color:rgba(134,23,43,.65)!important;box-shadow:inset 4px 0 0 var(--wine)!important}
+.compendium-page .toc>button:first-child>b,.compendium-page .toc>button:nth-child(2)>b{color:var(--wine)!important}
+.compendium-page .toc>button:nth-child(2){box-shadow:inset 3px 0 0 rgba(134,23,43,.42)!important}
+.chapter-portal .day-ribbon{background:linear-gradient(180deg,#9d2940,var(--wine-dark))!important}
+.chapter-portal .day-card-head>span{color:#f3d99a!important}
+.day-opening>.kicker{color:#d9b35c!important}
+.day-opening .chapter-lily-crown+.kicker{color:#e1bd69!important}
+.day-closing-book>.kicker{color:#b33a4c!important}
+.day-closing-book .closing-rule span{color:var(--wine)!important}
+.day-closing-book .finish-day{background:linear-gradient(180deg,#971f36,var(--wine-dark))!important;border-color:#d4ad5c!important;color:#fff7e5!important}
+.day-closing-book .family-final-prayer{border-top-color:rgba(134,23,43,.36)!important}
+.day-closing-book .joseph-divider span{color:var(--wine)!important}
+@media(max-width:560px){.compendium-page .continue-card{padding:.68rem .85rem!important}.compendium-page .toc{gap:.55rem!important}}
