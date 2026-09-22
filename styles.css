@@ -2009,3 +2009,25 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  #prayers .prayer-card,#memory .memory-card,#table .table-card,#recipes .recipe-card{border-radius:14px!important}
  #sleeping .sleeping-card,#sleeping .intention-card{border-radius:16px!important}
 }
+
+
+/* v11.36 · lírios josefinos como motivo condutor */
+:root{--lily-ivory:#f4edd7;--lily-gold:#d4b45f;--lily-green:#70865c}
+.chapter-lily-crown.lily-botanical{width:188px!important;height:58px!important;gap:.05rem!important}
+.chapter-lily-crown.lily-botanical b{font-size:2.75rem!important;color:var(--lily-ivory)!important;text-shadow:0 1px #c29c4b,0 3px 5px rgba(0,0,0,.28)!important}
+.chapter-lily-crown.lily-botanical i{font-size:2.15rem!important;color:var(--lily-gold)!important}
+.chapter-lily-crown.lily-botanical span{color:var(--lily-green)!important;font-size:1.65rem!important}
+.day-opening>h2:after{content:"⚜  ❦  ⚜";display:block;margin:.58rem auto .1rem;color:var(--lily-gold);font-size:.76rem;letter-spacing:.35em;opacity:.82}
+.day-closing-book:before{content:"⚜";display:block;width:44px;height:44px;margin:-2.2rem auto .55rem;border-radius:50%;background:#123a43;border:1px solid #c9a451;color:var(--lily-ivory);font-size:1.65rem;line-height:42px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,.18)}
+.compendium-page>h2:before{content:"⚜";display:block;margin:0 auto .35rem;color:var(--lily-ivory);text-shadow:0 1px #b99143;font-size:2rem}
+#prayers.book-page>h2:before,#sleeping.book-page>h2:before,#memory.book-page>h2:before,#table.book-page>h2:before,#recipes.book-page>h2:before{content:"⚜";display:block;margin:0 auto .35rem;color:var(--lily-gold);font-size:1.65rem;text-shadow:0 1px rgba(92,60,18,.28)}
+#sleeping .sleeping-card:after,#sleeping .intention-card:after{content:"⚜";display:block;text-align:center;margin:.8rem auto 0;color:var(--lily-gold);font-size:1.25rem;opacity:.8}
+#prayers .prayer-card:after{content:"❦";display:block;text-align:right;margin:.35rem .35rem 0 0;color:var(--lily-green);font-size:1.1rem;opacity:.7}
+.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{color:#5f8796!important;opacity:.34!important}
+.daily-intentions .daily-supplications>h4:before{content:"⚜";display:inline-block;margin-right:.42rem;color:var(--lily-gold);font-size:.9em}
+.joseph-divider span{font-size:1.45rem!important;color:var(--lily-gold)!important}
+@media(max-width:560px){
+ .chapter-lily-crown.lily-botanical{width:160px!important;height:52px!important}
+ .chapter-lily-crown.lily-botanical b{font-size:2.45rem!important}
+ .day-opening>h2:after{margin-top:.45rem;font-size:.68rem}
+}
