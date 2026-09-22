@@ -1555,3 +1555,9 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .intention-art-cta{bottom:.62rem!important;min-width:82%!important}
 .daily-intentions .intention-art-hint{display:none!important}
 @media(max-width:420px){.daily-intentions .intention-art-button{padding-bottom:5.55rem!important}.daily-intentions .intention-art-kicker{bottom:4.62rem!important}.daily-intentions .intention-art-sub{bottom:3.18rem!important}.daily-intentions .intention-art-cta{bottom:.58rem!important}}
+
+
+/* v10.96 · nova arte é o próprio portal: sem texto/CTA HTML sobreposto */
+.daily-intentions .intention-art-clean{display:block!important;width:calc(100% + 2.1rem)!important;height:auto!important;min-height:0!important;margin:-1.05rem -1.05rem 1.25rem!important;padding:0!important;border:0!important;border-radius:17px 17px 0 0!important;background:transparent!important;overflow:hidden!important;box-shadow:none!important}
+.daily-intentions .intention-art-clean:before,.daily-intentions .intention-art-clean:after{display:none!important}
+.daily-intentions .intention-art-clean img{display:block!important;position:static!important;width:100%!important;height:auto!important;transform:none!important;filter:none!important}
