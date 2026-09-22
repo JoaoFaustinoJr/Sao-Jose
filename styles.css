@@ -2048,3 +2048,20 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .compendium-page>h2:before,#prayers.book-page>h2:before,#sleeping.book-page>h2:before,#memory.book-page>h2:before,#table.book-page>h2:before,#recipes.book-page>h2:before{width:70px!important;height:56px!important}
  .joseph-ornament-page:after{width:44px!important;height:104px!important;right:1px!important;opacity:.18!important}
 }
+
+
+/* v11.39 · segunda inserção dos ornamentos reais */
+.compendium-page .continue-card:after{content:""!important;display:block!important;width:min(210px,62vw)!important;height:42px!important;margin:.55rem auto -.15rem!important;background:url("./assets/file_00000000948481f48fb580158afe4050.png") center/contain no-repeat!important;opacity:.88}
+.compendium-page .toc>button:first-child:before,.compendium-page .toc>button:nth-child(2):before{content:""!important;position:absolute!important;right:9px!important;top:50%!important;transform:translateY(-50%)!important;width:36px!important;height:36px!important;background:url("./assets/file_00000000c540820bbc040d52c3e567a2.png") center/contain no-repeat!important;opacity:.58!important}
+.chapter-portal .day-card-head:after{content:""!important;display:block!important;width:82px!important;height:28px!important;margin:.28rem auto -.18rem!important;background:url("./assets/file_00000000f7c881f5bd44d76b9167d115.png") center/contain no-repeat!important;filter:drop-shadow(0 2px 2px rgba(0,0,0,.2))}
+.day-prayer-opening:after{content:""!important;display:block!important;width:min(190px,58vw)!important;height:38px!important;margin:.85rem auto -.15rem!important;background:url("./assets/file_00000000ccfc8211b3c05229b1bb9a74.png") center/contain no-repeat!important;opacity:.88}
+.novena-blue article .action:after{content:""!important;display:block!important;width:70px!important;height:34px!important;margin:.5rem auto -.15rem!important;background:url("./assets/file_00000000c540820bbc040d52c3e567a2.png") center/contain no-repeat!important;opacity:.68}
+.daily-intentions:after{content:""!important;display:block!important;width:min(225px,65vw)!important;height:44px!important;margin:.8rem auto 0!important;background:url("./assets/file_00000000948481f48fb580158afe4050.png") center/contain no-repeat!important;opacity:.82}
+#memory .gallery figure:nth-child(odd):after,#memory .memory-gallery figure:nth-child(odd):after{content:""!important;display:block!important;width:58px!important;height:28px!important;margin:.2rem auto .45rem!important;background:url("./assets/file_00000000f7c881f5bd44d76b9167d115.png") center/contain no-repeat!important;opacity:.66}
+#table .table-card:after,#recipes .recipe-card:after{content:""!important;display:block!important;width:86px!important;height:38px!important;margin:.55rem auto .05rem!important;background:url("./assets/file_00000000ccfc8211b3c05229b1bb9a74.png") center/contain no-repeat!important;opacity:.72}
+#sleeping .sleeping-card:before,#sleeping .intention-card:before{content:""!important;display:block!important;width:min(245px,68vw)!important;height:52px!important;margin:-.25rem auto .35rem!important;background:url("./assets/file_0000000054808243a16d9f09c4d1b5be.png") center/contain no-repeat!important;opacity:.9}
+@media(max-width:560px){
+ .chapter-portal .day-card-head:after{width:70px!important;height:24px!important}
+ .day-prayer-opening:after{height:32px!important}
+ #sleeping .sleeping-card:before,#sleeping .intention-card:before{height:45px!important}
+}
