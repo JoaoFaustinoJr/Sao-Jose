@@ -2142,3 +2142,23 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  #titlepage .titlepage-seal:before{inset:-12px!important}
  #titlepage .titlepage-seal:after{width:190px!important;height:40px!important;bottom:-24px!important}
 }
+
+
+/* v11.44 · correção de proporção conforme mockup aprovado */
+#titlepage .titlepage-seal{width:min(285px,72vw)!important;height:155px!important;margin:.5rem auto .65rem!important}
+#titlepage .titlepage-seal:before{inset:0!important;background:url("./assets/file_0000000054808243a16d9f09c4d1b5be.png") center/contain no-repeat!important;filter:drop-shadow(0 5px 6px rgba(88,57,17,.16))!important}
+#titlepage .titlepage-seal:after{display:none!important}
+#titlepage .titlepage-rule{margin-top:.25rem!important}
+#titlepage .titlepage-dedication{margin-top:1.15rem!important}
+.chapter-lily-crown.lily-botanical{width:min(245px,68vw)!important;height:58px!important;margin:1.2rem auto .2rem!important}
+.day-opening>h2:after{display:none!important}
+.novena-blue article>h3:not(.day-closing-book h3):after{display:none!important}
+.day-prayer-opening:after{width:min(180px,52vw)!important;height:38px!important;margin:.75rem auto 0!important;opacity:.72!important}
+.action:after{width:74px!important;height:30px!important;opacity:.62!important}
+.chapter-portal:before{width:38px!important;height:38px!important;opacity:.65!important}
+.day-closing-book .closing-invocation:after{width:min(160px,48vw)!important;height:34px!important;opacity:.7!important}
+@media(max-width:560px){
+ #titlepage .titlepage-seal{width:min(255px,70vw)!important;height:138px!important}
+ .chapter-lily-crown.lily-botanical{width:min(220px,65vw)!important;height:52px!important}
+ .day-prayer-opening:after{height:34px!important}
+}
