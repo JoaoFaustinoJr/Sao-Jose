@@ -2128,3 +2128,17 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  #table:before{width:110px!important;height:210px!important;opacity:.20!important}
  #recipes .recipe-book:after{height:68px!important}
 }
+
+
+/* v11.43 · correção da folha de rosto: medalhão integrado, sem aparência de ícone */
+#titlepage .titlepage-seal{width:148px!important;height:148px!important;margin:.2rem auto .5rem!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;transform:none!important;overflow:visible!important}
+#titlepage .titlepage-seal:before{content:""!important;position:absolute!important;inset:-16px!important;background:url("./assets/file_000000003748820e9ae98ad05db89686.png") center/contain no-repeat!important;filter:drop-shadow(0 6px 7px rgba(82,54,17,.18))!important}
+#titlepage .titlepage-seal:after{content:""!important;position:absolute!important;left:50%!important;bottom:-28px!important;transform:translateX(-50%)!important;width:220px!important;height:45px!important;background:url("./assets/file_00000000948481f48fb580158afe4050.png") center/contain no-repeat!important;opacity:.78!important}
+#titlepage .titlepage-seal>*{visibility:hidden!important}
+#titlepage .titlepage-lily{display:none!important}
+#titlepage .titlepage-rule{margin-top:.7rem!important}
+@media(max-width:560px){
+ #titlepage .titlepage-seal{width:128px!important;height:128px!important;margin:.1rem auto .45rem!important}
+ #titlepage .titlepage-seal:before{inset:-12px!important}
+ #titlepage .titlepage-seal:after{width:190px!important;height:40px!important;bottom:-24px!important}
+}
