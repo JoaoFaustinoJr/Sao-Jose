@@ -1706,3 +1706,17 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .family-devotion-photo figcaption strong,.family-devotion-photo figcaption small{display:block}
 .family-devotion-photo figcaption small{margin-top:.25rem;opacity:.72}
 @media(max-width:560px){.family-photo-grid{grid-template-columns:1fr}.family-photo-grid figure.wide{grid-column:auto}.family-photo-grid img,.family-photo-grid .wide img{height:auto;max-height:430px;object-fit:cover}}
+
+
+/* v11.09 · álbum familiar compacto: fotos como cards */
+.family-devotion-gallery{padding:.9rem!important}
+.family-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.65rem!important}
+.family-photo-grid figure,.family-photo-grid figure.wide{grid-column:auto!important;border-radius:12px!important}
+.family-photo-grid img,.family-photo-grid .wide img{width:100%!important;height:138px!important;object-fit:cover!important}
+.family-photo-grid figcaption{padding:.48rem .55rem!important;font-size:.74rem!important;line-height:1.25!important;min-height:2.55rem;display:flex;align-items:center;justify-content:center}
+.family-album-card{display:none!important}
+@media(max-width:560px){
+ .family-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.55rem!important}
+ .family-photo-grid img,.family-photo-grid .wide img{height:112px!important;max-height:none!important}
+ .family-photo-grid figcaption{font-size:.7rem!important;padding:.42rem .35rem!important;min-height:2.35rem}
+}
