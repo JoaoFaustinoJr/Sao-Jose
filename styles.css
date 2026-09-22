@@ -1765,3 +1765,19 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .metal-cross,.asset-cross{display:none!important}
 .persignation-cross-clean{display:flex!important;align-items:center;justify-content:center;width:104px;height:104px;margin:.25rem auto .55rem;border:1px solid rgba(205,171,91,.58);border-radius:50%;font-family:Georgia,serif;font-size:4.2rem;line-height:1;color:#d7b45f;text-shadow:0 1px #f3dd9a,0 3px 5px rgba(0,0,0,.35);background:radial-gradient(circle,rgba(215,180,95,.08),rgba(0,0,0,0) 68%)}
 @media(max-width:560px){.persignation-cross-clean{width:94px;height:94px;font-size:3.8rem}}
+
+/* v11.22 · composição aprovada: cruz no medalhão e lírios centralizados sobre o capítulo */
+.joseph-lily-brooch,.persignation-cross-clean{display:none!important}
+.chapter-lily-crown{position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:.45rem!important;width:210px!important;height:54px!important;margin:.3rem auto .15rem!important;color:#d9b35c!important;filter:drop-shadow(0 3px 4px rgba(0,0,0,.3));z-index:2}
+.chapter-lily-crown:before,.chapter-lily-crown:after{content:"";width:48px;height:1px;background:linear-gradient(90deg,transparent,#cba34f)}
+.chapter-lily-crown:after{background:linear-gradient(90deg,#cba34f,transparent)}
+.chapter-lily-crown b{font-size:2.5rem;line-height:1;color:#f0e4c4;text-shadow:0 1px #a57a2b,0 2px #75531e;font-weight:400}
+.chapter-lily-crown span{font-size:1.35rem;color:#c89b3e}
+.ornate-crucifix{position:relative;display:block!important;width:104px;height:118px;margin:.2rem auto .55rem;filter:drop-shadow(0 4px 5px rgba(0,0,0,.4))}
+.ornate-crucifix .oc-v,.ornate-crucifix .oc-h{position:absolute;display:block;background:linear-gradient(90deg,#5d431e,#c6983c,#f0d67d,#8d6327,#4b351a);border:1px solid #d6b25c;box-shadow:inset 0 0 0 2px rgba(45,30,14,.42)}
+.ornate-crucifix .oc-v{width:25px;height:112px;left:39px;top:2px;border-radius:13px 13px 8px 8px}
+.ornate-crucifix .oc-h{width:92px;height:25px;left:6px;top:37px;border-radius:8px}
+.ornate-crucifix:before,.ornate-crucifix:after{content:"✦";position:absolute;z-index:3;color:#f0d278;font-size:1rem;left:44px}
+.ornate-crucifix:before{top:4px}.ornate-crucifix:after{bottom:5px}
+.ornate-crucifix b{position:absolute;z-index:4;left:29px;top:26px;width:46px;height:50px;display:flex;align-items:center;justify-content:center;font:400 2.4rem Georgia,serif;color:#f2d77f;text-shadow:0 1px #553915}
+@media(max-width:560px){.chapter-lily-crown{width:185px!important;height:48px!important}.chapter-lily-crown b{font-size:2.2rem}.ornate-crucifix{width:96px;height:110px;transform:scale(.94);transform-origin:center}.ornate-crucifix .oc-v{height:106px;left:36px}.ornate-crucifix .oc-h{width:86px;left:5px}.ornate-crucifix b{left:26px}}
