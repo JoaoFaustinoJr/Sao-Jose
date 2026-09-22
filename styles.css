@@ -2065,3 +2065,24 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .day-prayer-opening:after{height:32px!important}
  #sleeping .sleeping-card:before,#sleeping .intention-card:before{height:45px!important}
 }
+
+
+/* v11.40 · seletores corrigidos e inserções visíveis */
+.day-prayer-opening{position:relative!important}
+.day-prayer-opening:after{content:""!important;display:block!important;width:min(260px,72vw)!important;height:64px!important;margin:.9rem auto -.1rem!important;background:url("./assets/file_00000000ccfc8211b3c05229b1bb9a74.png") center/contain no-repeat!important;opacity:1!important}
+.action{position:relative!important;overflow:hidden!important}
+.action:after{content:""!important;display:block!important;width:112px!important;height:48px!important;margin:.55rem auto -.1rem!important;background:url("./assets/file_00000000c540820bbc040d52c3e567a2.png") center/contain no-repeat!important;opacity:.9!important}
+.family-devotion-gallery:before{content:""!important;display:block!important;width:min(300px,78vw)!important;height:70px!important;margin:.2rem auto .35rem!important;background:url("./assets/file_0000000054808243a16d9f09c4d1b5be.png") center/contain no-repeat!important}
+.family-photo-grid figure:nth-child(odd):after{content:""!important;display:block!important;width:82px!important;height:36px!important;margin:.3rem auto .45rem!important;background:url("./assets/file_00000000f7c881f5bd44d76b9167d115.png") center/contain no-repeat!important;opacity:.86!important}
+#sleeping>h2:after{content:""!important;display:block!important;width:min(300px,80vw)!important;height:72px!important;margin:.7rem auto .15rem!important;background:url("./assets/file_0000000054808243a16d9f09c4d1b5be.png") center/contain no-repeat!important}
+#sleeping .sleeping-prayer:before{content:""!important;display:block!important;width:104px!important;height:50px!important;margin:0 auto .6rem!important;background:url("./assets/file_00000000c540820bbc040d52c3e567a2.png") center/contain no-repeat!important}
+#sleeping .sleeping-prayer:after{content:""!important;display:block!important;width:min(220px,65vw)!important;height:48px!important;margin:.6rem auto 0!important;background:url("./assets/file_00000000ccfc8211b3c05229b1bb9a74.png") center/contain no-repeat!important}
+#table>h2:after,#recipes>h2:after{content:""!important;display:block!important;width:min(270px,74vw)!important;height:62px!important;margin:.65rem auto .1rem!important;background:url("./assets/file_00000000948481f48fb580158afe4050.png") center/contain no-repeat!important}
+#table .memory-evidence:after{content:""!important;display:block!important;width:110px!important;height:48px!important;margin:.65rem auto 0!important;background:url("./assets/file_00000000c540820bbc040d52c3e567a2.png") center/contain no-repeat!important}
+#recipes .recipe-card:after{content:""!important;display:block!important;width:150px!important;height:52px!important;margin:.6rem auto .05rem!important;background:url("./assets/file_00000000ccfc8211b3c05229b1bb9a74.png") center/contain no-repeat!important;opacity:.95!important}
+#memory .family-archive:before{content:""!important;display:block!important;width:min(250px,70vw)!important;height:58px!important;margin:0 auto .35rem!important;background:url("./assets/file_00000000948481f48fb580158afe4050.png") center/contain no-repeat!important}
+@media(max-width:560px){
+ .day-prayer-opening:after{height:54px!important}
+ .family-devotion-gallery:before,#sleeping>h2:after{height:60px!important}
+ #table>h2:after,#recipes>h2:after{height:52px!important}
+}
