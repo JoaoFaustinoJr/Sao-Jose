@@ -1728,3 +1728,11 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .curated-grid img,.historic-table-grid img{height:105px!important;object-fit:cover!important}
 .table-archive-gallery{margin-top:1rem!important}
 @media(min-width:620px){.curated-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}.historic-table-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}.historic-table-grid figure:last-child{grid-column:auto!important;max-width:none}.curated-grid img,.historic-table-grid img{height:125px!important}}
+
+/* v11.15 · enquadramento individual das duas imagens devocionais */
+.curated-grid figure:nth-child(1) img{object-position:center 38%!important}
+.curated-grid figure:nth-child(2) img{object-position:center 42%!important}
+@media(max-width:560px){
+ .curated-grid figure:nth-child(1) img{object-position:center 34%!important}
+ .curated-grid figure:nth-child(2) img{object-position:center 40%!important}
+}
