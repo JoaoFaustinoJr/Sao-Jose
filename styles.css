@@ -1932,3 +1932,31 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .day-prayer-opening{border-radius:16px!important}
  .day-closing-book{border-radius:18px!important;padding-left:.7rem!important;padding-right:.7rem!important}
 }
+
+
+/* v11.33 · percurso visual dos nove dias */
+.day-prayer-nav button{position:relative!important;transition:transform .18s ease,background .18s ease!important}
+.day-prayer-nav button:after{content:"";position:absolute;left:18%;right:18%;bottom:-.42rem;height:2px;background:linear-gradient(90deg,transparent,var(--wine),transparent);opacity:.45}
+.day-prayer-nav button:active{transform:translateY(1px)}
+.chapter-lily-crown.lily-botanical{margin-top:1.55rem!important;margin-bottom:.18rem!important}
+.chapter-lily-crown.lily-botanical:before,.chapter-lily-crown.lily-botanical:after{height:2px!important;background:linear-gradient(90deg,transparent,#c49b4c)!important}
+.chapter-lily-crown.lily-botanical:after{background:linear-gradient(90deg,#c49b4c,transparent)!important}
+.day-opening>h2{font-size:clamp(2rem,7vw,3.15rem)!important;text-shadow:0 2px 10px rgba(0,0,0,.16)!important}
+.day-opening>.lead{font-style:italic!important;color:#e8d6a4!important}
+.novena-blue article>h3{position:relative!important;text-align:center!important;color:#f1dfb3!important}
+.novena-blue article>h3:before,.novena-blue article>h3:after{height:2px!important;background:linear-gradient(90deg,transparent,#c9a252)!important}
+.novena-blue article>h3:after{background:linear-gradient(90deg,#c9a252,transparent)!important}
+.novena-blue article>blockquote{border-left:3px solid var(--wine)!important;background:linear-gradient(90deg,rgba(134,23,43,.11),rgba(216,181,96,.035))!important;border-radius:0 14px 14px 0!important;padding:1rem 1.05rem!important}
+.novena-blue article .action{border:1px solid rgba(204,169,84,.38)!important;border-top:3px solid #b89142!important;border-radius:16px!important;background:linear-gradient(145deg,rgba(224,191,107,.08),rgba(134,23,43,.055))!important;box-shadow:0 7px 18px rgba(0,0,0,.07)!important}
+.novena-blue article .action>b{color:#e5c46d!important;letter-spacing:.08em!important}
+.daily-intentions{margin-top:2.15rem!important;margin-bottom:1.8rem!important;padding-top:.8rem!important;border-top:1px solid rgba(205,168,82,.36)!important}
+.daily-intentions .intention-art-button{border-radius:18px!important;overflow:hidden!important;box-shadow:0 10px 24px rgba(0,0,0,.20),0 0 0 1px rgba(205,168,82,.45)!important}
+.daily-intentions .daily-supplications{margin-top:1rem!important;border:1px solid rgba(205,168,82,.34)!important;border-top:3px solid var(--wine)!important;border-radius:16px!important;padding:1rem!important;background:linear-gradient(180deg,rgba(134,23,43,.055),rgba(224,191,107,.035))!important}
+.daily-intentions .daily-supplications>span{color:#d8b45e!important;letter-spacing:.12em!important}
+.family-rosary-link{border:1px solid rgba(205,168,82,.38)!important;box-shadow:inset 4px 0 0 var(--wine),0 7px 16px rgba(0,0,0,.07)!important}
+@media(max-width:560px){
+ .day-opening>h2{font-size:2.15rem!important}
+ .daily-intentions{margin-top:1.7rem!important}
+ .daily-intentions .daily-supplications{padding:.8rem!important}
+ .novena-blue article>blockquote{padding:.85rem .9rem!important}
+}
