@@ -1604,3 +1604,16 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .daily-supplications:after{right:-.55rem!important;transform:scaleX(-1) rotate(-18deg)!important}
 .daily-intentions .daily-supplications>span,.daily-intentions .daily-supplications>h4,.daily-intentions .daily-supplications>button{position:relative!important;z-index:2!important}
 @media(max-width:420px){.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{font-size:3.75rem!important;opacity:.4!important}}
+
+
+/* v11.02 · arabescos mais orgânicos e discretos */
+.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{
+ content:"❧\A  ❦\A ❧"!important;
+ font-size:4.05rem!important;line-height:.62!important;
+ color:#54859a!important;opacity:.30!important;
+ bottom:-.2rem!important;
+ text-shadow:0 0 15px rgba(84,133,154,.12)!important;
+}
+.daily-intentions .daily-supplications:before{left:-.25rem!important;transform:rotate(-12deg) scaleY(1.18)!important;transform-origin:left bottom!important}
+.daily-intentions .daily-supplications:after{right:-.25rem!important;transform:scaleX(-1) rotate(-12deg) scaleY(1.18)!important;transform-origin:right bottom!important}
+@media(max-width:420px){.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{font-size:3.55rem!important;opacity:.28!important;bottom:-.05rem!important}}
