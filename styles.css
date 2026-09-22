@@ -1960,3 +1960,31 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .daily-intentions .daily-supplications{padding:.8rem!important}
  .novena-blue article>blockquote{padding:.85rem .9rem!important}
 }
+
+
+/* v11.34 · oração como livro: hierarquia, leitura e conclusão */
+.day-prayer-opening>.kicker,.day-closing-book>.kicker{display:flex!important;align-items:center!important;justify-content:center!important;gap:.65rem!important}
+.day-prayer-opening>.kicker:before,.day-prayer-opening>.kicker:after,.day-closing-book>.kicker:before,.day-closing-book>.kicker:after{content:"";width:38px;height:1px;background:linear-gradient(90deg,transparent,#c6a052)!important}
+.day-prayer-opening>.kicker:after,.day-closing-book>.kicker:after{background:linear-gradient(90deg,#c6a052,transparent)!important}
+.day-prayer-opening .simple-prayers{max-width:620px!important;margin-left:auto!important;margin-right:auto!important}
+.day-prayer-opening .simple-prayers p{margin:.62rem 0!important}
+.day-traditional-prayer{position:relative!important;margin-top:1.25rem!important;padding-top:1.15rem!important;border-top:1px solid rgba(202,165,79,.32)!important}
+.day-traditional-prayer:before{content:"✦";position:absolute;top:-.65rem;left:50%;transform:translateX(-50%);background:#123a43;padding:0 .6rem;color:#c9a653;font-size:.82rem}
+.novena-blue article p{line-height:1.72!important}
+.novena-blue article .meditation,.novena-blue article [class*="meditation"]{max-width:650px!important;margin-left:auto!important;margin-right:auto!important}
+.day-closing-book>h3{font-size:1.55rem!important;letter-spacing:.025em!important}
+.day-closing-book .closing-prayers{display:grid!important;gap:.55rem!important}
+.day-closing-book .closing-prayers button{min-height:48px!important;border:1px solid rgba(202,165,79,.35)!important;background:linear-gradient(180deg,rgba(255,249,230,.10),rgba(255,249,230,.035))!important}
+.day-closing-book .family-final-prayer{margin-top:1rem!important;padding-top:1rem!important}
+.day-closing-book .finish-day{min-height:52px!important;box-shadow:0 8px 18px rgba(73,8,21,.22),inset 0 0 0 1px rgba(238,204,126,.18)!important}
+.day-finished{margin-top:.85rem!important;padding:.85rem!important;border-radius:15px!important;background:linear-gradient(145deg,rgba(134,23,43,.08),rgba(215,179,90,.06))!important}
+.day-finished span{color:#c9a451!important}
+.day-finished strong{color:#7f172a!important}
+.compendium-page .toc{position:relative!important}
+.compendium-page .toc:before{content:"";position:absolute;top:0;bottom:0;left:20px;width:1px;background:linear-gradient(transparent,rgba(134,23,43,.26),rgba(197,156,72,.34),transparent);pointer-events:none}
+.compendium-page .toc>button{z-index:1!important;background-color:rgba(255,252,241,.92)!important}
+@media(max-width:560px){
+ .day-prayer-opening>.kicker:before,.day-prayer-opening>.kicker:after,.day-closing-book>.kicker:before,.day-closing-book>.kicker:after{width:26px}
+ .novena-blue article p{line-height:1.66!important}
+ .day-closing-book .closing-prayers button{min-height:46px!important}
+}
