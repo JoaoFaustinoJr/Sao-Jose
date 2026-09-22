@@ -52,7 +52,7 @@ const large=document.getElementById('largeText'),motion=document.getElementById(
 document.getElementById('finishNovena')?.addEventListener('click',()=>{localStorage.setItem('saoJoseNovenaCompleted',new Date().toISOString());const m=document.getElementById('finishMsg');if(m)m.textContent='Caminho guardado neste aparelho. A Memória da Família permanece aberta para continuar.'});
 
 /* v10.84 — intenções e súplicas no rito de cada dia */
-(function(){for(let i=1;i<=9;i++){const page=document.getElementById('day'+i),article=page?.querySelector('article');if(!article||article.querySelector('.daily-intentions'))continue;const ph=[...article.querySelectorAll('h3')].find(x=>/oração/i.test(x.textContent));const box=document.createElement('section');box.className='daily-intentions';box.innerHTML=`<figure class="intention-art"><img src="./assets/art/file_000000000d8c820e94e1f86c9a75cb79.png" alt="Momento das Intenções: São José com o Menino Jesus, lírios e turíbulo com a fumaça do incenso subindo." loading="lazy"></figure><div class="lily-divider" aria-hidden="true"><i></i><span>⚜</span><i></i></div><div class="daily-supplications"><span>ORAÇÃO DIÁRIA · TODOS OS NOVE DIAS</span><h4>Súplicas à Santíssima Trindade e invocações a São José</h4><button class="devotional-link" type="button" data-prayer="trinitySupplications"><span>Rezar as súplicas e invocações</span><b aria-hidden="true">›</b></button></div>`;if(ph)ph.before(box);else article.appendChild(box);}})();
+(function(){for(let i=1;i<=9;i++){const page=document.getElementById('day'+i),article=page?.querySelector('article');if(!article||article.querySelector('.daily-intentions'))continue;const ph=[...article.querySelectorAll('h3')].find(x=>/oração/i.test(x.textContent));const box=document.createElement('section');box.className='daily-intentions';box.innerHTML=`<button class="intention-art intention-art-button" type="button" data-open-intentions aria-label="Abrir a seção de intenções"><img src="./assets/art/file_000000000d8c820e94e1f86c9a75cb79.png" alt="Momento das Intenções: São José com o Menino Jesus, lírios e turíbulo com a fumaça do incenso subindo." loading="lazy"><span class="intention-art-cta">Confiar minhas intenções <b aria-hidden="true">›</b></span></button><div class="lily-divider" aria-hidden="true"><i></i><span>⚜</span><i></i></div><div class="daily-supplications"><span>ORAÇÃO DIÁRIA · TODOS OS NOVE DIAS</span><h4>Súplicas à Santíssima Trindade e invocações a São José</h4><button class="devotional-link" type="button" data-prayer="trinitySupplications"><span>Rezar as súplicas e invocações</span><b aria-hidden="true">›</b></button></div>`;if(ph)ph.before(box);else article.appendChild(box);}})();
 
 /* v5.0 guided novena navigation */
 function jumpInDay(kind,btn){const page=btn.closest('.chapter');if(!page)return;const hs=[...page.querySelectorAll('h3')];let target=null;if(kind==='opening')target=page.querySelector('[data-section="opening"]');const match={word:/palavra/i,meditation:/contemplar|medita|silêncio|escuta|aliança|ternura|trabalho|discern/i,prayer:/oração/i,intentions:/inten|mesa|sonhos/i}[kind];if(match)target=hs.find(h=>match.test(h.textContent));if(!target&&kind==='word')target=page.querySelector('article>h3');if(!target&&kind==='meditation')target=hs[Math.min(1,hs.length-1)];if(!target&&kind==='prayer')target=hs.find(h=>/oração/i.test(h.textContent))||hs[hs.length-1];if(!target&&kind==='intentions')target=page.querySelector('.action')||hs[hs.length-1];if(target){target.scrollIntoView({behavior:document.body.classList.contains('reduce-motion')?'auto':'smooth',block:'start'});target.classList.add('prayer-focus');setTimeout(()=>target.classList.remove('prayer-focus'),1200)}}
@@ -166,3 +166,33 @@ document.addEventListener('click',async e=>{
  const data={title:'Novena de São José',text:'Uma devoção de família · oração · silêncio · memória',url:'https://joaofaustinojr.github.io/Sao-Jose/'};
  try{if(navigator.share){await navigator.share(data);if(toolsMsg())toolsMsg().textContent='Compartilhamento aberto.';}else{await navigator.clipboard.writeText(data.url);if(toolsMsg())toolsMsg().textContent='Link da Novena copiado.';}}catch(err){if(err?.name!=='AbortError'&&toolsMsg())toolsMsg().textContent='Não foi possível abrir o compartilhamento neste navegador.';}
 });
+
+
+/* v10.93 — portal das intenções com retorno ao ponto de oração */
+let intentionReturn=null;
+document.addEventListener('click',e=>{
+ const open=e.target.closest('[data-open-intentions]');
+ if(open){
+   e.preventDefault();
+   const page=open.closest('.chapter');
+   intentionReturn={pageId:page?.id||'day1',scrollY:window.scrollY};
+   show('sleeping');
+   requestAnimationFrame(()=>window.scrollTo({top:0,behavior:document.body.classList.contains('reduce-motion')?'auto':'smooth'}));
+   return;
+ }
+ const back=e.target.closest('[data-return-intentions]');
+ if(back){
+   e.preventDefault();
+   const dest=document.getElementById(intentionReturn?.pageId||'day1');
+   if(dest){show(dest.id);requestAnimationFrame(()=>window.scrollTo({top:intentionReturn?.scrollY||0,behavior:'auto'}));}
+ }
+});
+(function(){
+ const page=document.getElementById('sleeping');
+ if(!page||page.querySelector('[data-return-intentions]'))return;
+ const header=page.querySelector('header');
+ const b=document.createElement('button');
+ b.type='button'; b.className='ghost intentions-return'; b.setAttribute('data-return-intentions','');
+ b.innerHTML='‹ Voltar ao dia da Novena';
+ header?.prepend(b);
+})();
