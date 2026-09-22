@@ -1759,3 +1759,9 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .joseph-lily-brooch i{font-style:normal;font-size:3rem;color:#d8b15b;line-height:1;text-shadow:0 1px #f3da92,0 -1px #6b4b20}
 .joseph-lily-brooch b{position:absolute;font-size:1.55rem;color:#f1ead5;transform:rotate(-30deg) translate(-11px,-3px);text-shadow:0 1px #8c6b31}
 @media(max-width:560px){.metal-cross{width:82px;height:105px}.metal-cross:before{height:101px}.metal-cross:after{width:78px}.joseph-lily-brooch{width:55px!important;height:55px!important;right:.45rem!important;top:.65rem!important}.joseph-lily-brooch i{font-size:2.55rem}.joseph-lily-brooch b{font-size:1.3rem}}
+
+/* v11.21 · correção visual da persignação */
+.persignation-art{min-height:145px!important}
+.metal-cross,.asset-cross{display:none!important}
+.persignation-cross-clean{display:flex!important;align-items:center;justify-content:center;width:104px;height:104px;margin:.25rem auto .55rem;border:1px solid rgba(205,171,91,.58);border-radius:50%;font-family:Georgia,serif;font-size:4.2rem;line-height:1;color:#d7b45f;text-shadow:0 1px #f3dd9a,0 3px 5px rgba(0,0,0,.35);background:radial-gradient(circle,rgba(215,180,95,.08),rgba(0,0,0,0) 68%)}
+@media(max-width:560px){.persignation-cross-clean{width:94px;height:94px;font-size:3.8rem}}
