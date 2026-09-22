@@ -2105,3 +2105,19 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .novena-blue article>h3:not(.day-closing-book h3):after{width:62px!important;height:26px!important}
  #table .table-chain:before,#table .table-chain:after{display:none!important}
 }
+
+
+/* v11.47 · oração do dia: um único ornamento, proporcional */
+.day-traditional-prayer:after{display:none!important;content:none!important}
+.day-prayer-opening:after{
+ content:""!important;
+ display:block!important;
+ width:min(150px,42vw)!important;
+ height:34px!important;
+ margin:.78rem auto .08rem!important;
+ background:url("./assets/file_00000000ccfc8211b3c05229b1bb9a74.png") center/contain no-repeat!important;
+ opacity:.82!important;
+}
+@media(max-width:560px){
+ .day-prayer-opening:after{width:min(138px,40vw)!important;height:31px!important;margin:.7rem auto .05rem!important}
+}
