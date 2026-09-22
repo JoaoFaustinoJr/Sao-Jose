@@ -1567,3 +1567,16 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .intention-art-clean{width:calc(100% + 2.1rem)!important;aspect-ratio:1.04/1!important;margin:-1.05rem -1.05rem 1.1rem!important;border-radius:17px!important;overflow:hidden!important;background:#062b39!important}
 .daily-intentions .intention-art-clean img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center top!important}
 @media(max-width:480px){.daily-intentions .intention-art-clean{aspect-ratio:1.02/1!important}}
+
+
+/* v10.99 · arabescos josefinos inspirados no mockup */
+.daily-intentions{position:relative!important;overflow:hidden!important}
+.daily-intentions .daily-supplications{position:relative!important;isolation:isolate;padding:1.35rem 2.2rem 1.55rem!important;overflow:hidden}
+.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{content:"";position:absolute;z-index:-1;bottom:-.35rem;width:7.4rem;height:10.5rem;opacity:.34;background-repeat:no-repeat;background-size:contain;pointer-events:none;filter:saturate(.85)}
+.daily-intentions .daily-supplications:before{left:-1rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 170'%3E%3Cg fill='none' stroke='%235c8ca0' stroke-width='5' stroke-linecap='round'%3E%3Cpath d='M20 170C22 118 29 70 54 25M25 144C5 127 7 102 11 83C34 93 42 113 34 133M38 108C22 86 28 62 40 45C59 60 64 80 51 99M51 75C42 52 53 30 68 17C83 38 79 56 63 69M20 153C42 139 63 140 82 151C67 169 45 170 26 163M31 126C54 112 76 116 91 130C73 145 51 143 35 136M43 96C66 84 88 91 101 107C80 119 61 114 47 106M56 65C77 57 96 66 106 81C86 91 70 85 59 77%3E%3C/path%3E%3C/g%3E%3C/svg%3E")}
+.daily-intentions .daily-supplications:after{right:-1rem;transform:scaleX(-1);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 170'%3E%3Cg fill='none' stroke='%235c8ca0' stroke-width='5' stroke-linecap='round'%3E%3Cpath d='M20 170C22 118 29 70 54 25M25 144C5 127 7 102 11 83C34 93 42 113 34 133M38 108C22 86 28 62 40 45C59 60 64 80 51 99M51 75C42 52 53 30 68 17C83 38 79 56 63 69M20 153C42 139 63 140 82 151C67 169 45 170 26 163M31 126C54 112 76 116 91 130C73 145 51 143 35 136M43 96C66 84 88 91 101 107C80 119 61 114 47 106M56 65C77 57 96 66 106 81C86 91 70 85 59 77%3E%3C/path%3E%3C/g%3E%3C/svg%3E")}
+.daily-intentions .daily-supplications>span,.daily-intentions .daily-supplications>h4,.daily-intentions .daily-supplications>button{position:relative;z-index:2}
+.daily-intentions .lily-divider{margin:.55rem 1.5rem .15rem!important}
+.daily-intentions .lily-divider i{opacity:.7}
+.daily-intentions .lily-divider span{font-size:1.15rem!important;text-shadow:0 0 12px rgba(219,177,75,.22)}
+@media(max-width:420px){.daily-intentions .daily-supplications{padding-left:1.45rem!important;padding-right:1.45rem!important}.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{width:6.2rem;height:9rem;opacity:.28}}
