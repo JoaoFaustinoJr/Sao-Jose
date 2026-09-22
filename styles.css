@@ -1498,3 +1498,21 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .intention-art:after{z-index:2}
 .daily-intentions .lily-divider{position:relative;z-index:4;margin-top:.25rem}
 @media(max-width:480px){.daily-intentions .intention-art:before{left:28%;width:48%;height:125px;bottom:-51px;opacity:.6}.daily-intentions .intention-art{margin-bottom:2rem!important}}
+
+
+/* v10.91 · CTA das súplicas — destaque dourado integrado */
+.daily-intentions .devotional-link{
+ width:min(92%,31rem)!important;
+ margin:1rem auto .5rem!important;
+ padding:1rem 1.2rem!important;
+ border:1px solid #d7ad58!important;
+ border-radius:10px!important;
+ background:linear-gradient(180deg,#d9b45f 0%,#b98a35 100%)!important;
+ box-shadow:inset 0 1px 0 rgba(255,250,225,.55),0 7px 18px rgba(0,0,0,.22)!important;
+ color:#082f40!important;
+ text-shadow:none!important;
+ font-weight:700!important;
+}
+.daily-intentions .devotional-link span{color:#082f40!important;text-shadow:none!important}
+.daily-intentions .devotional-link b{color:#082f40!important;opacity:1!important}
+.daily-intentions .devotional-link:active{transform:translateY(1px)!important;box-shadow:inset 0 1px 0 rgba(255,250,225,.4),0 3px 10px rgba(0,0,0,.2)!important}
