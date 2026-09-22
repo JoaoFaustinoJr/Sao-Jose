@@ -1561,3 +1561,9 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .intention-art-clean{display:block!important;width:calc(100% + 2.1rem)!important;height:auto!important;min-height:0!important;margin:-1.05rem -1.05rem 1.25rem!important;padding:0!important;border:0!important;border-radius:17px 17px 0 0!important;background:transparent!important;overflow:hidden!important;box-shadow:none!important}
 .daily-intentions .intention-art-clean:before,.daily-intentions .intention-art-clean:after{display:none!important}
 .daily-intentions .intention-art-clean img{display:block!important;position:static!important;width:100%!important;height:auto!important;transform:none!important;filter:none!important}
+
+
+/* v10.98 · portal como no mockup: ocupa o quadro sem faixa vazia */
+.daily-intentions .intention-art-clean{width:calc(100% + 2.1rem)!important;aspect-ratio:1.04/1!important;margin:-1.05rem -1.05rem 1.1rem!important;border-radius:17px!important;overflow:hidden!important;background:#062b39!important}
+.daily-intentions .intention-art-clean img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center top!important}
+@media(max-width:480px){.daily-intentions .intention-art-clean{aspect-ratio:1.02/1!important}}
