@@ -2031,3 +2031,20 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .chapter-lily-crown.lily-botanical b{font-size:2.45rem!important}
  .day-opening>h2:after{margin-top:.45rem;font-size:.68rem}
 }
+
+
+/* v11.37 · ornamentos josefinos reais enviados pelo autor */
+.chapter-lily-crown.lily-botanical{width:min(360px,86vw)!important;height:86px!important;background:url("./assets/file_0000000054808243a16d9f09c4d1b5be.png") center/contain no-repeat!important;filter:drop-shadow(0 4px 5px rgba(0,0,0,.18))!important}
+.chapter-lily-crown.lily-botanical>*{display:none!important}
+.day-opening>h2:after{content:""!important;display:block!important;width:min(250px,70vw)!important;height:50px!important;margin:.55rem auto .08rem!important;background:url("./assets/file_00000000948481f48fb580158afe4050.png") center/contain no-repeat!important;opacity:1!important}
+.compendium-page>h2:before,#prayers.book-page>h2:before,#sleeping.book-page>h2:before,#memory.book-page>h2:before,#table.book-page>h2:before,#recipes.book-page>h2:before{content:""!important;display:block!important;width:84px!important;height:66px!important;margin:0 auto .28rem!important;background:url("./assets/file_00000000c540820bbc040d52c3e567a2.png") center/contain no-repeat!important;filter:drop-shadow(0 3px 4px rgba(0,0,0,.12))!important}
+.day-closing-book:before{content:""!important;width:105px!important;height:58px!important;margin:-2.25rem auto .45rem!important;border:0!important;border-radius:0!important;background:url("./assets/file_00000000ccfc8211b3c05229b1bb9a74.png") center/contain no-repeat!important;box-shadow:none!important}
+.daily-intentions .daily-supplications>h4:before{content:""!important;display:inline-block!important;width:32px!important;height:27px!important;margin-right:.38rem!important;vertical-align:middle!important;background:url("./assets/file_00000000f7c881f5bd44d76b9167d115.png") center/contain no-repeat!important}
+.joseph-ornament-page:after{content:""!important;position:absolute!important;right:4px!important;top:118px!important;width:56px!important;height:128px!important;background:url("./assets/file_00000000f9a4820eb32b2fba7e5fd9ec.png") center/contain no-repeat!important;opacity:.24!important;pointer-events:none!important;z-index:0!important}
+.joseph-ornament-page>*{position:relative;z-index:1}
+@media(max-width:560px){
+ .chapter-lily-crown.lily-botanical{width:min(310px,88vw)!important;height:72px!important}
+ .day-opening>h2:after{height:42px!important}
+ .compendium-page>h2:before,#prayers.book-page>h2:before,#sleeping.book-page>h2:before,#memory.book-page>h2:before,#table.book-page>h2:before,#recipes.book-page>h2:before{width:70px!important;height:56px!important}
+ .joseph-ornament-page:after{width:44px!important;height:104px!important;right:1px!important;opacity:.18!important}
+}
