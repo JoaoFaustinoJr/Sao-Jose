@@ -1491,3 +1491,10 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .devotional-link{width:min(92%,31rem)!important;margin:1rem auto .45rem!important;padding:1rem 1.15rem!important;border:1px solid rgba(216,174,82,.78)!important;border-radius:12px!important;background:linear-gradient(180deg,rgba(15,70,82,.96),rgba(7,47,61,.98))!important;box-shadow:inset 0 0 0 1px rgba(255,235,180,.08),0 8px 20px rgba(0,0,0,.18)!important;color:#f7e6bd!important;font-size:1.08rem!important;font-weight:700!important;letter-spacing:.02em!important}
 .daily-intentions .devotional-link span{color:#f7e6bd!important}
 .daily-intentions .devotional-link b{margin-left:auto;color:#e2b95f!important;font-size:1.75rem!important}
+
+/* v10.90 · fumaça do incenso rompe suavemente o limite da arte */
+.daily-intentions .intention-art{overflow:visible!important;margin-bottom:2.35rem!important}
+.daily-intentions .intention-art:before{content:"";position:absolute;z-index:3;left:31%;bottom:-58px;width:43%;height:145px;pointer-events:none;opacity:.68;background:radial-gradient(ellipse at 42% 78%,rgba(244,241,226,.34) 0 8%,transparent 32%),radial-gradient(ellipse at 60% 55%,rgba(244,241,226,.25) 0 7%,transparent 31%),radial-gradient(ellipse at 47% 25%,rgba(244,241,226,.18) 0 6%,transparent 28%);filter:blur(9px);transform:rotate(-7deg)}
+.daily-intentions .intention-art:after{z-index:2}
+.daily-intentions .lily-divider{position:relative;z-index:4;margin-top:.25rem}
+@media(max-width:480px){.daily-intentions .intention-art:before{left:28%;width:48%;height:125px;bottom:-51px;opacity:.6}.daily-intentions .intention-art{margin-bottom:2rem!important}}
