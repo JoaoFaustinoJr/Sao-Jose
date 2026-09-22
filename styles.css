@@ -1468,3 +1468,16 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .intention-pause span{display:block;margin-bottom:.45rem;color:#d8b86c;font-size:.67rem;letter-spacing:.19em;font-weight:700}
 .daily-intentions .intention-pause p{margin:0;color:inherit;font-style:italic;line-height:1.55}
 .daily-intentions>.incense-altar,.daily-intentions>.incense-rays{display:none!important}
+
+/* v10.87 · acabamento editorial: intenções → súplicas */
+.daily-intentions .intention-pause{display:none!important}
+.daily-intentions .lily-divider{display:flex;align-items:center;justify-content:center;gap:.7rem;margin:.8rem 0 1.15rem;color:#d3ad5e}
+.daily-intentions .lily-divider i{height:1px;flex:1;max-width:8.5rem;background:linear-gradient(90deg,transparent,rgba(211,173,94,.62))}
+.daily-intentions .lily-divider i:last-child{background:linear-gradient(90deg,rgba(211,173,94,.62),transparent)}
+.daily-intentions .lily-divider span{font-size:1.1rem;line-height:1;text-shadow:0 0 12px rgba(211,173,94,.18)}
+.daily-intentions .daily-supplications{margin-top:0;padding:0 .15rem .2rem;border-top:0}
+.daily-intentions .daily-supplications>span{display:block;margin-bottom:.45rem;font-size:.64rem;letter-spacing:.19em;color:#d3ad5e}
+.daily-intentions .daily-supplications h4{margin:.2rem auto .95rem;max-width:28rem;line-height:1.25}
+.daily-intentions .devotional-link{width:100%;min-height:0;margin:.2rem 0 0;padding:.82rem .25rem .7rem;border:0;border-top:1px solid rgba(211,173,94,.32);border-bottom:1px solid rgba(211,173,94,.32);border-radius:0;background:transparent!important;box-shadow:none!important;color:#ead8aa;display:flex;align-items:center;justify-content:center;gap:.65rem;font-family:Georgia,serif;font-size:1rem;letter-spacing:.015em}
+.daily-intentions .devotional-link b{font-family:Georgia,serif;font-size:1.45rem;font-weight:400;color:#d3ad5e;line-height:.8;transition:transform .18s ease}
+.daily-intentions .devotional-link:active b{transform:translateX(3px)}
