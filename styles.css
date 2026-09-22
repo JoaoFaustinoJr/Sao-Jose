@@ -2086,3 +2086,22 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .family-devotion-gallery:before,#sleeping>h2:after{height:60px!important}
  #table>h2:after,#recipes>h2:after{height:52px!important}
 }
+
+
+/* v11.41 · lírios como pontuação visual do percurso */
+.chapter-portal:before{content:""!important;position:absolute!important;left:12px!important;bottom:10px!important;width:58px!important;height:58px!important;background:url("./assets/file_00000000f7c881f5bd44d76b9167d115.png") center/contain no-repeat!important;opacity:.88!important;z-index:4!important}
+.day-prayer-nav:before,.day-prayer-nav:after{content:""!important;display:block!important;width:48px!important;height:38px!important;flex:0 0 48px!important;background:url("./assets/file_00000000c540820bbc040d52c3e567a2.png") center/contain no-repeat!important;opacity:.68!important}
+.day-traditional-prayer:after{content:""!important;display:block!important;width:min(190px,58vw)!important;height:44px!important;margin:.75rem auto 0!important;background:url("./assets/file_00000000ccfc8211b3c05229b1bb9a74.png") center/contain no-repeat!important}
+.novena-blue article>h3:not(.day-closing-book h3):after{content:""!important;display:block!important;width:74px!important;height:30px!important;margin:.35rem auto -.1rem!important;background:url("./assets/file_00000000f7c881f5bd44d76b9167d115.png") center/contain no-repeat!important;opacity:.78!important}
+.day-closing-book .closing-invocation:after{content:""!important;display:block!important;width:min(220px,65vw)!important;height:48px!important;margin:.65rem auto 0!important;background:url("./assets/file_00000000948481f48fb580158afe4050.png") center/contain no-repeat!important}
+#prayers .prayer-card:nth-child(odd):after{content:""!important;display:block!important;width:92px!important;height:38px!important;margin:.45rem auto 0!important;background:url("./assets/file_00000000c540820bbc040d52c3e567a2.png") center/contain no-repeat!important;opacity:.75!important}
+#prayers .prayer-card:nth-child(even):after{content:""!important;display:block!important;width:125px!important;height:40px!important;margin:.45rem auto 0!important;background:url("./assets/file_00000000ccfc8211b3c05229b1bb9a74.png") center/contain no-repeat!important;opacity:.72!important}
+#memory .archive-collections article:after{content:""!important;display:block!important;width:70px!important;height:32px!important;margin:.45rem auto 0!important;background:url("./assets/file_00000000f7c881f5bd44d76b9167d115.png") center/contain no-repeat!important;opacity:.7!important}
+#table .table-chain:before,#table .table-chain:after{content:""!important;display:block!important;width:58px!important;height:42px!important;flex:0 0 58px!important;background:url("./assets/file_00000000c540820bbc040d52c3e567a2.png") center/contain no-repeat!important;opacity:.72!important}
+#recipes .recipe-book:before{content:""!important;display:block!important;width:min(300px,80vw)!important;height:64px!important;margin:0 auto .55rem!important;background:url("./assets/file_0000000054808243a16d9f09c4d1b5be.png") center/contain no-repeat!important}
+@media(max-width:560px){
+ .chapter-portal:before{width:48px!important;height:48px!important;left:8px!important}
+ .day-prayer-nav:before,.day-prayer-nav:after{width:34px!important;height:30px!important;flex-basis:34px!important}
+ .novena-blue article>h3:not(.day-closing-book h3):after{width:62px!important;height:26px!important}
+ #table .table-chain:before,#table .table-chain:after{display:none!important}
+}
