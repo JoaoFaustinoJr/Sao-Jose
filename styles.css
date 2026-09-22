@@ -1736,3 +1736,11 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .curated-grid figure:nth-child(1) img{object-position:center 34%!important}
  .curated-grid figure:nth-child(2) img{object-position:center 40%!important}
 }
+
+/* v11.18 · artes josefinas: recortes da prancha enviada ao acervo */
+.day-opening{position:relative}
+.joseph-lily-brooch{position:absolute;right:1rem;top:calc(var(--day-card-offset,0px) + 1rem);width:58px;height:58px;background-image:url("./assets/art/file_00000000619c820e9c39d4e5f07f52fc.png");background-size:500% auto;background-position:50% 2%;background-repeat:no-repeat;filter:drop-shadow(0 3px 5px rgba(0,0,0,.25));opacity:.94;z-index:2}
+.persignation-art{height:auto!important;min-height:165px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important}
+.asset-cross{display:block;width:132px;height:132px;background-image:url("./assets/art/file_00000000619c820e9c39d4e5f07f52fc.png");background-size:500% auto;background-position:1% 31%;background-repeat:no-repeat;filter:drop-shadow(0 4px 6px rgba(0,0,0,.3))}
+.persignation-art small{margin-top:.15rem}
+@media(max-width:560px){.joseph-lily-brooch{width:50px;height:50px;right:.65rem}.asset-cross{width:118px;height:118px}.persignation-art{min-height:150px!important}}
