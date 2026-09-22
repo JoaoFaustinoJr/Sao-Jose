@@ -1543,3 +1543,15 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .intention-art-button:active img{transform:scale(1.008)!important;filter:brightness(.88)!important}
 .intentions-return{display:inline-flex!important;align-items:center;gap:.35rem;margin:0 0 .85rem!important;padding:.55rem .8rem!important;border:1px solid rgba(211,173,94,.42)!important;border-radius:999px!important;color:#ead8aa!important;background:rgba(7,47,61,.55)!important;font-family:Georgia,serif!important}
 @media(max-width:420px){.daily-intentions .intention-art-kicker{bottom:6.25rem;font-size:.65rem}.daily-intentions .intention-art-sub{bottom:4.8rem;font-size:.76rem}.daily-intentions .intention-art-cta{bottom:1.85rem!important;font-size:.84rem!important}.daily-intentions .intention-art-hint{bottom:.48rem}}
+
+
+/* v10.95 · hotfix visual inequívoco do portal — evita sobreposição no mobile */
+.daily-intentions .intention-art-button{width:calc(100% + 2.1rem)!important;margin:-1.05rem -1.05rem 1.35rem!important;padding:0 0 5.65rem!important;background:#062b39!important;overflow:hidden!important}
+.daily-intentions .intention-art-button img{position:relative!important;z-index:1!important;width:100%!important}
+.daily-intentions .intention-art-button:after{display:none!important}
+.daily-intentions .intention-art-kicker,.daily-intentions .intention-art-sub,.daily-intentions .intention-art-cta,.daily-intentions .intention-art-hint{position:absolute!important;z-index:5!important}
+.daily-intentions .intention-art-kicker{bottom:4.72rem!important}
+.daily-intentions .intention-art-sub{bottom:3.25rem!important}
+.daily-intentions .intention-art-cta{bottom:.62rem!important;min-width:82%!important}
+.daily-intentions .intention-art-hint{display:none!important}
+@media(max-width:420px){.daily-intentions .intention-art-button{padding-bottom:5.55rem!important}.daily-intentions .intention-art-kicker{bottom:4.62rem!important}.daily-intentions .intention-art-sub{bottom:3.18rem!important}.daily-intentions .intention-art-cta{bottom:.58rem!important}}
