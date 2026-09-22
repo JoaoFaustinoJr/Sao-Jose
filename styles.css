@@ -1781,3 +1781,19 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .ornate-crucifix:before{top:4px}.ornate-crucifix:after{bottom:5px}
 .ornate-crucifix b{position:absolute;z-index:4;left:29px;top:26px;width:46px;height:50px;display:flex;align-items:center;justify-content:center;font:400 2.4rem Georgia,serif;color:#f2d77f;text-shadow:0 1px #553915}
 @media(max-width:560px){.chapter-lily-crown{width:185px!important;height:48px!important}.chapter-lily-crown b{font-size:2.2rem}.ornate-crucifix{width:96px;height:110px;transform:scale(.94);transform-origin:center}.ornate-crucifix .oc-v{height:106px;left:36px}.ornate-crucifix .oc-h{width:86px;left:5px}.ornate-crucifix b{left:26px}}
+
+/* v11.23 · acabamento final dos ornamentos dos dias */
+.day-opening>.illumination{display:none!important}
+.chapter-lily-crown.lily-botanical{position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:.18rem!important;width:150px!important;height:48px!important;margin:.55rem auto .05rem!important;background:none!important}
+.chapter-lily-crown.lily-botanical:before,.chapter-lily-crown.lily-botanical:after{content:"";width:32px;height:1px;background:#a88643;opacity:.7}
+.chapter-lily-crown.lily-botanical span{font-size:1.45rem!important;color:#9e7b35!important;transform:rotate(-18deg)}
+.chapter-lily-crown.lily-botanical span:last-child{transform:rotate(18deg) scaleX(-1)}
+.chapter-lily-crown.lily-botanical b,.chapter-lily-crown.lily-botanical i{font-style:normal!important;font-weight:400!important;font-size:2.35rem!important;line-height:1!important;color:#f2ead1!important;text-shadow:0 1px #b68a37,0 2px 2px rgba(0,0,0,.35)!important;transform:rotate(-12deg)}
+.chapter-lily-crown.lily-botanical i{font-size:1.9rem!important;transform:rotate(14deg);margin-left:-.45rem;color:#d8b55f!important}
+.metal-devotional{width:112px!important;height:126px!important}
+.metal-devotional .oc-v{width:24px!important;height:118px!important;left:44px!important;top:3px!important;background:linear-gradient(90deg,#3e3327 0%,#8d7651 12%,#e3c77d 29%,#76603d 48%,#d6b55f 69%,#55432d 100%)!important;border:2px ridge #c6a35a!important}
+.metal-devotional .oc-h{width:102px!important;height:25px!important;left:5px!important;top:39px!important;background:linear-gradient(#4c3d2a,#d5b66a,#76603f,#d0ad5b,#463722)!important;border:2px ridge #c6a35a!important}
+.metal-devotional .corpus{position:absolute!important;z-index:5!important;left:34px!important;top:22px!important;width:44px!important;height:66px!important;display:flex!important;align-items:center!important;justify-content:center!important;font:400 3.5rem Georgia,serif!important;color:#d8bd79!important;text-shadow:0 1px #fff0b5,0 2px 2px #3d2d18!important}
+.metal-devotional .gem{position:absolute!important;z-index:6!important;width:9px!important;height:9px!important;background:#e6c86f!important;border:1px solid #5c421d!important;transform:rotate(45deg)!important;box-shadow:0 0 0 1px #b58c3c!important}
+.metal-devotional .g1{left:51px!important;top:2px!important}.metal-devotional .g2{left:3px!important;top:47px!important}.metal-devotional .g3{right:3px!important;top:47px!important}.metal-devotional .g4{left:51px!important;bottom:2px!important}
+@media(max-width:560px){.chapter-lily-crown.lily-botanical{width:138px!important;height:44px!important}.metal-devotional{transform:scale(.9)!important;margin-top:-.15rem!important;margin-bottom:-.05rem!important}}
