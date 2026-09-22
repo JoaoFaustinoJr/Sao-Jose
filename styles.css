@@ -1744,3 +1744,18 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .asset-cross{display:block;width:132px;height:132px;background-image:url("./assets/art/file_00000000619c820e9c39d4e5f07f52fc.png");background-size:500% auto;background-position:1% 31%;background-repeat:no-repeat;filter:drop-shadow(0 4px 6px rgba(0,0,0,.3))}
 .persignation-art small{margin-top:.15rem}
 @media(max-width:560px){.joseph-lily-brooch{width:50px;height:50px;right:.65rem}.asset-cross{width:118px;height:118px}.persignation-art{min-height:150px!important}}
+
+/* v11.20 · ornamentos robustos sem recorte de prancha */
+.asset-cross{display:none!important}
+.persignation-art{min-height:160px!important}
+.metal-cross{position:relative;display:block!important;width:92px;height:118px;margin:.2rem auto .55rem;filter:drop-shadow(0 5px 5px rgba(0,0,0,.35))}
+.metal-cross:before,.metal-cross:after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:linear-gradient(90deg,#725423,#e7c777,#fff0b2,#9a702b,#4d391c);border:1px solid #d5b35f;box-shadow:inset 0 0 0 2px rgba(35,27,18,.35),0 0 0 1px rgba(238,205,118,.25)}
+.metal-cross:before{width:27px;height:112px;border-radius:12px 12px 9px 9px}
+.metal-cross:after{width:86px;height:27px;border-radius:9px}
+.metal-cross i,.metal-cross b,.metal-cross em{position:absolute;z-index:2;display:block;border:1px solid #f1d47e;background:#6b4b20;transform:rotate(45deg)}
+.metal-cross i{width:17px;height:17px;left:37px;top:51px;background:#d4ad50;box-shadow:inset 0 0 0 3px #74501f}
+.metal-cross b{width:12px;height:12px;left:40px;top:4px}.metal-cross em{width:12px;height:12px;left:40px;bottom:4px}
+.joseph-lily-brooch{background:none!important;position:absolute!important;right:.85rem!important;top:1rem!important;width:66px!important;height:66px!important;display:flex!important;align-items:center;justify-content:center;opacity:.92!important;filter:drop-shadow(0 3px 4px rgba(0,0,0,.3));z-index:3}
+.joseph-lily-brooch i{font-style:normal;font-size:3rem;color:#d8b15b;line-height:1;text-shadow:0 1px #f3da92,0 -1px #6b4b20}
+.joseph-lily-brooch b{position:absolute;font-size:1.55rem;color:#f1ead5;transform:rotate(-30deg) translate(-11px,-3px);text-shadow:0 1px #8c6b31}
+@media(max-width:560px){.metal-cross{width:82px;height:105px}.metal-cross:before{height:101px}.metal-cross:after{width:78px}.joseph-lily-brooch{width:55px!important;height:55px!important;right:.45rem!important;top:.65rem!important}.joseph-lily-brooch i{font-size:2.55rem}.joseph-lily-brooch b{font-size:1.3rem}}
