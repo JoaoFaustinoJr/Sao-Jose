@@ -1645,3 +1645,24 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .daily-supplications:after{right:-.2rem!important;left:auto!important;transform:rotate(14deg)!important}
 .daily-intentions .daily-supplications>span,.daily-intentions .daily-supplications>h4,.daily-intentions .daily-supplications>button{position:relative!important;z-index:3!important}
 @media(max-width:420px){.daily-intentions .daily-supplications:before,.daily-intentions .daily-supplications:after{font-size:3.35rem!important;width:4.7rem!important;bottom:-.25rem!important}}
+
+
+/* v11.05 · linguagem ornamental josefina aplicada seletivamente */
+#compendium .prayer-card,#sleeping .sleeping-prayer,#table .action,#memory .memory-evidence,#recipes .recipe-entry{
+ position:relative!important;overflow:hidden!important;isolation:isolate
+}
+#compendium .prayer-card:before,#compendium .prayer-card:after,
+#sleeping .sleeping-prayer:before,#sleeping .sleeping-prayer:after,
+#table .action:before,#table .action:after,
+#memory .memory-evidence:before,#memory .memory-evidence:after,
+#recipes .recipe-entry:before,#recipes .recipe-entry:after{
+ content:"❧"!important;position:absolute!important;bottom:-.55rem!important;
+ font-family:Georgia,serif!important;font-size:3rem!important;line-height:1!important;
+ color:#4d8096!important;opacity:.18!important;z-index:0!important;pointer-events:none!important
+}
+#compendium .prayer-card:before,#sleeping .sleeping-prayer:before,#table .action:before,#memory .memory-evidence:before,#recipes .recipe-entry:before{left:-.15rem!important;transform:rotate(-18deg)!important}
+#compendium .prayer-card:after,#sleeping .sleeping-prayer:after,#table .action:after,#memory .memory-evidence:after,#recipes .recipe-entry:after{right:-.15rem!important;transform:rotate(18deg)!important}
+#compendium .prayer-card>*,#sleeping .sleeping-prayer>*,#table .action>*,#memory .memory-evidence>*,#recipes .recipe-entry>*{position:relative;z-index:2}
+#sleeping .sleeping-prayer:before,#sleeping .sleeping-prayer:after{opacity:.24!important}
+#table .action:before,#table .action:after{opacity:.22!important}
+@media(max-width:420px){#compendium .prayer-card:before,#compendium .prayer-card:after,#sleeping .sleeping-prayer:before,#sleeping .sleeping-prayer:after,#table .action:before,#table .action:after,#memory .memory-evidence:before,#memory .memory-evidence:after,#recipes .recipe-entry:before,#recipes .recipe-entry:after{font-size:2.55rem!important}}
