@@ -1481,3 +1481,8 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .daily-intentions .devotional-link{width:100%;min-height:0;margin:.2rem 0 0;padding:.82rem .25rem .7rem;border:0;border-top:1px solid rgba(211,173,94,.32);border-bottom:1px solid rgba(211,173,94,.32);border-radius:0;background:transparent!important;box-shadow:none!important;color:#ead8aa;display:flex;align-items:center;justify-content:center;gap:.65rem;font-family:Georgia,serif;font-size:1rem;letter-spacing:.015em}
 .daily-intentions .devotional-link b{font-family:Georgia,serif;font-size:1.45rem;font-weight:400;color:#d3ad5e;line-height:.8;transition:transform .18s ease}
 .daily-intentions .devotional-link:active b{transform:translateX(3px)}
+
+/* v10.89 · legibilidade do comando devocional */
+.daily-intentions .devotional-link,.daily-intentions .devotional-link span{color:#f1dfb4!important;opacity:1!important;text-shadow:0 1px 0 rgba(0,0,0,.22)}
+.daily-intentions .devotional-link{border-color:rgba(211,173,94,.42)!important}
+.daily-intentions .devotional-link b{color:#d9b45e!important;opacity:1!important}
