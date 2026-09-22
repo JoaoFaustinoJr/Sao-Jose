@@ -1797,3 +1797,21 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .metal-devotional .gem{position:absolute!important;z-index:6!important;width:9px!important;height:9px!important;background:#e6c86f!important;border:1px solid #5c421d!important;transform:rotate(45deg)!important;box-shadow:0 0 0 1px #b58c3c!important}
 .metal-devotional .g1{left:51px!important;top:2px!important}.metal-devotional .g2{left:3px!important;top:47px!important}.metal-devotional .g3{right:3px!important;top:47px!important}.metal-devotional .g4{left:51px!important;bottom:2px!important}
 @media(max-width:560px){.chapter-lily-crown.lily-botanical{width:138px!important;height:44px!important}.metal-devotional{transform:scale(.9)!important;margin-top:-.15rem!important;margin-bottom:-.05rem!important}}
+
+/* v11.24 · identidade editorial: azul/marfim/ouro + vinho cerimonial */
+:root{--ceremonial-wine:#7f1226;--ceremonial-wine-deep:#5d0d1b;--ceremonial-wine-soft:#9b3040}
+.bookmark,.ribbon,.chapter-ribbon{background:linear-gradient(180deg,#98263a,var(--ceremonial-wine-deep))!important}
+.seal,.wax-seal,.sj-seal{background:radial-gradient(circle at 38% 30%,#a92d3e 0%,#821326 46%,#570b18 100%)!important;border-color:#b87b43!important;box-shadow:0 8px 16px rgba(66,8,18,.22),inset 0 0 0 3px rgba(222,166,83,.26)!important}
+.page#compendium .continue-card,.page#compendium .resume-card{border-left:4px solid var(--ceremonial-wine)!important}
+.page#compendium .menu-card:nth-of-type(2),.page#compendium [data-go="novena"]{border-left:4px solid var(--ceremonial-wine)!important}
+.page#compendium .menu-card:nth-of-type(2) .icon,.page#compendium [data-go="novena"] .icon{color:var(--ceremonial-wine)!important}
+.day-opening .kicker,.day-opening .chapter-label{color:#d9b35c!important}
+.day-opening .chapter-lily-crown{margin-bottom:.1rem!important}
+.day-opening .chapter-lily-crown b{color:#f2ead1!important}
+.daily-intentions .intention-art-button,.daily-intentions [data-open-intentions]{box-shadow:0 0 0 1px rgba(127,18,38,.18)!important}
+.daily-intentions .daily-supplications{border-top-color:rgba(127,18,38,.34)!important}
+.day-closing .section-kicker,.closing-prayers .section-kicker{color:var(--ceremonial-wine)!important}
+.prayer-card[data-prayer*="consecr"],.prayer-card[data-prayer*="final"]{border-color:rgba(127,18,38,.28)!important}
+@media(max-width:560px){
+ .page#compendium .continue-card,.page#compendium .resume-card{padding-top:.85rem!important;padding-bottom:.85rem!important}
+}
