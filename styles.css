@@ -1815,3 +1815,9 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 @media(max-width:560px){
  .page#compendium .continue-card,.page#compendium .resume-card{padding-top:.85rem!important;padding-bottom:.85rem!important}
 }
+
+/* v11.25 · crucifixo definitivo da persignação */
+.ornate-crucifix,.metal-devotional{display:none!important}
+.persignation-crucifix-art{display:block!important;width:132px!important;height:150px!important;object-fit:contain!important;margin:-.15rem auto .15rem!important;filter:drop-shadow(0 5px 7px rgba(0,0,0,.42))!important}
+.persignation-art{min-height:190px!important}
+@media(max-width:560px){.persignation-crucifix-art{width:118px!important;height:136px!important}.persignation-art{min-height:176px!important}}
