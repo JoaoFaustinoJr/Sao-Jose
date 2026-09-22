@@ -1879,3 +1879,15 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .cover-wine-seal i{position:relative;font-size:8px;line-height:1;margin-top:3px;font-style:normal}
 .cover-wine-seal+.med{margin-top:.35rem!important}
 @media(max-width:560px){.cover-wine-seal{width:52px;height:52px;margin-top:-26px;margin-bottom:12px}.cover-wine-seal span{font-size:18px}}
+
+/* v11.29 · correção visual da capa a partir do teste mobile */
+#cover.cover{box-sizing:border-box!important;left:0!important;right:0!important;padding-left:12px!important;padding-right:12px!important}
+#cover .cover-inner{box-sizing:border-box!important;margin-left:auto!important;margin-right:auto!important;left:0!important;right:0!important}
+#cover .cover-art-mockup::after{content:none!important;display:none!important}
+#cover .cover-art-mockup{margin-left:auto!important;margin-right:auto!important}
+#cover .cover-wine-seal{z-index:6!important;margin-top:-28px!important}
+#cover .cover-wine-seal span,#cover .cover-wine-seal i{z-index:2!important}
+@media(max-width:760px){
+ #cover.cover{padding-left:10px!important;padding-right:10px!important}
+ #cover .cover-inner{width:min(calc(100vw - 20px),680px)!important;max-width:100%!important}
+}
