@@ -1458,3 +1458,13 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .thurible:before{content:"";position:absolute;left:14px;right:14px;top:-12px;height:18px;border:2px solid #d3ad5e;border-radius:50% 50% 20% 20%;background:#76501e}.thurible span{position:absolute;inset:15px 0 auto;text-align:center;color:#f1d58e;font-size:20px}
 .incense-smoke{position:absolute;left:50%;bottom:90px;width:110px;height:100px;transform:translateX(-50%)}.incense-smoke i{position:absolute;bottom:-5px;width:24px;height:105px;border-radius:50%;border-left:7px solid rgba(244,239,221,.32);filter:blur(5px);transform:rotate(-12deg)}.incense-smoke i:nth-child(2){left:38px;height:125px;transform:rotate(14deg);opacity:.75}.incense-smoke i:nth-child(3){left:70px;height:90px;transform:rotate(-22deg);opacity:.55}
 .daily-intentions blockquote{margin:.8rem auto 1rem;font-style:italic;color:#ead8aa}.daily-intentions blockquote small{display:block;margin-top:.35rem;font-style:normal}.daily-supplications{margin-top:1.1rem;padding-top:1rem;border-top:1px solid rgba(211,173,94,.28)}.daily-supplications>span{font-size:.68rem;letter-spacing:.15em;color:#d3ad5e}.daily-supplications h4{margin:.45rem 0}.daily-supplications button{margin-top:.65rem}
+
+/* v10.85 · Momento das Intenções — arte editorial integrada ao rito */
+.daily-intentions{overflow:hidden}
+.daily-intentions .intention-art{margin:-1.05rem -1.05rem 1.05rem;position:relative;background:#071f27;border-bottom:1px solid rgba(211,173,94,.48)}
+.daily-intentions .intention-art:after{content:"";position:absolute;inset:auto 0 0;height:18%;pointer-events:none;background:linear-gradient(180deg,transparent,rgba(5,28,37,.2))}
+.daily-intentions .intention-art img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.daily-intentions .intention-pause{margin:.35rem 0 1.1rem;padding:.95rem 1rem;text-align:center;border-top:1px solid rgba(211,173,94,.25);border-bottom:1px solid rgba(211,173,94,.25);background:linear-gradient(90deg,transparent,rgba(211,173,94,.055),transparent)}
+.daily-intentions .intention-pause span{display:block;margin-bottom:.45rem;color:#d8b86c;font-size:.67rem;letter-spacing:.19em;font-weight:700}
+.daily-intentions .intention-pause p{margin:0;color:inherit;font-style:italic;line-height:1.55}
+.daily-intentions>.incense-altar,.daily-intentions>.incense-rays{display:none!important}
