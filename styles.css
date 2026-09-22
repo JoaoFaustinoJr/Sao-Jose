@@ -1720,3 +1720,11 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .family-photo-grid img,.family-photo-grid .wide img{height:112px!important;max-height:none!important}
  .family-photo-grid figcaption{font-size:.7rem!important;padding:.42rem .35rem!important;min-height:2.35rem}
 }
+
+
+/* v11.10 · curadoria: miniaturas de acervo, não imagens editoriais */
+.curated-grid,.historic-table-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.historic-table-grid figure:last-child{grid-column:1/-1!important;max-width:50%;width:100%;justify-self:center}
+.curated-grid img,.historic-table-grid img{height:105px!important;object-fit:cover!important}
+.table-archive-gallery{margin-top:1rem!important}
+@media(min-width:620px){.curated-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}.historic-table-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}.historic-table-grid figure:last-child{grid-column:auto!important;max-width:none}.curated-grid img,.historic-table-grid img{height:125px!important}}
