@@ -1870,3 +1870,12 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  .novena-blue article>h3:before,.novena-blue article>h3:after{width:24px;margin:0 .38rem}
  .compendium-page .toc>button{min-height:64px!important}
 }
+
+/* v11.28 · fio cerimonial vinho na capa */
+.cover .cover-art-mockup{margin-bottom:0!important}
+.cover-wine-seal{position:relative;z-index:4;width:58px;height:58px;margin:-29px auto 14px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 36% 28%,#a83445 0%,#82182a 48%,#5b0d1b 100%);border:2px solid #c9a24e;box-shadow:0 5px 12px rgba(0,0,0,.35),inset 0 0 0 3px rgba(226,181,91,.18);color:#f0d17c;font-family:Georgia,serif}
+.cover-wine-seal:before{content:"";position:absolute;inset:4px;border:1px solid rgba(240,209,124,.58);border-radius:50%}
+.cover-wine-seal span{position:relative;font-size:20px;font-style:italic;line-height:1;font-weight:600;letter-spacing:.02em}
+.cover-wine-seal i{position:relative;font-size:8px;line-height:1;margin-top:3px;font-style:normal}
+.cover-wine-seal+.med{margin-top:.35rem!important}
+@media(max-width:560px){.cover-wine-seal{width:52px;height:52px;margin-top:-26px;margin-bottom:12px}.cover-wine-seal span{font-size:18px}}
