@@ -1685,3 +1685,9 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 #sleeping .sleeping-prayer:before,#memory .memory-evidence:before,#recipes .recipe-card:before,#table .action:before{left:-.15rem!important;transform:rotate(-16deg)!important}
 #sleeping .sleeping-prayer:after,#memory .memory-evidence:after,#recipes .recipe-card:after,#table .action:after{right:-.15rem!important;transform:rotate(16deg)!important}
 #sleeping .sleeping-prayer>*,#memory .memory-evidence>*,#recipes .recipe-card>*,#table .action>*{position:relative!important;z-index:2!important}
+
+
+/* v11.07 · referência documental dos cantos */
+.song-document-link{width:100%;margin-top:.7rem;text-align:left;display:flex;align-items:center;justify-content:center;gap:.35rem;flex-wrap:wrap}
+.song-document-link small{font-size:.72rem;opacity:.72;font-weight:400}
+.song-document-link:disabled{opacity:.72;cursor:default}
