@@ -2569,3 +2569,21 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .page.chapter:nth-of-type(3n)::after{--ribbon:#6d243f;--ribbon-hi:#913c5d}
 /* o lírio decorativo do canto continua deliberadamente removido */
 .page.chapter .chapter-portal::before{display:none!important;content:none!important;background:none!important;width:0!important;height:0!important}
+
+/* v11.67 · fitas em tecido sobreposto: composição aprovada */
+.page.chapter::after{
+ display:block!important;content:""!important;position:absolute!important;z-index:8!important;
+ right:12px!important;top:58px!important;width:30px!important;height:96px!important;
+ background:
+  linear-gradient(90deg,rgba(255,255,255,.16) 0 10%,transparent 24% 64%,rgba(0,0,0,.20) 82% 100%),
+  linear-gradient(90deg,var(--ribbon,#74202b) 0 34%,var(--ribbon-hi,#9a3440) 34% 68%,var(--ribbon,#74202b) 68% 100%)!important;
+ clip-path:polygon(0 0,100% 0,100% 84%,50% 100%,0 84%)!important;
+ border-radius:2px 2px 0 0!important;
+ box-shadow:0 6px 11px rgba(0,0,0,.34),inset 1px 0 rgba(255,255,255,.16),inset -1px 0 rgba(0,0,0,.22)!important;
+ opacity:.96!important;
+}
+.page.chapter:nth-of-type(3n+1)::after{--ribbon:#173f5c;--ribbon-hi:#6f2946}
+.page.chapter:nth-of-type(3n+2)::after{--ribbon:#275039;--ribbon-hi:#8a273d}
+.page.chapter:nth-of-type(3n)::after{--ribbon:#6d243f;--ribbon-hi:#264d61}
+/* lírio do canto permanece removido */
+.page.chapter .chapter-portal::before{display:none!important;content:none!important;background:none!important;width:0!important;height:0!important}
