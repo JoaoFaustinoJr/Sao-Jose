@@ -2509,3 +2509,27 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
   .day-standard-card .day-card-head span{font-size:1.3rem!important}
   .day-standard-card .day-card-head strong{font-size:.8rem!important}
 }
+
+
+/* v11.62 · limpeza definitiva: remove o ornamento residual da margem/canto do cabeçalho */
+.chapter .vellum-leaf>.josephine-seal,
+.chapter .vellum-leaf>.josephine-mark,
+.day-standard-card .day-ribbon,
+.day-standard-card .day-card-head:before,
+.day-standard-card .day-card-head:after{
+  display:none!important;
+  content:none!important;
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.day-standard-card .day-card-head{
+  padding-left:.75rem!important;
+  padding-right:.75rem!important;
+}
+@media(max-width:430px){
+  .day-standard-card .day-card-head{
+    padding-left:.55rem!important;
+    padding-right:.55rem!important;
+  }
+}
