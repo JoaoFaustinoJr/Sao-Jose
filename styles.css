@@ -2549,3 +2549,23 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .page.chapter .chapter-portal::before{
  display:none!important;content:none!important;background:none!important;background-image:none!important;width:0!important;height:0!important;
 }
+
+/* v11.66 · restaura as fitas dos capítulos; mantém removidos somente os lírios de canto */
+.page.chapter::after{
+ display:block!important;
+ content:""!important;
+ position:absolute!important;
+ right:12px!important;
+ top:58px!important;
+ width:25px!important;
+ height:92px!important;
+ background:linear-gradient(90deg,var(--ribbon,#74202b),var(--ribbon-hi,#9a3440) 46%,var(--ribbon,#74202b))!important;
+ clip-path:polygon(0 0,100% 0,100% 86%,50% 100%,0 86%)!important;
+ border-radius:1px 1px 0 0!important;
+ box-shadow:0 5px 10px rgba(0,0,0,.32),inset 1px 0 rgba(255,255,255,.12),inset -1px 0 rgba(0,0,0,.2)!important;
+}
+.page.chapter:nth-of-type(3n+1)::after{--ribbon:#163c5a;--ribbon-hi:#285d7c}
+.page.chapter:nth-of-type(3n+2)::after{--ribbon:#275039;--ribbon-hi:#3f7453}
+.page.chapter:nth-of-type(3n)::after{--ribbon:#6d243f;--ribbon-hi:#913c5d}
+/* o lírio decorativo do canto continua deliberadamente removido */
+.page.chapter .chapter-portal::before{display:none!important;content:none!important;background:none!important;width:0!important;height:0!important}
