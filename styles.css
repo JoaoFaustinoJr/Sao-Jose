@@ -2139,3 +2139,20 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
     opacity:.48!important;
   }
 }
+
+
+/* v11.50 · marcador de encadernação: fora da área tipográfica */
+.chapter .vellum-leaf>.josephine-seal{
+  top:20px!important;
+  width:36px!important;
+  height:48px!important;
+  opacity:.44!important;
+}
+@media(max-width:600px){
+  .chapter .vellum-leaf>.josephine-seal{
+    top:18px!important;
+    width:34px!important;
+    height:46px!important;
+    opacity:.42!important;
+  }
+}
