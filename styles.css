@@ -2533,3 +2533,14 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
     padding-right:.55rem!important;
   }
 }
+
+/* v11.64 · limpeza visual definitiva dos cartões dos dias */
+.chapter-portal .day-standard-card .day-ribbon,
+.chapter-portal .day-standard-card .day-card-head::before,
+.chapter-portal .day-standard-card .day-card-head::after{
+ display:none!important;content:none!important;background:none!important;background-image:none!important;border:0!important;box-shadow:none!important;
+}
+.chapter-portal .day-standard-card .day-card-head{padding-top:1rem!important;min-height:0!important;overflow:hidden!important;}
+/* neutraliza a fita global apenas nas páginas dos nove dias */
+.page.chapter::after{display:none!important;content:none!important;background:none!important;}
+@media(max-width:600px){.chapter-portal .day-standard-card .day-card-head{padding-top:.9rem!important;min-height:0!important;}}
