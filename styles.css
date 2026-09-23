@@ -2156,3 +2156,33 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
     opacity:.42!important;
   }
 }
+
+
+/* v11.53 · corrige enquadramento do símbolo na Oficina de São José
+   O selo passa a ficar integralmente dentro do cartão, sem corte pela borda. */
+.joseph-folio article .action{
+  overflow:visible!important;
+}
+.joseph-folio article .action:before{
+  top:10px!important;
+  right:12px!important;
+  width:32px!important;
+  height:32px!important;
+  box-sizing:border-box!important;
+  border-radius:50%!important;
+  background-clip:padding-box!important;
+  z-index:3!important;
+}
+.joseph-folio article .action>b{
+  display:block!important;
+  padding-right:48px!important;
+}
+@media(max-width:420px){
+  .joseph-folio article .action:before{
+    top:9px!important;
+    right:10px!important;
+    width:30px!important;
+    height:30px!important;
+  }
+  .joseph-folio article .action>b{padding-right:44px!important}
+}
