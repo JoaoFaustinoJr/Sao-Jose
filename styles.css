@@ -2282,3 +2282,65 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
   .novena-section-divider{width:min(54%,180px);margin:1.45rem auto .7rem}
   .novena-section-divider b{width:24px;height:24px;font-size:.72rem}
 }
+
+
+/* v11.58 · refinamento solicitado: menos redundância, atalhos maiores e jaculatória legível */
+/* remove o ornamento redundante imediatamente sob o quadro principal dos dias */
+.chapter-portal + .day-prayer-nav:before,
+.chapter-portal + .day-prayer-nav:after,
+.day-prayer-nav .chapter-lily-crown,
+.day-prayer-nav>.ornament,
+.day-prayer-nav>.joseph-divider{display:none!important;content:none!important}
+
+/* atalhos A Palavra / Meditação / Oração do dia / Intenções */
+.day-prayer-nav{
+  width:min(100%,470px)!important;
+  margin:1rem auto 1.35rem!important;
+}
+.day-prayer-nav button{
+  min-height:96px!important;
+  padding:.55rem .28rem .7rem!important;
+}
+.day-prayer-nav button img,
+.day-prayer-nav button .nav-art,
+.day-prayer-nav button .prayer-nav-icon{
+  width:58px!important;
+  height:58px!important;
+  max-width:58px!important;
+}
+.day-prayer-nav button span,
+.day-prayer-nav button small{
+  font-size:.9rem!important;
+  line-height:1.08!important;
+}
+
+/* jaculatória: faixa vinho para contraste e hierarquia devocional */
+.day-closing-book .closing-invocation{
+  display:block!important;
+  width:min(92%,430px)!important;
+  box-sizing:border-box!important;
+  margin:1.05rem auto 1rem!important;
+  padding:.72rem 1rem!important;
+  border:1px solid rgba(218,173,88,.72)!important;
+  border-radius:8px!important;
+  background:linear-gradient(180deg,rgba(139,25,48,.96),rgba(103,18,37,.96))!important;
+  color:#fff1d2!important;
+  font-size:1.18rem!important;
+  line-height:1.25!important;
+  font-weight:700!important;
+  text-shadow:0 1px 2px rgba(0,0,0,.32)!important;
+  box-shadow:inset 0 0 18px rgba(218,173,88,.08)!important;
+  opacity:1!important;
+}
+.day-closing-book .closing-invocation:after{
+  display:none!important;
+  content:none!important;
+}
+@media(max-width:560px){
+  .day-prayer-nav button{min-height:102px!important}
+  .day-prayer-nav button img,
+  .day-prayer-nav button .nav-art,
+  .day-prayer-nav button .prayer-nav-icon{width:62px!important;height:62px!important;max-width:62px!important}
+  .day-prayer-nav button span,.day-prayer-nav button small{font-size:.94rem!important}
+  .day-closing-book .closing-invocation{font-size:1.12rem!important;padding:.72rem .8rem!important}
+}
