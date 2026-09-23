@@ -2121,3 +2121,21 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 @media(max-width:560px){
  .day-prayer-opening:after{width:min(138px,40vw)!important;height:31px!important;margin:.7rem auto .05rem!important}
 }
+
+
+/* v11.49 · hotfix mobile: marcador central livre do cabeçalho e ornamento redundante removido */
+.chapter .vellum-leaf>.josephine-seal{
+  top:118px!important;
+}
+.chapter-portal .day-card-head:after{
+  display:none!important;
+  content:none!important;
+}
+@media(max-width:600px){
+  .chapter .vellum-leaf>.josephine-seal{
+    top:116px!important;
+    width:38px!important;
+    height:50px!important;
+    opacity:.48!important;
+  }
+}
