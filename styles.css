@@ -2472,3 +2472,40 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
   }
   .day-prayer-nav.prayer-ribbon button:before{width:54px!important;height:54px!important}
 }
+
+
+/* v11.61 · cabeçalho final: sem medalhão, tipografia central e limpa */
+.day-standard-card .day-card-head{
+  min-height:104px!important;
+  padding:1rem .75rem .82rem!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  background:linear-gradient(100deg,#7d0926,#a50b32 54%,#790823)!important;
+}
+.day-standard-card .day-card-head:before,
+.day-standard-card .day-card-head:after{
+  display:none!important;
+  content:none!important;
+  background:none!important;
+}
+.day-standard-card .day-card-head span{
+  margin:0!important;
+  font-size:1.42rem!important;
+  letter-spacing:.12em!important;
+}
+.day-standard-card .day-card-head strong{
+  margin-top:.42rem!important;
+  font-size:.92rem!important;
+  letter-spacing:.035em!important;
+}
+@media(max-width:430px){
+  .day-standard-card .day-card-head{
+    min-height:96px!important;
+    padding:.9rem .55rem .72rem!important;
+  }
+  .day-standard-card .day-card-head span{font-size:1.3rem!important}
+  .day-standard-card .day-card-head strong{font-size:.8rem!important}
+}
