@@ -2587,3 +2587,12 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .page.chapter:nth-of-type(3n)::after{--ribbon:#6d243f;--ribbon-hi:#264d61}
 /* lírio do canto permanece removido */
 .page.chapter .chapter-portal::before{display:none!important;content:none!important;background:none!important;width:0!important;height:0!important}
+
+/* v11.68 · pinacoteca devocional em São José Adormecido */
+.sleeping-masterpiece{width:min(92%,520px);margin:1.15rem auto 1.1rem;padding:8px;background:linear-gradient(135deg,#805114,#efc967 27%,#9a641c 55%,#e9c15c 78%,#704611);box-shadow:0 15px 30px rgba(0,0,0,.28)}
+.sleeping-masterpiece-frame{padding:4px;background:#071f31;border:1px solid rgba(246,215,137,.72);overflow:hidden}
+.sleeping-masterpiece img{display:block;width:100%;height:auto;max-height:470px;object-fit:cover;object-position:center 42%;filter:saturate(.86) contrast(1.02) brightness(.94)}
+.sleeping-masterpiece figcaption{margin:0;padding:.72rem .7rem .68rem;text-align:center;background:linear-gradient(180deg,#f0d48d,#d6a64e);color:#352413;font-family:Georgia,serif;line-height:1.25}
+.sleeping-masterpiece figcaption strong{display:block;font-size:1.02rem}.sleeping-masterpiece figcaption span{display:block;margin-top:.18rem;font-size:.76rem}.sleeping-masterpiece figcaption small{display:block;margin-top:.25rem;font-size:.64rem;opacity:.78}
+.sleeping-art-note{width:min(90%,500px);margin:.25rem auto 1.25rem;padding:.8rem 1rem;border-left:2px solid #cba450;background:rgba(5,30,45,.46);color:#eadfc8;font:italic .86rem/1.55 Georgia,serif;text-align:left}
+@media(max-width:600px){.sleeping-masterpiece{width:90%;padding:6px}.sleeping-masterpiece img{max-height:410px}.sleeping-art-note{font-size:.82rem}}
