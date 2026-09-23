@@ -2209,3 +2209,23 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
     padding-right:54px!important;
   }
 }
+
+
+/* v11.55 · crucifixo da persignação: escala mais discreta */
+.persignation-crucifix-art{
+  width:106px!important;
+  height:122px!important;
+  margin:-.05rem auto .1rem!important;
+}
+.persignation-art{
+  min-height:160px!important;
+}
+@media(max-width:560px){
+  .persignation-crucifix-art{
+    width:98px!important;
+    height:112px!important;
+  }
+  .persignation-art{
+    min-height:152px!important;
+  }
+}
