@@ -1,5 +1,5 @@
-const CACHE='sao-jose-v1160';
-const SHELL=['./index.html','./styles.css?v=260','./app.js?v=260','./manifest.webmanifest?v=260'];
+const CACHE='sao-jose-v1161';
+const SHELL=['./index.html','./styles.css?v=261','./app.js?v=261','./manifest.webmanifest?v=261'];
 self.addEventListener('install',event=>{
   self.skipWaiting();
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)));
