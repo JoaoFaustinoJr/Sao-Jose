@@ -2596,3 +2596,16 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 .sleeping-masterpiece figcaption strong{display:block;font-size:1.02rem}.sleeping-masterpiece figcaption span{display:block;margin-top:.18rem;font-size:.76rem}.sleeping-masterpiece figcaption small{display:block;margin-top:.25rem;font-size:.64rem;opacity:.78}
 .sleeping-art-note{width:min(90%,500px);margin:.25rem auto 1.25rem;padding:.8rem 1rem;border-left:2px solid #cba450;background:rgba(5,30,45,.46);color:#eadfc8;font:italic .86rem/1.55 Georgia,serif;text-align:left}
 @media(max-width:600px){.sleeping-masterpiece{width:90%;padding:6px}.sleeping-masterpiece img{max-height:410px}.sleeping-art-note{font-size:.82rem}}
+
+/* v11.70 · uniformização dos marcadores dos nove dias: padrão visual do Dia V */
+.page.chapter::after{
+ display:block!important;content:""!important;position:absolute!important;z-index:8!important;
+ left:50%!important;right:auto!important;top:94px!important;transform:translateX(-50%)!important;
+ width:36px!important;height:72px!important;
+ background:linear-gradient(90deg,#173f5c 0%,#274f68 30%,#74203c 54%,#8e2947 72%,#173f5c 100%)!important;
+ clip-path:polygon(0 0,100% 0,100% 82%,50% 100%,0 82%)!important;
+ border-radius:2px 2px 0 0!important;
+ box-shadow:0 5px 10px rgba(0,0,0,.3),inset 1px 0 rgba(255,255,255,.13),inset -1px 0 rgba(0,0,0,.2)!important;
+ opacity:.96!important;
+}
+@media(max-width:600px){.page.chapter::after{top:94px!important;width:36px!important;height:72px!important}}
