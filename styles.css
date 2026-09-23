@@ -2251,3 +2251,34 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
   .persignation-crucifix-art{width:106px!important;height:122px!important}
   .persignation-art{min-height:160px!important}
 }
+
+
+/* v11.57 · ensaio editorial: ornamentos discretos entre partes da Novena */
+.novena-section-divider{
+  width:min(58%,220px);
+  margin:1.75rem auto .85rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.7rem;
+  opacity:.78;
+}
+.novena-section-divider span{
+  height:1px;
+  flex:1;
+  background:linear-gradient(90deg,transparent,rgba(190,145,63,.72));
+}
+.novena-section-divider span:last-child{transform:scaleX(-1)}
+.novena-section-divider b{
+  width:27px;height:27px;
+  display:grid;place-items:center;
+  font:400 .82rem Georgia,serif;
+  color:#b8893d;
+  background:radial-gradient(circle,rgba(190,145,63,.12),transparent 70%);
+}
+.deep-blue-section .novena-section-divider b,
+.chapter .novena-section-divider b{color:#d8ae59}
+@media(max-width:560px){
+  .novena-section-divider{width:min(54%,180px);margin:1.45rem auto .7rem}
+  .novena-section-divider b{width:24px;height:24px;font-size:.72rem}
+}
