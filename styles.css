@@ -2631,3 +2631,7 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
 /* v11.74 · assinatura realmente oculta fora do easter egg */
 .jf-easter-egg[hidden]{display:none!important;visibility:hidden!important;opacity:0!important;}
 .jf-easter-egg.is-revealed{display:block!important;visibility:visible!important;opacity:.72!important;}
+
+/* v11.75 · proteção absoluta: assinatura nunca participa do fluxo das páginas */
+#jfEasterEgg{display:none!important;position:fixed!important;right:22px!important;bottom:86px!important;z-index:40!important;margin:0!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important;}
+#jfEasterEgg.is-revealed{display:block!important;visibility:visible!important;opacity:.72!important;pointer-events:auto!important;}
