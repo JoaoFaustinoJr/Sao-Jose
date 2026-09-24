@@ -2623,3 +2623,7 @@ opacity:.96!important;filter:sepia(.2) saturate(.72) contrast(.92)!important;mix
  opacity:.96!important;pointer-events:none!important;
 }
 @media(max-width:600px){.page.chapter .chapter-portal.day-standard-card::after{top:-61px!important;width:36px!important;height:72px!important}}
+
+/* v11.73 · assinatura como easter egg, reservada ao encerramento da Novena */
+.jf-easter-egg{display:none;margin:28px 18px 90px;text-align:right;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1rem;font-weight:400;letter-spacing:.02em;color:#b79a63;opacity:0;transform:translateY(8px);transition:opacity .8s ease,transform .8s ease}
+.jf-easter-egg.is-revealed{display:block;opacity:.72;transform:translateY(0)}
