@@ -196,3 +196,5 @@ document.addEventListener('click',e=>{
  b.innerHTML='‹ Voltar ao dia da Novena';
  header?.prepend(b);
 })();
+/* v11.73 · easter egg da assinatura: três toques no selo SJ do Dia IX */
+(()=>{let taps=0,timer=0;document.addEventListener('click',e=>{const page=e.target.closest('#day9');const seal=e.target.closest('figcaption');if(!page||!seal)return;clearTimeout(timer);taps++;timer=setTimeout(()=>{taps=0},1800);if(taps>=3){const egg=document.getElementById('jfEasterEgg');if(egg){egg.classList.add('is-revealed');egg.setAttribute('aria-hidden','false');egg.scrollIntoView({behavior:'smooth',block:'center'});}taps=0;}});})();
